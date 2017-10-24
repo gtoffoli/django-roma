@@ -1,0 +1,30 @@
+{% extends "account/base.html" %}
+{% load i18n staticfiles %}
+
+{% block head_title %}{% trans "Welcome page" %}{% endblock %}
+{% block content %}
+<div class="boxcontent">
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
+            <h1>{% trans "Welcome page" %}</h1>
+            <p><span class="demiBold">{{ user.get_full_name }}</span>, {% trans "here is your user profile" %}<br>
+                <span class="demiBold">{% trans "Username" %}:</span> {{ user.username }}<br>
+                <span class="demiBold">{% trans "First name" %}:</span> {{ user.first_name }}<br>
+                <span class="demiBold">{% trans "Last name" %}:</span> {{ user.last_name }}<br>
+                <span class="demiBold">{% trans "E-mail" %}:</span> {{ user.email }}
+            </p>
+
+            {% for account in user.socialaccount_set.all %}
+                {% if forloop.first %}<h5 class="demiBold">{% trans "Social network account" %}:</h5>{% endif %}
+                <div style="margin-top: 5px; margin-bottom: 5px;">
+                    <a href="{{ account.get_profile_url }}" title="{% trans "Go to the" %} account {{ account.provider }}">
+                    <span  class="demiBold">{{ account.provider }}</span>	<img src="{{ account.get_avatar_url }}" /></a>
+                </div>
+            {% endfor %}
+
+            <p class="mT10">{% trans "Go to the" %} <a href='/' title="RomaPaese">homepage</a></p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

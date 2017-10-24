@@ -1,0 +1,33 @@
+{% extends "roma/roma_base.html" %}
+{% load staticfiles i18n %}
+
+{% block head_title %}{% trans "Donate to" %} RomaPaese{% endblock %}
+{% block content %}
+<div class="boxcontent">
+
+<div class="container">
+<h1>{% trans "Donate to" %} RomaPaese</h1>
+<div class="mB20">{{ text_body|safe }}</div>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="business" value="{{ business }}">
+    <input type="hidden" name="no_shipping" value="1">
+    <input type="hidden" name="return" value="{{ return }}">
+    <input type="hidden" name="cancel_return" value="{{ cancel_return }}">
+    <input type="hidden" name="lc" value="{{ lc }}">
+    <input type="hidden" name="item_name" value="{{ item_name }}">
+    <input type="hidden" name="currency_code" value="{{ currency_code }}">
+{% comment %}
+<input type="hidden" name="notify_url" value="{{ notify_url }}">
+<label style="font-size: 14px;" for="amount">   {{ currency_code }}   </label>
+<input type="text" style="font-size: 14px; margin-right: 4px;" size="5" value="{{ amount }}" name="amount">
+{% endcomment %}
+    <input type="image" src="{{ btn_source }}" border="0" name="submit" alt="{{ btn_alt }}">
+    <!--img alt="" border="0" src="{{ img_source }}" width="1" height="1"-->
+</form>
+</div>
+</div>
+
+{% endblock content %}
+

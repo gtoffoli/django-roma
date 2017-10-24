@@ -1,0 +1,676 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-12 23:11+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\forms.py:35 .\templates\account\profile.html:12
+msgid "First name"
+msgstr "Nombre"
+
+#: .\forms.py:40 .\templates\account\profile.html:13
+msgid "Last name"
+msgstr "Apellido"
+
+#: .\menus.py:9
+msgid "My zone"
+msgstr "Mi zona"
+
+#: .\menus.py:13
+msgid "Macro-zones"
+msgstr "Macro-zonas"
+
+#: .\menus.py:13 .\menus.py:17 .\menus.py:21 .\menus.py:25
+msgid "map"
+msgstr "mapa"
+
+#: .\menus.py:17
+msgid "New municipalities"
+msgstr "Nuevos municipios"
+
+#: .\menus.py:21
+msgid "Traditional city districts"
+msgstr "Barrios"
+
+#: .\menus.py:25
+msgid "Zipcode areas"
+msgstr "Zonas con código postal"
+
+#: .\menus.py:29
+msgid "Zone types"
+msgstr "Tipología de zonas"
+
+#: .\menus.py:29
+msgid "list"
+msgstr "lista"
+
+#: .\menus.py:43
+msgid "About"
+msgstr "Quienes somos"
+
+#: .\menus.py:48
+msgid "Our partners"
+msgstr "Nuestros partners"
+
+#: .\menus.py:53
+msgid "Help us"
+msgstr "Danos una mano"
+
+#: .\menus.py:58
+msgid "RomaPaese and the schools"
+msgstr "RomaPaese y las escuelas"
+
+#: .\menus.py:63
+msgid "Donate"
+msgstr "Haz una donación"
+
+#: .\menus.py:68
+msgid "Contacts"
+msgstr "Contactos"
+
+#: .\menus.py:77
+msgid "By theme area"
+msgstr "Por área temática"
+
+#: .\menus.py:83
+msgid "By category"
+msgstr "Por categoría"
+
+#: .\menus.py:95
+msgid "By affiliation"
+msgstr "Por afiliación"
+
+#: .\menus.py:100
+msgid "Resource networks"
+msgstr "Redes de recursos"
+
+#: .\menus.py:105
+msgid "New entries"
+msgstr "Añadidos de reciente"
+
+#: .\menus.py:110
+msgid "Updates"
+msgstr "Revisións"
+
+#: .\menus.py:116
+msgid "Da controllare"
+msgstr ""
+
+#: .\menus.py:121
+msgid "Top contributors"
+msgstr "Mayor contribuidores"
+
+#: .\menus.py:126
+msgid "Advanced search"
+msgstr "Búsqueda avanzada"
+
+#: .\menus.py:131
+msgid "How to search"
+msgstr "Cómo buscar"
+
+#: .\menus.py:136
+msgid "Suggest a resource"
+msgstr "Sugiere un recurso"
+
+#: .\menus.py:145
+msgid "Our blogs"
+msgstr "Nuestros blogs"
+
+#: .\menus.py:150
+msgid "From the schools"
+msgstr "De las escuelas"
+
+#: .\menus.py:155
+msgid "Citizens' committees"
+msgstr "De los comités"
+
+#: .\menus.py:160
+msgid "Ethnic and linguistic communities"
+msgstr "Comunidades étnicas y lingüísticas"
+
+#: .\menus.py:165
+msgid "Social networks"
+msgstr "Redes sociales"
+
+#: .\menus.py:170
+msgid "Why register"
+msgstr "Por qué registrarse"
+
+#: .\menus.py:210
+msgid "The resources"
+msgstr "Los recursos"
+
+#: .\menus.py:215
+msgid "The zones"
+msgstr "Las zonas"
+
+#: .\menus.py:220
+msgid "The project"
+msgstr "El proyecto"
+
+#: .\menus.py:225
+msgid "Community"
+msgstr "Comunidad"
+
+#: .\views.py:232
+msgid "PayPal - The safer, easier way to pay online!"
+msgstr "PayPal - La forma más segura de pagar en Internet!"
+
+#: .\templates\account\profile.html:4 .\templates\account\profile.html.py:6
+msgid "Welcome page"
+msgstr "Página de bienvenida"
+
+#: .\templates\account\profile.html:8
+msgid "here is your user profile"
+msgstr "aquí tu perfil de usuario"
+
+#: .\templates\account\profile.html:11
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: .\templates\account\profile.html:14
+msgid "E-mail"
+msgstr "E-mail"
+
+#: .\templates\account\profile.html:18
+msgid "Social network account"
+msgstr "Cuenta de red social"
+
+#: .\templates\account\profile.html:20 .\templates\account\profile.html:25
+msgid "Go to the"
+msgstr "Ir a la"
+
+#: .\templates\admin\base_site.html:15 .\templates\admin\base_site.html:20
+msgid "Amministrazione di RomaPaese"
+msgstr "Administración de RomaPaese"
+
+#: .\templates\admin\pois\poi\change_form.html:35
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\admin\pois\poi\change_form.html:38
+#: .\templates\richtext_blog\add_popup.html:6
+#: .\templates\richtext_blog\add_popup.html:12
+msgid "Add"
+msgstr "Añadir"
+
+#: .\templates\admin\pois\poi\change_form.html:49
+msgid "History"
+msgstr "Historia"
+
+#: .\templates\admin\pois\poi\change_form.html:50
+msgid "View on site"
+msgstr "Mirar en el sitio"
+
+#: .\templates\admin\pois\poi\change_form.html:76
+#: .\templates\admin\richtext_blog\post\change_form.html:159
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Por favor corregir el siguiente error"
+msgstr[1] "Por favor corregir los siguientes errores"
+
+#: .\templates\datatrans\base.html:5
+msgid "Data Translation"
+msgstr "Fecha de la traducción"
+
+#: .\templates\datatrans\base.html:16
+msgid "Datatrans - Model Translation"
+msgstr "Datatrans - Modelo de traducción"
+
+#: .\templates\datatrans\base.html:19
+msgid "Welcome,"
+msgstr "Bienvenido,"
+
+#: .\templates\datatrans\base.html:19
+msgid "Site administration"
+msgstr "Administración del sitio"
+
+#: .\templates\datatrans\base.html:19
+msgid "Change password"
+msgstr "Cambiar contraseña"
+
+#: .\templates\datatrans\base.html:19 .\templates\roma\_account_bar.html:25
+#: .\templates\roma\base.html:151 .\templates\roma\language.html:24
+msgid "Log out"
+msgstr "Salir"
+
+#: .\templates\datatrans\base.html:24
+msgid "Models"
+msgstr "Modelos"
+
+#: .\templates\datatrans\model_detail.html:4
+#: .\templates\datatrans\model_detail.html:9
+#: .\templates\datatrans\model_detail.html:13
+#: .\templates\datatrans\model_detail.html:29
+#: .\templates\datatrans\object_list.html:3
+#: .\templates\datatrans\object_list.html:4
+#: .\templates\datatrans\object_list.html:18
+msgid "Translations for"
+msgstr "Traducciones para"
+
+#: .\templates\datatrans\model_detail.html:32
+#, python-format
+msgid "Progress: %(percent)s%% (%(done)s/%(total)s)"
+msgstr "Progreso: %(percent)s%% (%(done)s/%(total)s)"
+
+#: .\templates\datatrans\model_detail.html:39
+msgid "Jump to first to do"
+msgstr "Ir al primero por hacer"
+
+#: .\templates\datatrans\model_detail.html:43
+#, python-format
+msgid "Jump to %(field_verbose_name)s field"
+msgstr "Ir al campo de %(field_verbose_name)s"
+
+#: .\templates\datatrans\model_detail.html:48
+msgid "done"
+msgstr "hecho"
+
+#: .\templates\datatrans\model_detail.html:50
+msgid "to do"
+msgstr "que hacer"
+
+#: .\templates\datatrans\model_detail.html:52
+msgid "to do (fuzzy)"
+msgstr "que hacer (fuzzy)"
+
+#: .\templates\datatrans\model_detail.html:82
+msgid "Link to this translation"
+msgstr "Enlace a esta traducción"
+
+#: .\templates\datatrans\model_detail.html:105
+msgid "tick this checkbox if the translation is deliberately empty"
+msgstr "marcar este cuadrado si la traducción es deliberadamente vacía"
+
+#: .\templates\datatrans\model_detail.html:105
+msgid "empty"
+msgstr "vacío"
+
+#: .\templates\datatrans\model_detail.html:107
+msgid "keep this original or fuzzy"
+msgstr "conservar este original o fuzzy"
+
+#: .\templates\datatrans\model_detail.html:107
+msgid "ignore"
+msgstr "ignorar"
+
+#: .\templates\datatrans\model_detail.html:116
+#: .\templates\richtext_blog\blog_edit.html:23
+#: .\templates\richtext_blog\post_edit.html:31
+msgid "Save"
+msgstr "Salvar"
+
+#: .\templates\datatrans\model_list.html:4
+#: .\templates\datatrans\model_list.html:9
+msgid "Models to translate"
+msgstr "Modelos por traducir"
+
+#: .\templates\datatrans\model_list.html:10
+#, python-format
+msgid "%(words)s words"
+msgstr "%(words)s palabras"
+
+#: .\templates\datatrans\model_list.html:14
+msgid "Scan models"
+msgstr "Escanear modelos"
+
+#: .\templates\datatrans\model_list.html:15
+#: .\templates\datatrans\obsolete_list.html:3
+#: .\templates\datatrans\obsolete_list.html:4
+#: .\templates\datatrans\obsolete_list.html:7
+msgid "Obsolete translations"
+msgstr "Traducciones obsoletas"
+
+#: .\templates\datatrans\model_list.html:21
+msgid "words"
+msgstr "palabras"
+
+#: .\templates\datatrans\model_list.html:31
+msgid "Change"
+msgstr "Cambio"
+
+#: .\templates\datatrans\model_list.html:35
+msgid "Total"
+msgstr "Total"
+
+#: .\templates\datatrans\obsolete_list.html:10
+#, python-format
+msgid "There are %(obsolete_count)s obsolete messages."
+msgstr "Hay %(obsolete_count)s mensajes obsoletos"
+
+#: .\templates\datatrans\obsolete_list.html:11
+msgid ""
+"Please review them to see if you can reuse something,\n"
+"\t\t\tand when done click the 'Remove all obsoletes' button to clean the "
+"KeyValue table."
+msgstr ""
+"Por favor revisarlos para ver si algo se puede reutilizar, cuando hace click "
+"en el botón 'Quitar todos los obsoletos' para limpiar la tabla del KeyValue"
+
+#: .\templates\datatrans\obsolete_list.html:17
+#: .\templates\datatrans\obsolete_list.html:35
+msgid "Remove all obsoletes"
+msgstr "Quitar todos los obsoletos"
+
+#: .\templates\datatrans\obsolete_list.html:21
+msgid "Obsolete message"
+msgstr "Mensaje obsoleto"
+
+#: .\templates\datatrans\obsolete_list.html:22
+msgid "Language"
+msgstr "Idioma"
+
+#: .\templates\datatrans\obsolete_list.html:40
+msgid "There are no obsolete messages! Yay!"
+msgstr "No hay mensajes obsoletos! Yeah!"
+
+#: .\templates\richtext_blog\add_popup.html:18
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: .\templates\richtext_blog\add_popup.html:18
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: .\templates\richtext_blog\blog-base.html:33
+msgid "Recent Posts"
+msgstr ""
+
+#: .\templates\richtext_blog\blog-base.html:44
+msgid "Tags"
+msgstr ""
+
+#: .\templates\richtext_blog\blog-base.html:55
+msgid "Feeds"
+msgstr ""
+
+#: .\templates\richtext_blog\blog-base.html:66
+msgid "Archive"
+msgstr ""
+
+#: .\templates\richtext_blog\blog-macros.html:13
+msgid "Show all posts of the blog"
+msgstr ""
+
+#: .\templates\richtext_blog\blog-macros.html:21
+#: .\templates\richtext_blog\blog-macros.html:31
+msgid "Show the summary of the blog"
+msgstr ""
+
+#: .\templates\richtext_blog\blog-macros.html:63
+msgid "Posted"
+msgstr ""
+
+#: .\templates\richtext_blog\blog-macros.html:63
+#: .\templates\richtext_blog\blog_detail.html:13
+#: .\templates\richtext_blog\blog_index.html:17
+msgid "by"
+msgstr ""
+
+#: .\templates\richtext_blog\blog-macros.html:65
+msgid "comments"
+msgstr "comentarios"
+
+#: .\templates\richtext_blog\blog-macros.html:68
+msgid "View comments"
+msgstr "Muestra los comentarios"
+
+#: .\templates\richtext_blog\blog-macros.html:80
+msgid "Filed under"
+msgstr "Con etiquetas"
+
+#: .\templates\richtext_blog\blog-macros.html:125
+msgid "All posts"
+msgstr "Todos los aportes"
+
+#: .\templates\richtext_blog\blog_detail.html:14
+msgid "show resource"
+msgstr "muestra los recursos"
+
+#: .\templates\richtext_blog\blog_detail.html:18
+msgid "Summary"
+msgstr "Sumario"
+
+#: .\templates\richtext_blog\blog_detail.html:27
+msgid "Add a post"
+msgstr "Nuevo aporte"
+
+#: .\templates\richtext_blog\blog_edit.html:4
+#: .\templates\richtext_blog\blog_edit.html:6
+msgid "Editing of the blog"
+msgstr "Edición del blog"
+
+#: .\templates\richtext_blog\blog_index.html:8
+#: .\templates\richtext_blog\blog_index.html:10
+msgid "The blogs of"
+msgstr "Los blogs de"
+
+#: .\templates\richtext_blog\blog_index.html:13
+msgid "List of the blogs"
+msgstr "Lista dos blogs"
+
+#: .\templates\richtext_blog\popup_plus.html:7
+#: .\templates\richtext_blog\popup_plus.html:9
+msgid "Add another"
+msgstr "Añadir otro"
+
+#: .\templates\richtext_blog\post-detail.html:34
+msgid "Comments"
+msgstr "Comentarios"
+
+#: .\templates\richtext_blog\post-detail.html:41
+msgid "Anonymous"
+msgstr "Anónimo"
+
+#: .\templates\richtext_blog\post-detail.html:54
+msgid "Comments are closed"
+msgstr "Los comentarios están cerrados"
+
+#: .\templates\richtext_blog\post-detail.html:56
+msgid "Leave a comment"
+msgstr "Dejar comentario"
+
+#: .\templates\richtext_blog\post-detail.html:87
+msgid "Submit Comment"
+msgstr "Enviar Comentario"
+
+#: .\templates\richtext_blog\post-list.html:17
+#: .\templates\richtext_blog\post-list.html:32
+msgid "All Posts"
+msgstr "Todos los aportes"
+
+#: .\templates\richtext_blog\post-list.html:19
+#: .\templates\richtext_blog\post-list.html:32
+msgid "of the blog"
+msgstr "del blog"
+
+#: .\templates\richtext_blog\post_edit.html:4
+#: .\templates\richtext_blog\post_edit.html:6
+msgid "Editing of the post"
+msgstr "Edición del aporte"
+
+#: .\templates\richtext_blog\post_edit.html:4
+#: .\templates\richtext_blog\post_edit.html:6
+msgid "New post"
+msgstr "Añadir aporte"
+
+#: .\templates\richtext_blog\tag-view.html:7
+#: .\templates\richtext_blog\tag-view.html:11
+msgid "Posts tagged with"
+msgstr "Aportes con etiquetas"
+
+#: .\templates\roma\_account_bar.html:17 .\templates\roma\base.html:142
+#: .\templates\roma\language.html:16
+msgid "My profile"
+msgstr "Mi perfil"
+
+#: .\templates\roma\_account_bar.html:18 .\templates\roma\base.html:143
+#: .\templates\roma\language.html:17
+msgid "My resources"
+msgstr "Los recursos"
+
+#: .\templates\roma\_account_bar.html:20 .\templates\roma\base.html:145
+#: .\templates\roma\language.html:19
+msgid "Admin"
+msgstr "Admin"
+
+#: .\templates\roma\_account_bar.html:31 .\templates\roma\base.html:158
+#: .\templates\roma\language.html:30
+msgid "Sign Up"
+msgstr "Regístrate"
+
+#: .\templates\roma\_account_bar.html:33 .\templates\roma\base.html:160
+#: .\templates\roma\language.html:32
+msgid "Log In"
+msgstr "Ingrese"
+
+#: .\templates\roma\base.html:71
+msgid "search ... "
+msgstr "busca ..."
+
+#: .\templates\roma\base.html:98
+msgid ""
+"This site makes use of cookies for statistical survey and for improving the "
+"user experience"
+msgstr ""
+
+#: .\templates\roma\base.html:98
+#, fuzzy
+msgid "close message"
+msgstr "Mensaje obsoleto"
+
+#: .\templates\roma\base.html:98
+msgid "learn more"
+msgstr ""
+
+#: .\templates\roma\base.html:123 .\templates\roma\fv_gridA.html:5
+#: .\templates\roma\fv_gridB.html:4
+msgid "go home"
+msgstr "vuelve a la página inizial"
+
+#: .\templates\roma\base.html:130
+msgid "enter"
+msgstr "escribe"
+
+#: .\templates\roma\base.html:130
+msgid "characters or a few more"
+msgstr "caracteres o unos pocos más"
+
+#: .\templates\roma\base.html:194
+msgid ""
+"Hint: use the search box in the blue bar above to quickly search in whole "
+"Rome: resources, categories, streets, districts."
+msgstr ""
+"Pista: usa el cuadro de búsqueda en la barra azul para buscar rápidamente in "
+"toda Roma: recursos, categorías, calles, barrios."
+
+#: .\templates\roma\donate.html:4 .\templates\roma\donate.html.py:6
+msgid "Donate to"
+msgstr "Haz una donación a"
+
+#: .\templates\roma\donate_thanks.html:4 .\templates\roma\donate_thanks.html:6
+msgid "Thanks for your donation to"
+msgstr "Gracias por tu donación a"
+
+#: .\templates\roma\partners.html:6
+msgid "sponsors"
+msgstr "patrocinadores"
+
+#: .\templates\roma\partners.html:16
+msgid "partners"
+msgstr "partners"
+
+#: .\templates\roma\partners.html:22
+msgid "in the spotlight"
+msgstr "en el punto de mira"
+
+#: .\templates\roma\partners.html:34
+msgid "scarica"
+msgstr ""
+
+#: .\templatetags\django_bootstrap_breadcrumbs.py:68
+msgid "You are here"
+msgstr "Tu estas aquí"
+
+#~ msgid "%s tag needs no argument"
+#~ msgstr "%s tag no necesita argument"
+
+#~ msgid "A few organisations"
+#~ msgstr "Unas organizacións"
+
+#, fuzzy
+#~ msgid "Resource maps"
+#~ msgstr "Cadenas de recursos"
+
+#, fuzzy
+#~ msgid "Last modified"
+#~ msgstr "Apellido"
+
+#~ msgid ""
+#~ "Quickly search in whole Rome: resources, categories, streets, districts."
+#~ msgstr ""
+#~ "Buscar rápidamente in toda Roma: recursos, categorías, calles, barrios."
+
+#~ msgid "Search this site"
+#~ msgstr "Busca en el sitio"
+
+#~ msgid ""
+#~ "Please sign in with one\n"
+#~ "of your existing third party accounts. Or, <a href=\"%(signup_url)s"
+#~ "\">sign up</a> \n"
+#~ "for a %(site_name)s account and sign in below:"
+#~ msgstr ""
+#~ "Por favor entrar con una\n"
+#~ "de sus existentes cuentas de terceros. O, <a href=\"%(signup_url)s"
+#~ "\">entre con un usuario de %(site_name)s y firmar a continuación:"
+
+#~ msgid "or"
+#~ msgstr "o"
+
+#~ msgid "Forgot Password?"
+#~ msgstr "Has olvidado tu contraseña?"
+
+#~ msgid "Sign Out"
+#~ msgstr "Salir"
+
+#~ msgid "Are you sure you want to sign out?"
+#~ msgstr "Seguro que quieres salir?"
+
+#~ msgid "Password Reset"
+#~ msgstr "Resetear contraseña"
+
+#~ msgid ""
+#~ "Forgotten your password? Enter your e-mail address below, and we'll send "
+#~ "you an e-mail allowing you to reset it."
+#~ msgstr ""
+#~ "Has olvidado tu contraseña? Escribe tu dirección e-mail, y te mandaremos "
+#~ "un mensaje que te permita resetearla."
+
+#~ msgid "Reset My Password"
+#~ msgstr "Resetear Mi Contraseña"
+
+#~ msgid "Please contact us if you have any trouble resetting your password."
+#~ msgstr "Por favor contáctenos si tiene problemas al resetear su contraseña."
+
+#~ msgid "Signup"
+#~ msgstr "Registración"
+
+#~ msgid ""
+#~ "Already have an account? Then please <a href=\"%(login_url)s\">sign in</"
+#~ "a>."
+#~ msgstr ""
+#~ "Ya tienes una cuenta? Entonces por favor <a href=\"%(login_url)s\">entra</"
+#~ "a>."

@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /navigation_autocomplete
+Disallow: /my_resources
+Disallow: /viewport
+Disallow: /pois/
+Disallow: /annota-risorsa/
+# Disallow: /zona/00
+# Disallow: /zona/municipio
+Disallow: /zona/roma
+Disallow: /mappa-zona/
+Disallow: /categoria/*/zona/00
+Disallow: /categoria/*/zona/municipio
+Disallow: /categoria/*/tema/
+Crawl-delay: 12
+User-agent: BUbiNG
+Disallow: /
+User-agent: BLEXBot
+Disallow: /
+User-agent: spbot
+Disallow: /
