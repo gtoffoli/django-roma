@@ -3,9 +3,12 @@ from __future__ import unicode_literals
 
 import datetime
 import feedparser
+
+from django.core.cache import caches
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render                        # MMR old version - , render_to_response
 from django.template import RequestContext
+from django.utils import translation
 from django.utils.translation import ugettext as _
 from django.contrib.flatpages.models import FlatPage
 import roma.models
@@ -251,27 +254,16 @@ from pois.views import zone_index_map
 from pois.models import resources_by_theme_count, resources_by_topo_count
 from pois.models import zone_prefix_dict
 
-
-"""
-MMR old version cache
-from django.core.cache import get_cache
-cache = get_cache('custom')
-"""
-from django.core.cache import caches
-
 def home_data(request, fv=False):
     zone_dict = zone_index_map(request, zonetype_id=0, render_view=False)
-    language = RequestContext(request).get('LANGUAGE_CODE', 'en')
+    language = translation.get_language() or 'en'
+    cache = caches['custom']
     key = 'homebody_' + language
-    """
-    MMR old version cache
     # if request.GET.get('nocache', None):
     if request.GET.get('nocache', None) or fv:
         data_dict = None
     else:
         data_dict = cache.get(key, None)
-    """
-    data_dict = None
     if not data_dict:
         print ('cache invalid')
         # data_dict = zone_index_map(request, zonetype_id=0, render=False)
@@ -313,11 +305,8 @@ def home_data(request, fv=False):
         d = feedparser.parse('http://%s/feed' % site_url)
         feed = d.entries and d or []
         data_dict['feed'] = feed
-        """
-        MMR old version cache
         if not fv:
             cache.set(key, data_dict)
-        """
     data_dict.update(zone_dict)
     return data_dict
 
