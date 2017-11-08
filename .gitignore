@@ -19,5 +19,6 @@ bootstrap/
 ol/
 *.bak
 *.bat
+*.old
 *Copia.*
 

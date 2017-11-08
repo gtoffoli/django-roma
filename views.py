@@ -6,15 +6,16 @@ import feedparser
 
 from django.core.cache import caches
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render                        # MMR old version - , render_to_response
+from django.shortcuts import render
 from django.template import RequestContext
 from django.utils import translation
 from django.utils.translation import ugettext as _
 from django.contrib.flatpages.models import FlatPage
+
 import roma.models
 from roma.forms import SearchForm
 import pois.views
-from pois.models import Tag, TagTag, Zone, Poi
+from pois.models import Tag, TagTag, Zone, Poi, Poitype
 from pois.models import MACROZONE, TOPOZONE, MUNICIPIO
 # from roma.fairvillage.api import poitypes as categories
 
@@ -25,17 +26,14 @@ Disallow:
 
 def fairvillage(request):
     flatpage = FlatPage.objects.get(pk=32)
-    # MMR old version - return render_to_response('roma/fairvillage.html', {'text': flatpage.content,}, context_instance=RequestContext(request))
     return render(request, 'roma/fairvillage.html', {'text': flatpage.content,})
 
 def robots(request):
-    # MMR old version - response = render_to_response('roma/robots.txt', {}, context_instance=RequestContext(request))
     response = render(request, 'roma/robots.txt', {})
     response['Content-Type'] = 'text/plain; charset=utf-8'
     return response
 
 def slim(request):
-    # MMR old version - return render_to_response("roma/slim.html", {'text': datetime.datetime.now(),}, context_instance=RequestContext(request))
     return render(request, "roma/slim.html", {'text': datetime.datetime.now(),})
     
 def generic(request, typ, obj):
@@ -202,7 +200,6 @@ def node_distance(n1, n2, rel_dict, m, found):
     return max_distance
 
 def tagcloud(request):
-    # MMR old version - return render_to_response('tagcloud.html')
     return render(request, 'tagcloud.html', {} )
 
 def current_datetime(request):
@@ -241,12 +238,10 @@ def donate(request):
         "btn_alt": _("PayPal - The safer, easier way to pay online!"),
         "img_source": "https://www.paypal.com/%s/i/scr/pixel.gif" % full_lc,
         }
-    # MMR old version - return render_to_response("roma/donate.html", paypal_dict, context_instance=RequestContext(request))
     return render(request, "roma/donate.html", paypal_dict)
 
 # corrisponde al return address dell'interfaccia PayPal
 def donate_thanks(request):
-    # MMR old version - return render_to_response("roma/donate_thanks.html", context_instance=RequestContext(request))
     return render(request, "roma/donate_thanks.html")
 
 from pois.views import zone_index_map
@@ -259,14 +254,12 @@ def home_data(request, fv=False):
     language = translation.get_language() or 'en'
     cache = caches['custom']
     key = 'homebody_' + language
-    # if request.GET.get('nocache', None):
     if request.GET.get('nocache', None) or fv:
         data_dict = None
     else:
         data_dict = cache.get(key, None)
     if not data_dict:
         print ('cache invalid')
-        # data_dict = zone_index_map(request, zonetype_id=0, render=False)
         data_dict = {}
         summary = FlatPage.objects.get(url='/project/summary/').content
         data_dict['summary'] = summary
@@ -277,7 +270,6 @@ def home_data(request, fv=False):
         for theme in themes:
             n = resources_by_theme_count(theme)
             if n:
-                # by_theme_list.append([theme, n])
                 by_theme_list.append([theme.id,theme.name, theme.slug, n])
         data_dict['by_theme_list'] = by_theme_list
         by_zone_list = []
@@ -289,7 +281,6 @@ def home_data(request, fv=False):
             for zone in zones:
                 n = resources_by_topo_count(zone)
                 if n:
-                    # topotype_sublist.append([zone, n])
                     topotype_sublist.append([zone.code, zone.name, zone.slug, n])
             by_zone_list.append([topotype_name_plural, topotype_sublist])
         data_dict['by_zone_list'] = by_zone_list
@@ -312,14 +303,15 @@ def home_data(request, fv=False):
 
 def home(request):
     data_dict = home_data(request)
-    # MMR old version - return render_to_response('pois/home.html', data_dict, context_instance=RequestContext(request))
-    return render(request, 'pois/home.html', data_dict )
+    poitype_list = Poitype.objects.filter(slug__in=['caf','secondarie-superiori'])
+    pois_list = Poi.objects.filter(id__in=[1819, 6039, 2202])
+    data_dict['poitype_list']=poitype_list
+    pois_dict_list=[poi.make_dict() for poi in pois_list]
+    data_dict['pois_list']=pois_dict_list
+    return render(request, 'roma/home.html', data_dict )
     
 def test(request):
     return render(request, 'roma/test.html', {})
-
-def roma_base(request):
-    return render(request, 'roma/roma_base.html', {})
 
 from allauth.account.views import SignupView as allauthSignupView
 from .forms import SignupForm

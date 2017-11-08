@@ -1,0 +1,216 @@
+{% extends "roma/roma_base.html" %}
+{% load staticfiles i18n %}
+
+
+{% block head_title %}{% trans "culture, well-being, solidarity"|capfirst %}{% endblock %}
+
+{% block extra_style %}
+<style>
+.row-eq-height {display: -webkit-box; display: -ms-flexbox; display: flex;}
+.box-flex-a,
+.box-flex-b {height: 100%;}
+@media (min-width: 1200px) and (max-width: 1400px) {
+.box-flex-a {height: auto;}
+.box-scroll-height {height: 60vh; overflow: auto; -webkit-overflow-scrolling: touch;}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+.box-flex-a {height: auto;}
+.box-scroll-height {height: 50vh; overflow: auto; -webkit-overflow-scrolling: touch;}
+}
+</style>
+{% endblock extra_style %}
+
+{% block top-banner %}{% endblock top-banner %}
+
+{% block content %}
+
+    <div class="mLR-15">
+        <div><img src="{{ MEDIA_URL }}home.jpg" class="img-responsive"></div>
+        {{ summary|safe }}
+    </div>
+
+    <div class="boxcontent">
+        <div class="hidden-xs hidden-sm hidden-md">
+        <div class="row row-eq-height mB20">
+            <div class="col-lg-3">
+                <div class="back-box box-flex-a">
+                <h4 class="char-spacing text-center back-LightSkyBlue" style="color: #333; margin-top:0; padding:12px 6px">{% trans "Resources by" %} {% trans "theme area" %}</h4>
+                <article id="tema" class="view-list box-scroll-height">
+                {% for theme_id, theme_name, theme_slug, n in by_theme_list %}
+                    {% if theme_id != 49 %}
+                        <p>{{ theme_name|capfirst }} <span class="text-pre-wrap">[ <a href="/tema/{{ theme_slug }}/" title="{% trans "show an index" %} {% trans "of resources for" %} {{ theme_name }}">{{ n }}</a> ]</span></p>
+                    {% elif theme_id == 49 %}
+                        {% if request.user.is_superuser or request.user.is_staff %}
+                            <p>{{ theme_name|capfirst }} <span class="text-pre-wrap">[ <a href="/tema/{{ theme_slug }}/" title="{% trans "show an index" %} {% trans "of resources for" %} {{ theme_name }}">{{ n }}</a> ]</span></p>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                </article>
+            </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="back-box box-flex-b">
+                <h4 class="color-base char-spacing text-center back-Zone" style="color:white;  margin-top:0; padding:12px 6px">{% trans "Resources by" %} {% trans "zones of" %} <span class="ntranslate">Roma</span></h4>
+                <div><img class="mapHome" src="{{ MEDIA_URL }}mappe/mappa_roma.jpg"></div>
+                <div id="accordion" class="back-box">
+                {% for topotype_name_plural, topotype_sublist in by_zone_list|slice:":4" %}
+                    <div>
+                        <h5 style="font-weight: bold; color: #333; margin-top:0; padding: 10px"><a href="#" class="toggleIcon" style="color:#333"><i class="fa fa-plus-square"></i></a> {{ topotype_name_plural|capfirst }}</h5>
+                        {% if topotype_sublist|length > 6 %}
+                        <article id="zona_{{ forloop.counter }}" class="view-list box-scroll" style="height: 20vh; display:none">
+                        {% else %}
+                        <article id="zona_{{ forloop.counter }}" class="view-list" style="display:none">
+                        {% endif %}
+                        {% for zone_code, zone_name, zone_slug, n in topotype_sublist %}
+                            <p>{{ zone_name }} <small>({{ zone_code }})</small> <span class="text-pre-wrap">[ <a href="/indice-zona/{{ zone_slug }}/" title="{% trans "show an index" %} {% trans "of resources in the zone" %} {{ zone_name }}">{{ n }}</a> ]</span></p>
+                        {% endfor %}
+                        </article>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="back-box box-flex-b">
+                <h4 class="char-spacing text-center back-Zone" style="color:white; margin-top:0; padding:12px 6px">{% trans "Resources by" %} {% trans "zones of" %} <span class="ntranslate">Lazio</span></h4>
+                <div class="back-box"><img class="mapHome" src="{{ MEDIA_URL }}mappe/mappa_lazio.jpg"></div>
+                <article id="prov" class="view-list">
+                {% for zone_code, zone_name, zone_slug, n in by_prov_list %}
+                    <p>{{ zone_name }} <span class="text-pre-wrap">[ <a href="/indice-zona/{{ zone_slug }}/" title="{% trans "show an index" %} {% trans "of resources in the zone" %} {{ zone_name }}">{{ n }}</a> ]</span></p>
+                {% endfor %}
+                </article>
+            </div>
+            </div>
+            <div class="col-lg-3">
+                <h4 class="color-base char-spacing text-center" style="margin-top:0; padding:12px 6px; background: #B5813A; color: white">In evidenza</h4>
+                {% for poitype in poitype_list %}
+                    <div class="text-center mB10" style="position:relative"><a href="/categoria/{{poitype.slug}}/"><img class="mapHome" src="{{ MEDIA_URL }}mappe/{{poitype.slug}}.jpg"></a><div class="demiBold" style="padding:6px; background:rgba(255,255,255,0.8); width: 100%; position:absolute; bottom:0"><a href="/categoria/{{poitype.slug}}/">{{ poitype.name }}</a></div></div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row back-box pB20" style="margin-left:0; margin-right:0; padding-bottom:20px">
+            <div class="col-lg-12">
+                 <h4 class="color-roma char-spacing text-center" style="margin-top:0; padding:12px 6px">Risorse in primo piano</h4>
+            </div>
+            {% for poi in pois_list %}
+            <div class="col-lg-4">
+                <div class="row row-eq-height" style="border:1px solid #A63840; margin:0">
+                    <div class="col-lg-6" style="padding-right:0; background:#ffffff">
+                        <div style="position: absolute; top: 20%;">
+                            <h4 style="font-size:16px; padding-right: 5px"><a href="{{poi.url}}" title="{% trans "show resource" %}"><span class="notranslate">{{ poi.name }}</span></a></h4>
+                            <address class="mT10 notranslate" style="padding-right: 5px"><span class="notranslate">{{poi.street_address}}<br>{{poi.cap}} {{poi.comune.0}}</span></address>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" style="padding-left:0; padding-right:0">
+                        <a href="{{poi.url}}" title="{% trans "show resource" %}"><img class="mapHome" style="border:0 solid transparent" src="{{ MEDIA_URL }}mappe/scuola-latina.jpg"></a>
+                    </div> 
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+        <div class="hidden-xs hidden-sm hidden-lg">
+            <div class="row row-eq-height mB20">
+            <div class="col-md-4">
+                <div class="back-box box-flex-a">
+                <h4 class="char-spacing text-center back-LightSkyBlue" style="color: #333; margin-top:0; padding:12px 6px">{% trans "Resources by" %} {% trans "theme area" %}</h4>
+                <article id="tema" class="view-list box-scroll-height">
+                {% for theme_id, theme_name, theme_slug, n in by_theme_list %}
+                    {% if theme_id != 49 %}
+                        <p>{{ theme_name|capfirst }} <span class="text-pre-wrap">[ <a href="/tema/{{ theme_slug }}/" title="{% trans "show an index" %} {% trans "of resources for" %} {{ theme_name }}">{{ n }}</a> ]</span></p>
+                    {% elif theme_id == 49 %}
+                        {% if request.user.is_superuser or request.user.is_staff %}
+                            <p>{{ theme_name|capfirst }} <span class="text-pre-wrap">[ <a href="/tema/{{ theme_slug }}/" title="{% trans "show an index" %} {% trans "of resources for" %} {{ theme_name }}">{{ n }}</a> ]</span></p>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                </article>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="back-box box-flex-b">
+                <h4 class="color-base char-spacing text-center back-Zone" style="color:white;  margin-top:0; padding:12px 6px">{% trans "Resources by" %} {% trans "zones of" %} <span class="ntranslate">Roma</span></h4>
+                <div><img class="mapHome" src="{{ MEDIA_URL }}mappe/mappa_roma.jpg"></div>
+                <div id="accordion" class="back-box">
+                {% for topotype_name_plural, topotype_sublist in by_zone_list|slice:":4" %}
+                    <div>
+                        <h5 style="font-weight: bold; color: #333; margin-top:0; padding: 10px"><a href="#" class="toggleIcon" style="color:#333"><i class="fa fa-plus-square"></i></a> {{ topotype_name_plural|capfirst }}</h5>
+                        {% if topotype_sublist|length > 6 %}
+                        <article id="zona_{{ forloop.counter }}" class="view-list box-scroll" style="height: 20vh; display:none">
+                        {% else %}
+                        <article id="zona_{{ forloop.counter }}" class="view-list" style="display:none">
+                        {% endif %}
+                        {% for zone_code, zone_name, zone_slug, n in topotype_sublist %}
+                            <p>{{ zone_name }} <small>({{ zone_code }})</small> <span class="text-pre-wrap">[ <a href="/indice-zona/{{ zone_slug }}/" title="{% trans "show an index" %} {% trans "of resources in the zone" %} {{ zone_name }}">{{ n }}</a> ]</span></p>
+                        {% endfor %}
+                        </article>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="back-box box-flex-b">
+                <h4 class="char-spacing text-center back-Zone" style="color:white; margin-top:0; padding:12px 6px">{% trans "Resources by" %} {% trans "zones of" %} <span class="ntranslate">Lazio</span></h4>
+                <div class="back-box"><img class="mapHome" src="{{ MEDIA_URL }}mappe/mappa_lazio.jpg"></div>
+                <article id="prov" class="view-list">
+                {% for zone_code, zone_name, zone_slug, n in by_prov_list %}
+                    <p>{{ zone_name }} <span class="text-pre-wrap">[ <a href="/indice-zona/{{ zone_slug }}/" title="{% trans "show an index" %} {% trans "of resources in the zone" %} {{ zone_name }}">{{ n }}</a> ]</span></p>
+                {% endfor %}
+                </article>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4 class="color-base char-spacing text-center" style="margin-top:0; padding:12px 6px; background: #B5813A; color: white">In evidenza</h4>
+                {% for poitype in poitype_list %}
+                    <div class="text-center mB10" style="position:relative"><a href="/categoria/{{poitype.slug}}/"><img class="mapHome" src="{{ MEDIA_URL }}mappe/{{poitype.slug}}.jpg"></a><div class="demiBold" style="padding:6px; background:rgba(255,255,255,0.8); width: 100%; position:absolute; bottom:0"><a href="/categoria/{{poitype.slug}}/">{{ poitype.name }}</a></div></div>
+                {% endfor %}
+            </div>
+            <div class="col-md-4">
+               <h4 class="color-roma char-spacing text-center" style="margin-top:0; padding:12px 6px">Risorse in primo piano</h4>
+{% for poi in pois_list|slice:"2" %}
+
+                            <h4 style="font-size:16px; padding-right: 5px"><a href="{{poi.url}}" title="{% trans "show resource" %}"><span class="notranslate">{{ poi.name }}</span></a></h4>
+                            <address class="mT10 notranslate" style="padding-right: 5px"><span class="notranslate">{{poi.street_address}}<br>{{poi.cap}} {{poi.comune.0}}</span></address>
+                        <a href="{{poi.url}}" title="{% trans "show resource" %}"><img class="mapHome" style="border:0 solid transparent" src="{{ MEDIA_URL }}mappe/scuola-latina.jpg"></a>
+                 {% endfor %}
+            </div>
+        </div>
+</div>
+
+    </div>
+
+{% endblock content %}
+
+{% block body_scripts %}
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $('h5 a.toggleIcon').on('click', function(event){
+                event.preventDefault();
+                $("body").css("cursor", "default");
+                var accordion = $(this).parent().parent();
+                var accordionContent = accordion.children('article');
+                idAccordionContent = accordionContent.attr('id');
+                if ($("#accordion").find("div.open")) {
+                    contentOpen = $("div.open").children('article');
+                    idContent = contentOpen.attr('id');
+                    if (idContent != idAccordionContent) {
+                        $("div.open h5 a.toggleIcon").children('i').attr("class","fa fa-plus-square");
+                        contentOpen.slideToggle(250);
+                        $("div.open").toggleClass("open", false);
+                    }
+                }
+                var accordionToggleIcon = $(this);
+                accordion.toggleClass("open");
+                accordionContent.slideToggle(250);
+                if (accordion.hasClass("open")) {
+                    accordionToggleIcon.children('i').attr("class","fa fa-minus-square");
+                } else {
+                    accordionToggleIcon.children('i').attr("class","fa fa-plus-square");
+                }
+            });
+        });
+    </script>
+{% endblock body_scripts %} 

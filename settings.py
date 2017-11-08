@@ -279,7 +279,7 @@ TEMPLATES = [
                 'django.template.context_processors.i18n',
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
-                # MMR added ??? - 'django.template.context_processors.tz',
+                'django.template.context_processors.tz',
                 'django.template.context_processors.csrf',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.request',
@@ -295,8 +295,6 @@ TEMPLATES = [
         },
     },
 ]
-
-
 
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -318,6 +316,10 @@ INSTALLED_APPS = (
     # MMR 'filebrowser',
     'bootstrap3',
     'captcha',
+    'dal',
+    'dal_select2',
+    'dal_queryset_sequence',
+    'dal_select2_queryset_sequence',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -335,10 +337,6 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount.providers.twitter',
     # MMR 'richtext_blog',
     # MMR 'autocomplete_light',
-    'dal',
-    'dal_select2',
-    'dal_queryset_sequence',
-    'dal_select2_queryset_sequence',
     # 'portlets',
     # MMR 'romaportlets.text',
     'menu',

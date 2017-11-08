@@ -5,8 +5,10 @@ from __future__ import unicode_literals
 
 from django.conf.urls import include, url
 #MMR added
+from pois.views import StreetAutocomplete, ZoneAutocomplete, PoiAutocomplete, TagAutocomplete, RouteAutocomplete, UserAutocomplete
 from roma import views as roma_views
 from pois import views as pois_views
+from pois import search_indexes as pois_searchindexes
 
 """
 from roma import settings
@@ -151,9 +153,6 @@ urlpatterns = [
     url(r'^zona/(?P<zone_slug>.+)/$', pois_views.zone_detail_by_slug, name='zona'),
     url(r'^itinerario/(?P<route_slug>.+)/$', pois_views.route_detail_by_slug, name='itinerario'),
     url(r'^toponimo/(?P<street_slug>.+)/$', pois_views.street_detail_by_slug, name='toponimo'),
-    # url(r'^toponimo-autocomplete/$', street_autocomplete.as_view(),name='toponimo-autocomplete'),
-    url(r'^toponimo-autocomplete/$', pois_views.street_autocomplete,name='toponimo-autocomplete'),
-
     url(r'^viewport$', pois_views.viewport, name='refresh viewport'),
     url(r'^tema/(?P<tag_slug>[\w-]+)/zona/(?P<zone_slug>.+)/$', pois_views.tag_zone_detail_by_slug, name='tema-zona'),
     url(r'^tema/(?P<tag_slug>.+)/$', pois_views.tag_detail_by_slug, name='tema'),
@@ -179,6 +178,15 @@ urlpatterns = [
     url(r'^viewport_pois$', pois_views.viewport_pois, name='risorse in viewport'),
     url(r'^update_colocations$', pois_views.pois_update_colocations, name='pois_update_colocations'),
     url(r'^analisi-risorse$', pois_views.poi_analysis, name='poi_analysis'),
+    
+    url(r'^toponimo-autocomplete/$', StreetAutocomplete.as_view(),name='toponimo-autocomplete'),
+    url(r'^zona-autocomplete/$', ZoneAutocomplete.as_view(),name='zona-autocomplete'),
+    url(r'^risorsa-autocomplete/$', PoiAutocomplete.as_view(),name='risorsa-autocomplete'),
+    url(r'^tema-autocomplete/$', TagAutocomplete.as_view(),name='tema-autocomplete'),
+    url(r'^itinerario-autocomplete/$', RouteAutocomplete.as_view(),name='itinerario-autocomplete'),
+    url(r'^utente-autocomplete/$', UserAutocomplete.as_view(),name='utente-autocomplete'),
+    url(r'^navigation_autocomplete$', pois_searchindexes.navigation_autocomplete, name='navigation_autocomplete'),
+    url(r'^cerca/', pois_views.search_all, name='search_all'),
 ]
 """
 urlpatterns += patterns('',
@@ -255,7 +263,3 @@ if settings.USE_HAYSTACK:
                 load_all=False
             ), name='haystack_search'),
     ]
-# URL TESTING BOOTSTRAP3
-urlpatterns += [
-    url(r'^roma_base$', roma_views.roma_base, name='roma base'),
-]

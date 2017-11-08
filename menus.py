@@ -150,6 +150,7 @@ def resources_children(request):
             url='/poi-contributors',
             weight=80,
         ))
+    """
     children.append (MenuItem(
         _("Advanced search"),
         url='/cerca/',
@@ -160,6 +161,7 @@ def resources_children(request):
         url='/help/search',
         weight=80,
     ))
+    """
     children.append (MenuItem(
         _("Suggest a resource"),
         url='/nuova-risorsa',
