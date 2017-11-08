@@ -268,7 +268,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': (
-             sys.platform.count('linux') and '/home/ubuntu/django/roma/roma/templates' or '/django11/roma/roma/templates',
+             # sys.platform.count('linux') and '/home/ubuntu/django/roma/roma/templates' or '/django11/roma/roma/templates',
+             os.path.join(PROJECT_ROOT, 'templates'),
              ),
         'OPTIONS': {
             'context_processors': [
