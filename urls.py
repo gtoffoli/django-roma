@@ -107,7 +107,7 @@ urlpatterns = [
     url(r'^municipi$', pois_views.zone_index_map, {'zonetype_id': 7, 'prefix': 'M.'}, name='municipi'),
     url(r'^comuni', pois_views.zone_index_map, {'zonetype_id': 7, 'prefix': 'COM.'}, name='comuni'),
     url(r'^vecchi_municipi$', pois_views.zone_index_map, {'zonetype_id': 1}, name='vecchi municipi'),
-    url(r'^zone$', pois_views.zone_index_map, {'zonetype_id': 2}),
+    # url(r'^zone$', pois_views.zone_index_map, {'zonetype_id': 2}),
     url(r'^topo$', pois_views.zone_index_map, {'zonetype_id': 3}),
     url(r'^rioni$', pois_views.zone_index_map, {'zonetype_id': 3, 'prefix': 'R.'}),
     url(r'^quartieri$', pois_views.zone_index_map, {'zonetype_id': 3, 'prefix': 'Q.'}),

@@ -31,8 +31,8 @@
     var dismissLinkId = 'cookieChoiceDismiss';
 
     function _createHeaderElement(cookieText, dismissText, linkText, linkHref) {
-      var butterBarStyles = 'position:fixed;width:100%;background-color:#eee;' +
-          'margin:0; left:0; top:0;padding:4px;z-index:1000;text-align:center;';
+      var butterBarStyles = 'position:fixed;width:100%;background-color:#333;' +
+          'margin:0; left:0; bottom:0;padding:12px 24px; z-index:1000;text-align:left;color: #fff;';
 
       var cookieConsentElement = document.createElement('div');
       cookieConsentElement.id = cookieConsentId;
@@ -102,7 +102,8 @@
       _setElementText(dismissLink, dismissText);
       dismissLink.id = dismissLinkId;
       dismissLink.href = '#';
-      dismissLink.style.marginLeft = '24px';
+      /*dismissLink.style.marginLeft = '24px';*/
+      dismissLink.style.cssText = 'margin-left:24px; border: 1px solid #5fb0cc; padding: 3px 12px;';
       return dismissLink;
     }
 
@@ -110,8 +111,9 @@
       var infoLink = document.createElement('a');
       _setElementText(infoLink, linkText);
       infoLink.href = linkHref;
-      infoLink.target = '_blank';
-      infoLink.style.marginLeft = '8px';
+      /*infoLink.target = '_blank';
+      infoLink.style.marginLeft = '8px';*/
+      infoLink.style.cssText = 'margin-left: 8px; border: 1px solid #5fb0cc; padding: 3px 12px;';
       return infoLink;
     }
 

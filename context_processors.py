@@ -12,6 +12,7 @@ def context_processor(request):
         'site_url': request.META.get('HTTP_HOST', 'www.romapaese.it'),
         'map': show_map,
         'use_localeurl': settings.USE_LOCALEURL,
+        'maps_key': settings.GOOGLE_MAPS_KEY,
     }
 
     return my_settings

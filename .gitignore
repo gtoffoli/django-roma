@@ -18,6 +18,7 @@ richtext_blog/
 utils/
 bootstrap/
 ol/
+google/
 *.bak
 *.bat
 *.old

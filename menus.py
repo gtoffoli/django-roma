@@ -25,7 +25,7 @@ def zones_children(request):
          url='/municipi',
          weight=10,
          ))
-    children.append(MenuItem(_("Rioni - historical quarters"),
+    children.append(MenuItem(_("Historical quarters"),
          url='/rioni',
          weight=10,
     ))
@@ -141,7 +141,7 @@ def resources_children(request):
             weight=80,
         ))
         children.append (MenuItem(
-            _("Da controllare"),
+            _("To be reviewed"),
             url='/analisi-risorse',
             weight=80,
         ))

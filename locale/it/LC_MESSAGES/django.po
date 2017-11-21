@@ -1,177 +1,261 @@
-# This file is distributed under the same license as the Django package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: RomaPaese\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-15 17:07+0200\n"
-"PO-Revision-Date: 2013-06-25 15:33+0200\n"
-"Last-Translator: Giovanni Toffoli <toffoli@linkroma.it>\n"
-"Language: it\n"
+"POT-Creation-Date: 2017-11-21 11:32+0100\n"
+"PO-Revision-Date: 2017-11-21 12:07+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Translated-Using: django-rosetta 0.7.1\n"
+"Language: it\n"
+"X-Generator: Poedit 1.7.6\n"
 
-#: .\forms.py:35 .\templates\account\profile.html:12
+#: .\forms.py:36 .\templates\account\profile.html:12
 msgid "First name"
 msgstr "Nome"
 
-#: .\forms.py:40 .\templates\account\profile.html:13
+#: .\forms.py:41 .\templates\account\profile.html:13
 msgid "Last name"
 msgstr "Cognome"
 
-#: .\menus.py:12
-msgid "My zone"
-msgstr "La mia zona"
-
-#: .\menus.py:16
-msgid "Macro-zones"
-msgstr "Macro-zone"
-
-#: .\menus.py:16 .\menus.py:20 .\menus.py:24 .\menus.py:28
-msgid "map"
-msgstr "mappa"
-
 #: .\menus.py:20
+msgid "Macrozones"
+msgstr "Macrozone"
+
+#: .\menus.py:24
 msgid "Municipalities"
 msgstr "Municipi"
 
-#: .\menus.py:24
+#: .\menus.py:28
+msgid "Historical quarters"
+msgstr "Rioni"
+
+#: .\menus.py:32
+msgid "Quarters"
+msgstr "Quartieri"
+
+#: .\menus.py:36
+msgid "Quarter extensions"
+msgstr "Suburbi"
+
+#: .\menus.py:40
+msgid "Suburban zones"
+msgstr "Zone dell'agro romano"
+
+#: .\menus.py:45
 msgid "Traditional city districts"
 msgstr "Zone toponomastiche"
 
-#: .\menus.py:28
+#: .\menus.py:49
+msgid "Provinces"
+msgstr "Province"
+
+#: .\menus.py:54
 msgid "Zipcode areas"
 msgstr "Zone CAP"
 
-#: .\menus.py:32
+#: .\menus.py:58
 msgid "Zone types"
 msgstr "Tipi di zona"
 
-#: .\menus.py:32
+#: .\menus.py:58
 msgid "list"
 msgstr "elenco"
 
-#: .\menus.py:46
+#: .\menus.py:72
 msgid "About"
 msgstr "Chi siamo"
 
-#: .\menus.py:51
+#: .\menus.py:77
 msgid "Our partners"
 msgstr "I nostri partner"
 
-#: .\menus.py:56
+#: .\menus.py:82
 msgid "Help us"
 msgstr "Dacci una mano"
 
-#: .\menus.py:61
+#: .\menus.py:87
 msgid "RomaPaese and the schools"
 msgstr "RomaPaese e le scuole"
 
-#: .\menus.py:66
+#: .\menus.py:92
 msgid "Donate"
 msgstr "Fai una donazione"
 
-#: .\menus.py:71
+#: .\menus.py:97
 msgid "Contacts"
 msgstr "Contatti"
 
-#: .\menus.py:80
+#: .\menus.py:107
 msgid "By theme area"
 msgstr "Per area tematica"
 
-#: .\menus.py:86
+#: .\menus.py:112
 msgid "By category"
 msgstr "Per categoria"
 
-#: .\menus.py:91
+#: .\menus.py:119
 msgid "By affiliation"
 msgstr "Per affiliazione"
 
-#: .\menus.py:102
+#: .\menus.py:124
+msgid "Routes"
+msgstr "Itinerari"
+
+#: .\menus.py:129
 msgid "Resource networks"
 msgstr "Reti di risorse"
 
-#: .\menus.py:107
+#: .\menus.py:134
 msgid "New entries"
 msgstr "Aggiunte recenti"
 
-#: .\menus.py:112
+#: .\menus.py:139
 msgid "Updates"
 msgstr "Aggiornamenti"
 
-#: .\menus.py:118
-msgid "Da controllare"
-msgstr ""
+#: .\menus.py:144
+msgid "To be reviewed"
+msgstr "Da controllare"
 
-#: .\menus.py:123
+#: .\menus.py:149
 msgid "Top contributors"
-msgstr "Principali contributi"
+msgstr "Principali contributori"
 
-#: .\menus.py:128
-msgid "Advanced search"
-msgstr "Ricerca avanzata"
-
-#: .\menus.py:133
-msgid "How to search"
-msgstr "Come cercare"
-
-#: .\menus.py:138
+#: .\menus.py:166
 msgid "Suggest a resource"
 msgstr "Segnala una risorsa"
 
-#: .\menus.py:147
-msgid "Our blogs"
-msgstr "I nostri blog"
-
-#: .\menus.py:152
+#: .\menus.py:182
 msgid "From the schools"
 msgstr "Dalle scuole"
 
-#: .\menus.py:157
+#: .\menus.py:187
 msgid "Citizens' committees"
 msgstr "Dai quartieri"
 
-#: .\menus.py:162
+#: .\menus.py:192
 msgid "Ethnic and linguistic communities"
 msgstr "Comunità etniche e linguistiche"
 
-#: .\menus.py:167
+#: .\menus.py:197
 msgid "Social networks"
 msgstr "Reti sociali"
 
-#: .\menus.py:172
+#: .\menus.py:202
 msgid "Why register"
 msgstr "Perché registrarsi"
 
-#: .\menus.py:215
+#: .\menus.py:245
 msgid "The resources"
 msgstr "Le risorse"
 
-#: .\menus.py:220
+#: .\menus.py:250
 msgid "The zones"
 msgstr "Le zone"
 
-#: .\menus.py:225
+#: .\menus.py:255
 msgid "The project"
 msgstr "Il progetto"
 
-#: .\menus.py:230
+#: .\menus.py:260
 msgid "Community"
 msgstr "Comunità"
 
-#: .\views.py:232
-msgid "PayPal - The safer, easier way to pay online!"
-msgstr "PayPal - Il sistema di pagamento online più facile e sicuro!"
+#: .\templates\account\login.html:6 .\templates\account\login.html:12
+#: .\templates\account\login.html:44
+msgid "Sign In"
+msgstr "Accedi"
 
-#: .\templates\account\profile.html:4 .\templates\account\profile.html.py:6
+#: .\templates\account\login.html:17
+#, python-format
+msgid ""
+"Please sign in with one\n"
+"                    of your existing third party accounts. Or, <a href="
+"\"%(signup_url)s\">sign up</a>\n"
+"for a %(site_name)s account and sign in below:"
+msgstr ""
+"Per favore, loggati con uno\n"
+"dei tuoi account sociali. O, <a href=\"%(signup_url)s\">registra</a>\n"
+"un account per %(site_name)s e loggati."
+
+#: .\templates\account\login.html:27
+msgid "or"
+msgstr "oppure"
+
+#: .\templates\account\login.html:34
+#, python-format
+msgid ""
+"If you have not created an account yet, then please\n"
+"                    <a href=\"%(signup_url)s\">sign up</a> first."
+msgstr ""
+"Se non hai ancora creato un account, \n"
+"<a href=\"%(signup_url)s\">Registrati</a>"
+
+#: .\templates\account\login.html:45
+msgid "Forgot Password?"
+msgstr "Hai dimenticato la Password?"
+
+#: .\templates\account\logout.html:5 .\templates\account\logout.html:11
+#: .\templates\account\logout.html:20 .\templates\roma\roma_base.html:189
+#: .\templates\roma\roma_base.html:293
+msgid "Sign Out"
+msgstr "Disconnetti"
+
+#: .\templates\account\logout.html:13
+msgid "Are you sure you want to sign out?"
+msgstr "Sei sicuro di volerti disconnettere?"
+
+#: .\templates\account\password_change.html:5
+#: .\templates\account\password_change.html:11
+#: .\templates\account\password_change.html:16
+msgid "Change Password"
+msgstr "Cambia la tua Password"
+
+#: .\templates\account\password_reset.html:6
+#: .\templates\account\password_reset.html:12
+#: .\templates\account\password_reset_done.html:6
+#: .\templates\account\password_reset_done.html:12
+msgid "Password Reset"
+msgstr "Re-imposta la Password"
+
+#: .\templates\account\password_reset.html:17
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+"Hai dimenticato la tua password? Inserisci qui sotto l'indirizzo e-mail con "
+"cui ti sei registrato, ti invieremo una mail con un link per re-impostarla."
+
+#: .\templates\account\password_reset.html:22
+msgid "Reset My Password"
+msgstr "Re-imposta la mia Password"
+
+#: .\templates\account\password_reset.html:25
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "Se hai qualche problema a re-impostare la password, contattaci!"
+
+#: .\templates\account\password_reset_done.html:18
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Ti abbiamo spedito una mail. Contattaci se non la ricevi entro qualche "
+"minuto."
+
+#: .\templates\account\profile.html:4 .\templates\account\profile.html:9
 msgid "Welcome page"
 msgstr "Pagina di accoglienza"
 
-#: .\templates\account\profile.html:8
+#: .\templates\account\profile.html:10
 msgid "here is your user profile"
 msgstr "questo è il tuo profilo utente"
 
@@ -191,535 +275,198 @@ msgstr "Account di social network"
 msgid "Go to the"
 msgstr "Vai alla"
 
-#: .\templates\admin\base_site.html:15 .\templates\admin\base_site.html:20
-msgid "Amministrazione di RomaPaese"
-msgstr "Amministrazione di RomaPaese"
-
-#: .\templates\admin\pois\poi\change_form.html:35
-msgid "Home"
-msgstr ""
-
-#: .\templates\admin\pois\poi\change_form.html:38
-#: .\templates\richtext_blog\add_popup.html:6
-#: .\templates\richtext_blog\add_popup.html:12
-msgid "Add"
-msgstr "Aggiungi"
-
-#: .\templates\admin\pois\poi\change_form.html:49
-msgid "History"
-msgstr ""
-
-#: .\templates\admin\pois\poi\change_form.html:50
-msgid "View on site"
-msgstr ""
-
-#: .\templates\admin\pois\poi\change_form.html:76
-#: .\templates\admin\richtext_blog\post\change_form.html:159
-msgid "Please correct the error below."
-msgid_plural "Please correct the errors below."
-msgstr[0] "Per favore correggi l'errore qui sotto."
-msgstr[1] "Per favore correggi gli errori qui sotto."
-
-#: .\templates\datatrans\base.html:5
-msgid "Data Translation"
-msgstr ""
-
-#: .\templates\datatrans\base.html:16
-msgid "Datatrans - Model Translation"
-msgstr ""
-
-#: .\templates\datatrans\base.html:19
-msgid "Welcome,"
-msgstr ""
-
-#: .\templates\datatrans\base.html:19
-msgid "Site administration"
-msgstr ""
-
-#: .\templates\datatrans\base.html:19
-msgid "Change password"
-msgstr ""
-
-# _account_bar.html
-#: .\templates\datatrans\base.html:19 .\templates\roma\_account_bar.html:25
-#: .\templates\roma\base.html:145 .\templates\roma\language.html:24
-msgid "Log out"
-msgstr "Esci"
-
-#: .\templates\datatrans\base.html:24
-msgid "Models"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:4
-#: .\templates\datatrans\model_detail.html:9
-#: .\templates\datatrans\model_detail.html:13
-#: .\templates\datatrans\model_detail.html:29
-#: .\templates\datatrans\object_list.html:3
-#: .\templates\datatrans\object_list.html:4
-#: .\templates\datatrans\object_list.html:18
-msgid "Translations for"
-msgstr "Traduzioni per"
-
-#: .\templates\datatrans\model_detail.html:32
-#, python-format
-msgid "Progress: %(percent)s%% (%(done)s/%(total)s)"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:39
-msgid "Jump to first to do"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:43
-#, python-format
-msgid "Jump to %(field_verbose_name)s field"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:48
-msgid "done"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:50
-msgid "to do"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:52
-msgid "to do (fuzzy)"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:82
-msgid "Link to this translation"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:105
-msgid "tick this checkbox if the translation is deliberately empty"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:105
-msgid "empty"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:107
-msgid "keep this original or fuzzy"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:107
-msgid "ignore"
-msgstr ""
-
-#: .\templates\datatrans\model_detail.html:116
-#: .\templates\richtext_blog\blog_edit.html:23
-#: .\templates\richtext_blog\post_edit.html:31
-msgid "Save"
-msgstr "Salva"
-
-#: .\templates\datatrans\model_list.html:4
-#: .\templates\datatrans\model_list.html:9
-msgid "Models to translate"
-msgstr ""
-
-#: .\templates\datatrans\model_list.html:10
-#, python-format
-msgid "%(words)s words"
-msgstr ""
-
-#: .\templates\datatrans\model_list.html:14
-msgid "Scan models"
-msgstr ""
-
-#: .\templates\datatrans\model_list.html:15
-#: .\templates\datatrans\obsolete_list.html:3
-#: .\templates\datatrans\obsolete_list.html:4
-#: .\templates\datatrans\obsolete_list.html:7
-msgid "Obsolete translations"
-msgstr ""
-
-#: .\templates\datatrans\model_list.html:21
-msgid "words"
-msgstr ""
-
-#: .\templates\datatrans\model_list.html:31
-msgid "Change"
-msgstr ""
-
-#: .\templates\datatrans\model_list.html:35
-msgid "Total"
-msgstr ""
-
-#: .\templates\datatrans\obsolete_list.html:10
-#, python-format
-msgid "There are %(obsolete_count)s obsolete messages."
-msgstr ""
-
-#: .\templates\datatrans\obsolete_list.html:11
-msgid ""
-"Please review them to see if you can reuse something,\n"
-"\t\t\tand when done click the 'Remove all obsoletes' button to clean the "
-"KeyValue table."
-msgstr ""
-
-#: .\templates\datatrans\obsolete_list.html:17
-#: .\templates\datatrans\obsolete_list.html:35
-msgid "Remove all obsoletes"
-msgstr ""
-
-#: .\templates\datatrans\obsolete_list.html:21
-msgid "Obsolete message"
-msgstr ""
-
-#: .\templates\datatrans\obsolete_list.html:22
-msgid "Language"
-msgstr ""
-
-#: .\templates\datatrans\obsolete_list.html:40
-msgid "There are no obsolete messages! Yay!"
-msgstr ""
-
-#: .\templates\richtext_blog\add_popup.html:18
-msgid "Confirm"
-msgstr "Conferma"
-
-#: .\templates\richtext_blog\add_popup.html:18
-msgid "Cancel"
-msgstr "Annulla"
-
-#: .\templates\richtext_blog\blog-base.html:33
-msgid "Recent Posts"
-msgstr "Post recenti"
-
-#: .\templates\richtext_blog\blog-base.html:44
-msgid "Tags"
-msgstr "Tag"
-
-#: .\templates\richtext_blog\blog-base.html:55
-msgid "Feeds"
-msgstr "Feed"
-
-#: .\templates\richtext_blog\blog-base.html:66
-msgid "Archive"
-msgstr "Archivio"
-
-#: .\templates\richtext_blog\blog-macros.html:13
-msgid "Show all posts of the blog"
-msgstr "Mostra tutti i post del blog"
-
-#: .\templates\richtext_blog\blog-macros.html:21
-#: .\templates\richtext_blog\blog-macros.html:31
-msgid "Show the summary of the blog"
-msgstr "Mostra il sommario del blog"
-
-#: .\templates\richtext_blog\blog-macros.html:63
-msgid "Posted"
-msgstr "Post creato"
-
-#: .\templates\richtext_blog\blog-macros.html:63
-#: .\templates\richtext_blog\blog_detail.html:13
-#: .\templates\richtext_blog\blog_index.html:17
-msgid "by"
-msgstr "di"
-
-#: .\templates\richtext_blog\blog-macros.html:65
-msgid "comments"
-msgstr "commenti"
-
-#: .\templates\richtext_blog\blog-macros.html:68
-msgid "View comments"
-msgstr "Leggi i commenti"
-
-#: .\templates\richtext_blog\blog-macros.html:80
-msgid "Filed under"
-msgstr "Tag"
-
-#: .\templates\richtext_blog\blog-macros.html:125
-msgid "All posts"
-msgstr "Tutti i post"
-
-#: .\templates\richtext_blog\blog_detail.html:14
-msgid "show resource"
-msgstr "mostra la risorsa"
-
-#: .\templates\richtext_blog\blog_detail.html:18
-msgid "Summary"
-msgstr "Sommario"
-
-#: .\templates\richtext_blog\blog_detail.html:27
-msgid "Add a post"
-msgstr "Aggiungi un post"
-
-#: .\templates\richtext_blog\blog_edit.html:4
-#: .\templates\richtext_blog\blog_edit.html:6
-msgid "Editing of the blog"
-msgstr "Modifica del blog"
-
-#: .\templates\richtext_blog\blog_index.html:8
-#: .\templates\richtext_blog\blog_index.html:10
-msgid "The blogs of"
-msgstr "I blog di"
-
-#: .\templates\richtext_blog\blog_index.html:13
-msgid "List of the blogs"
-msgstr "Elenco dei blog"
-
-#: .\templates\richtext_blog\popup_plus.html:7
-#: .\templates\richtext_blog\popup_plus.html:9
-msgid "Add another"
-msgstr "Aggiungi un altro"
-
-#: .\templates\richtext_blog\post-detail.html:34
-msgid "Comments"
-msgstr "Commenti"
-
-#: .\templates\richtext_blog\post-detail.html:41
-msgid "Anonymous"
-msgstr "Anonimo"
-
-#: .\templates\richtext_blog\post-detail.html:54
-msgid "Comments are closed"
-msgstr "I commenti sono chiusi"
-
-#: .\templates\richtext_blog\post-detail.html:56
-msgid "Leave a comment"
-msgstr "Lascia un commento"
-
-#: .\templates\richtext_blog\post-detail.html:87
-msgid "Submit Comment"
-msgstr "Invia Commento"
-
-#: .\templates\richtext_blog\post-list.html:17
-#: .\templates\richtext_blog\post-list.html:32
-msgid "All Posts"
-msgstr "Tutti i post"
-
-#: .\templates\richtext_blog\post-list.html:19
-#: .\templates\richtext_blog\post-list.html:32
-msgid "of the blog"
-msgstr "del blog"
-
-#: .\templates\richtext_blog\post_edit.html:4
-#: .\templates\richtext_blog\post_edit.html:6
-msgid "Editing of the post"
-msgstr "Modifica del post"
-
-#: .\templates\richtext_blog\post_edit.html:4
-#: .\templates\richtext_blog\post_edit.html:6
-msgid "New post"
-msgstr "Nuovo post"
-
-#: .\templates\richtext_blog\tag-view.html:7
-#: .\templates\richtext_blog\tag-view.html:11
-msgid "Posts tagged with"
-msgstr "Post taggati con"
-
-#: .\templates\roma\_account_bar.html:17 .\templates\roma\base.html:136
-#: .\templates\roma\language.html:16
-msgid "My profile"
-msgstr "Il mio profilo"
-
-#: .\templates\roma\_account_bar.html:18 .\templates\roma\base.html:137
-#: .\templates\roma\language.html:17
-msgid "My resources"
-msgstr "Le mie risorse"
-
-#: .\templates\roma\_account_bar.html:20 .\templates\roma\base.html:139
-#: .\templates\roma\language.html:19
-msgid "Admin"
-msgstr ""
-
-# _account_bar.html
-#: .\templates\roma\_account_bar.html:31 .\templates\roma\base.html:152
-#: .\templates\roma\language.html:30
-msgid "Sign Up"
+#: .\templates\account\signup.html:5 .\templates\roma\roma_base.html:192
+#: .\templates\roma\roma_base.html:255
+msgid "Signup"
 msgstr "Registrati"
 
-# _account_bar.html
-#: .\templates\roma\_account_bar.html:33 .\templates\roma\base.html:154
-#: .\templates\roma\language.html:32
-msgid "Log In"
-msgstr "Accedi"
+#: .\templates\account\signup.html:11 .\templates\account\signup.html:19
+msgid "Sign Up"
+msgstr "Registrazione"
 
-#: .\templates\roma\base.html:63
-msgid "search ... "
-msgstr "cerca ..."
-
-#: .\templates\roma\base.html:90
+#: .\templates\account\signup.html:12
+#, python-format
 msgid ""
-"This site makes use of cookies for statistical survey and for improving the "
-"user experience"
-msgstr ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr "Hai già un account valido? <a href=\"%(login_url)s\">Accedi</a>."
 
-#: .\templates\roma\base.html:90
-msgid "close message"
-msgstr ""
+#: .\templates\account\verification_sent.html:5
+#: .\templates\account\verification_sent.html:11
+msgid "Verify Your E-mail Address"
+msgstr "Verifica il tuo indirizzo E-Mail."
 
-#: .\templates\roma\base.html:90
-msgid "learn more"
-msgstr ""
-
-# base.html
-#: .\templates\roma\base.html:117
-msgid "go home"
-msgstr "torna alla pagina iniziale"
-
-#: .\templates\roma\base.html:124
-msgid "enter"
-msgstr "digita"
-
-#: .\templates\roma\base.html:124
-msgid "characters or a few more"
-msgstr "caratteri o pochi più"
-
-#: .\templates\roma\base.html:190
+#: .\templates\account\verification_sent.html:13
 msgid ""
-"Hint: use the search box in the blue bar above to quickly search in whole "
-"Rome: resources, categories, streets, districts."
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
 msgstr ""
-"Suggerimento: usa la casella di ricerca nella barra azzurra per cercare "
-"velocemente in tutta Roma: risorse, categorie, strade, quartieri."
+"Ti abbiamo inviato una e-mail con un Link inserito all'interno. Per "
+"completare il procedimento di verifica clicca sul Link. Contattaci se non "
+"ricevi la mail entro qualche minuto."
 
-#: .\templates\roma\donate.html:4 .\templates\roma\donate.html.py:6
+#: .\templates\roma\donate.html:4 .\templates\roma\donate.html:9
 msgid "Donate to"
 msgstr "Fai una donazione a"
 
-#: .\templates\roma\donate_thanks.html:4 .\templates\roma\donate_thanks.html:6
+#: .\templates\roma\donate_thanks.html:4
+#: .\templates\roma\donate_thanks.html:10
 msgid "Thanks for your donation to"
 msgstr "Grazie per la tua donazione a"
 
-#: .\templates\roma\partners.html:6
-msgid "sponsors"
-msgstr "sponsor"
+#: .\templates\roma\home.html:5
+msgid "culture, well-being, solidarity"
+msgstr "cultura, benessere, solidarietà"
 
-#: .\templates\roma\partners.html:16
-msgid "partners"
-msgstr "partner"
+#: .\templates\roma\home.html:34 .\templates\roma\home.html:109
+#: .\templates\roma\home.html:189 .\templates\roma\home.html:266
+msgid "resources by theme area"
+msgstr "risorse per area tematica"
 
-#: .\templates\roma\partners.html:22
+#: .\templates\roma\home.html:38 .\templates\roma\home.html:41
+#: .\templates\roma\home.html:113 .\templates\roma\home.html:116
+#: .\templates\roma\home.html:193 .\templates\roma\home.html:196
+#: .\templates\roma\home.html:270 .\templates\roma\home.html:273
+msgid "show an index of resources for"
+msgstr "mostra un indice delle risorse per"
+
+#: .\templates\roma\home.html:50 .\templates\roma\home.html:125
+#: .\templates\roma\home.html:205 .\templates\roma\home.html:280
+msgid "resources by zones of Roma"
+msgstr "risorse per le zone di Roma"
+
+#: .\templates\roma\home.html:58 .\templates\roma\home.html:72
+#: .\templates\roma\home.html:133 .\templates\roma\home.html:147
+#: .\templates\roma\home.html:213 .\templates\roma\home.html:227
+#: .\templates\roma\home.html:287 .\templates\roma\home.html:298
+msgid "show an index of resources in the zone"
+msgstr "mostra un indice delle risorse nella zona"
+
+#: .\templates\roma\home.html:68 .\templates\roma\home.html:143
+#: .\templates\roma\home.html:223 .\templates\roma\home.html:295
+msgid "resources by zones of Lazio"
+msgstr "risorse per le zone del Lazio"
+
+#: .\templates\roma\home.html:78 .\templates\roma\home.html:156
+#: .\templates\roma\home.html:236 .\templates\roma\home.html:303
 msgid "in the spotlight"
 msgstr "in evidenza"
 
-# breadcrumbs
-#: .\templatetags\django_bootstrap_breadcrumbs.py:68
-msgid "You are here"
-msgstr "Tu sei qui"
+#: .\templates\roma\home.html:81 .\templates\roma\home.html:158
+#: .\templates\roma\home.html:238 .\templates\roma\home.html:306
+msgid "show the resources on the map by category"
+msgstr "mostra le risorse sulla mappa per la categoria"
 
-#~ msgid "enter at least 3 characters"
-#~ msgstr "digita almeno 3 caratteri"
+#: .\templates\roma\home.html:87 .\templates\roma\home.html:164
+#: .\templates\roma\home.html:244 .\templates\roma\home.html:311
+msgid "featured resources"
+msgstr "risorse in primo piano"
 
-#~ msgid "A few organisations"
-#~ msgstr "Alcune organizzazioni"
+#: .\templates\roma\home.html:93 .\templates\roma\home.html:98
+#: .\templates\roma\home.html:170 .\templates\roma\home.html:172
+#: .\templates\roma\home.html:250 .\templates\roma\home.html:252
+#: .\templates\roma\home.html:315 .\templates\roma\partners.html:5
+#: .\templates\roma\partners.html:16 .\templates\roma\partners.html:17
+#: .\templates\roma\partners.html:18 .\templates\roma\partners.html:26
+#: .\templates\roma\partners.html:39 .\templates\roma\partners.html:40
+#: .\templates\roma\partners.html:41 .\templates\roma\partners.html:50
+#: .\templates\roma\partners.html:62 .\templates\roma\partners.html:63
+#: .\templates\roma\partners.html:64
+msgid "show resource"
+msgstr "mostra la risorsa"
 
-#~ msgid "Resource maps"
-#~ msgstr "Mappe di risorse"
+#: .\templates\roma\partners.html:4 .\templates\roma\partners.html:25
+#: .\templates\roma\partners.html:49
+msgid "sponsors"
+msgstr "sponsor"
 
-#~ msgid "Last modified"
-#~ msgstr "Ultima modifica"
+#: .\templates\roma\partners.html:9 .\templates\roma\partners.html:30
+#: .\templates\roma\partners.html:54
+msgid "partners"
+msgstr "partner"
 
-#~ msgid ""
-#~ "Quickly search in whole Rome: resources, categories, streets, districts."
-#~ msgstr ""
-#~ "Cerca velocemente in tutta Roma: risorse, categorie, strade, quartieri."
-
-# search
-#~ msgid "Search this site"
-#~ msgstr "Cerca nel sito"
-
-#~ msgid "Confirm E-mail Address"
-#~ msgstr "Confirma Indirizzo E-mail"
-
-#~ msgid ""
-#~ "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-"
-#~ "mail address for user %(user_display)s."
-#~ msgstr ""
-#~ "Per favore conferma che <a href=\"mailto:%(email)s\">%(email)s</a> è un "
-#~ "indirizzo e-mail dell'utente %(user_display)s."
-
-#~ msgid ""
-#~ "This e-mail confirmation link expired or is invalid. Please <a href="
-#~ "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
-#~ msgstr ""
-#~ "Questo link di conferma e-mail è scaduto o non valido. Per favore <a href="
-#~ "\"%(email_url)s\">emetti una nuova richiesta di conferma e-mail</a>."
-
-#~ msgid ""
-#~ "You have confirmed that <a href=\"mailto:%(email)s\">%(email)s</a> is an "
-#~ "e-mail address for user %(user_display)s."
-#~ msgstr ""
-#~ "Hai confermato che <a href=\"mailto:%(email)s\">%(email)s</a> è un "
-#~ "indirizzoe-mail dell'utente %(user_display)s."
-
-# login.html
-#~ msgid "Sign In"
-#~ msgstr "Accedi"
-
-# login.html
- msgid ""
-"Please sign in with one\n"
-"of your existing third party accounts. Or, <a href=\"%(signup_url)s"
-"\">sign up</a> \n"
-"for a %(site_name)s account and sign in below:"
+#: .\templates\roma\roma_base.html:10
+msgid ""
+"Roma, Lazio, quarters, house, family, health, school, work, culture, services"
 msgstr ""
-"Per favore, loggati con uno\n"
-"dei tuoi account sociali. O, <a href=\"%(signup_url)s\">registra</a>\n"
-"un account per %(site_name)s e loggati."
+"Roma, Lazio, quartieri, casa, famiglia, salute, scuola, lavor, cultura, "
+"servizi"
 
-# login.html
-msgid "or"
-msgstr "oppure"
+#: .\templates\roma\roma_base.html:11
+msgid ""
+"Culture, well-being, solidarity: geolocated resources for Roma zones and "
+"municipalities in Lazio"
+msgstr ""
+"Cultura, benessere, solidarietà: risorse geolocalizzate per le zone di Roma "
+"e i comuni del Lazio"
 
-# login.html
-#~ msgid "Forgot Password?"
-#~ msgstr "Hai dimenticato la password?"
+#: .\templates\roma\roma_base.html:181 .\templates\roma\roma_base.html:226
+#: .\templates\roma\roma_base.html:355 .\templates\roma\roma_base.html:365
+msgid "enter"
+msgstr "digita"
 
-#  logout.html templates/account/logout.html.py
-#~ msgid "Sign Out"
-#~ msgstr "Disconnetti"
+#: .\templates\roma\roma_base.html:181 .\templates\roma\roma_base.html:226
+#: .\templates\roma\roma_base.html:355 .\templates\roma\roma_base.html:365
+msgid "characters or a few more"
+msgstr "caratteri o pochi più"
 
-#~ msgid "Are you sure you want to sign out?"
-#~ msgstr "Sei sicuro che vuoi disconnetterti?"
+#: .\templates\roma\roma_base.html:191 .\templates\roma\roma_base.html:254
+msgid "Log In"
+msgstr "Accedi"
 
-# password_reset.html:6
-# password_reset.html:10
-# password_reset_done.html:6
-# password_reset_done.html:9
-#~ msgid "Password Reset"
-#~ msgstr "Password Reset"
+#: .\templates\roma\roma_base.html:203 .\templates\roma\roma_base.html:233
+msgid "close"
+msgstr "chiudi"
 
-# password_reset.html:15
+#: .\templates\roma\roma_base.html:277 .\templates\roma\roma_base.html:287
+msgid "user"
+msgstr "utente"
+
+#: .\templates\roma\roma_base.html:279 .\templates\roma\roma_base.html:289
+msgid "Admin"
+msgstr "Amministratore"
+
+#: .\templates\roma\roma_base.html:281 .\templates\roma\roma_base.html:291
+msgid "My profile"
+msgstr "Il mio profilo"
+
+#: .\templates\roma\roma_base.html:282 .\templates\roma\roma_base.html:292
+msgid "My resources"
+msgstr "Le mie risorse"
+
+#: .\templates\roma\roma_base.html:293
+msgid "Logout"
+msgstr "Esci"
+
+#: .\templates\roma\roma_base.html:331
+msgid ""
+"We use cookies to personalise content and ads, to provide social media "
+"features and to analyse our traffic. We also share information about your "
+"use of our site with our social media, advertising and analytics partners "
+"who may combine it with other information you’ve provided to them or they’ve "
+"collected from your use of their services."
+msgstr ""
+"Utilizziamo i cookie per personalizzare i contenuti e gli annunci, fornire "
+"le funzioni dei social media e analizzare il nostro traffico. Inoltre "
+"forniamo informazioni sul modo in cui utilizzi il nostro sito ai nostri "
+"partner che si occupano di analisi dei dati web, pubblicità e social media, "
+"i quali potrebbero combinarle con altre informazioni che hai fornito loro o "
+"che hanno raccolto in base al tuo utilizzo dei loro servizi."
+
+#: .\templates\roma\roma_base.html:331
+msgid "learn more"
+msgstr "leggi di più"
+
+#: .\views.py:238
+msgid "PayPal - The safer, easier way to pay online!"
+msgstr "PayPal - Il sistema di pagamento online più facile e sicuro!"
+
 #~ msgid ""
-#~ "Forgotten your password? Enter your e-mail address below, and we'll send "
-#~ "you an e-mail allowing you to reset it."
+#~ "RomaPaese - Cultura, benessere, solidarietà: tutta Roma, quartiere per "
+#~ "quartiere, e tutto il Lazio, comune per comune"
 #~ msgstr ""
-#~ "Hai dimenticato la password? Inserisci il tuo indirizzo e-mail qui sotto, "
-#~ "e ti invieremo una e-mail che ti consentirà di resettarla."
+#~ "RomaPaese - Culture, well-being, solidarity: tutta Roma, quartiere per "
+#~ "quartiere, e tutto il Lazio, comune per comune"
 
-# password_reset.html:20
-#~ msgid "Reset My Password"
-#~ msgstr "Resetta la mia password"
-
-# password_reset.html:23
-#~ msgid "Please contact us if you have any trouble resetting your password."
-#~ msgstr ""
-#~ "Ti preghiamo di conttattarci se hai difficoltà a resettare la password."
-
-# signup.html
-#~ msgid "Signup"
-#~ msgstr "Registazione"
-
-# signup.html
-#~ msgid ""
-#~ "Already have an account? Then please <a href=\"%(login_url)s\">sign in</"
-#~ "a>."
-#~ msgstr ""
-#~ "Possiedi già un account? Allora dovresti fare <a href=\"%(login_url)s"
-#~ "\">log in</a>."
-
-#~ msgid "Verify Your E-mail Address"
-#~ msgstr "Verifica il tuo Indirizzo E-mail"
-
-#~ msgid ""
-#~ "We have sent an e-mail to <a href=\"mailto:%(email)s\">%(email)s</a> for "
-#~ "verification. Follow the link provided to finalize the signup process. "
-#~ "Please contact us if you do not receive it within a few minutes."
-#~ msgstr ""
-#~ "Abbiamo inviato un'e-mail a <a href=\"mailto:%(email)s\">%(email)s</a> "
-#~ "per verifica. Segui il link contenuto in essa per completare il processo "
-#~ "di registrazione. Per favore contattaci se non ricevi l'e-mail entro "
-#~ "qualche minuto."
+#~ msgid "You are here"
+#~ msgstr "Tu sei "
