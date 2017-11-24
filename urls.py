@@ -14,9 +14,9 @@ from pois import search_indexes as pois_searchindexes
 from roma import settings
 from roma.fairvillage.api import get_components, server_version, search_keys, radial_search, street_search, bbox_search, zone_search, get_pois
 """
-# import fairvillage
-# from fairvillage.api import get_components, server_version, search_keys, radial_search, street_search, bbox_search, zone_search
-# from fairvillage.api import get_pois, add_poi
+import fairvillage
+from fairvillage.api import get_components, server_version, search_keys, radial_search, street_search, bbox_search, zone_search
+from fairvillage.api import get_pois, add_poi
 
 from django.views.generic import TemplateView
 from django.conf import settings
@@ -37,42 +37,42 @@ from roma.models import Newsfeed
 # from pois.views import street_autocomplete
 
 # Routers provide an easy way of automatically determining the URL conf.
-# from fairvillage.api import fv_router
+from fairvillage.api import fv_router
 
 
 urlpatterns = [
     
-    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    # url(r'^rest/', include(fv_router.urls)),
-    # url(r'^api/', include(fv_router.urls)),
-    # url(r'^rest/get_components/$', get_components),
-    # url(r'^rest/search_keys/$', search_keys),
-    # url(r'^server_version/$', server_version),
-    # url(r'^search_keys/$', search_keys),
-    # url(r'^rest/radial_search/$', radial_search),
-    # url(r'^radial_search/$', radial_search),
-    # url(r'^rest/bbox_search/$', bbox_search),
-    # url(r'^bbox_search/$', bbox_search),
-    # url(r'^rest/get_pois/$', get_pois),
-    # url(r'^get_pois/$', get_pois),
-    # url(r'^zone_search/$', zone_search),
-    # url(r'^street_search/$', street_search),
-    # url(r'^add_poi/$', add_poi),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^rest/', include(fv_router.urls)),
+    url(r'^api/', include(fv_router.urls)),
+    url(r'^rest/get_components/$', get_components),
+    url(r'^rest/search_keys/$', search_keys),
+    url(r'^server_version/$', server_version),
+    url(r'^search_keys/$', search_keys),
+    url(r'^rest/radial_search/$', radial_search),
+    url(r'^radial_search/$', radial_search),
+    url(r'^rest/bbox_search/$', bbox_search),
+    url(r'^bbox_search/$', bbox_search),
+    url(r'^rest/get_pois/$', get_pois),
+    url(r'^get_pois/$', get_pois),
+    url(r'^zone_search/$', zone_search),
+    url(r'^street_search/$', street_search),
+    url(r'^add_poi/$', add_poi),
 
     # urlpatterns = patterns('',
-    # url(r'^fairvillage/$', roma_views.fairvillage', name='fairvillage'),
-    # url(r'^slim$', 'roma.views.slim', name='slim'),
-    # url(r'^search$', 'roma.views.search', name='search'),
-    # url(r'^tags', 'roma.views.tags', name='tags'),
-    # url(r'^tagcloud', 'roma.views.tagcloud', name='tagcloud'),
-    # url(r'^zonenet', 'pois.views.zone_net', name='zonenet'),
-    # url(r'^zonecloud', 'pois.views.zone_cloud', name='zonecloud'),
-    # url(r'^livesearch', 'roma.views.livesearch', name='livesearch'),
-    # url(r'^type/(?P<typ>\d+)/id/(?P<obj>\d+)/$', 'roma.views.generic'),
-    # url(r'^navigation_autocomplete$', 'pois.views.navigation_autocomplete', name='navigation_autocomplete'),
-    # GT -url(r'^cerca/(?P<q>.*)/$', 'pois.views.search_all', name='search_all'),
-    # url(r'^cerca/', 'pois.views.search_all', name='search_all'),
-    # url(r'^feed', Newsfeed(),),
+    url(r'^fairvillage/$', roma_views.fairvillage, name='fairvillage'),
+    url(r'^slim$', roma_views.slim, name='slim'),
+    url(r'^search$', roma_views.search, name='search'),
+    url(r'^tags', roma_views.tags, name='tags'),
+    url(r'^tagcloud', roma_views.tagcloud, name='tagcloud'),
+    url(r'^zonenet', pois_views.zone_net, name='zonenet'),
+    url(r'^zonecloud', pois_views.zone_cloud, name='zonecloud'),
+    url(r'^livesearch', roma_views.livesearch, name='livesearch'),
+    #url(r'^type/(?P<typ>\d+)/id/(?P<obj>\d+)/$', 'roma.views.generic'),
+    # url(r'^navigation_autocomplete$', pois_views.navigation_autocomplete, name='navigation_autocomplete'),
+    # url(r'^cerca/(?P<q>.*)/$', pois.views.search_all', name='search_all'),
+    # url(r'^cerca/', 'pois_views.search_all', name='search_all'),
+    url(r'^feed', Newsfeed(),),
 
     # MMR 20130422
     # url(r'^$', TemplateView.as_view(template_name='roma/index.html'), name='index',),

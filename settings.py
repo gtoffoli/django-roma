@@ -24,11 +24,10 @@ srid_OSM = 3857
 PROJECT_ROOT = os.path.dirname(__file__)
 PARENT_ROOT = os.path.dirname(PROJECT_ROOT)
 GRANDPARENT_ROOT = os.path.dirname(PARENT_ROOT)
-"""
-MMR temporaneamente disattivato
+
 FAIRVILLAGE_ROOT = os.path.join(GRANDPARENT_ROOT, 'fairvillage')
 sys.path.insert(0, FAIRVILLAGE_ROOT)
-"""
+
 sys.path.insert(0, GRANDPARENT_ROOT)
 sys.path.insert(0, PARENT_ROOT)
 sys.path.insert(0, PROJECT_ROOT)
@@ -57,28 +56,6 @@ USE_LOCALEURL = False
 SHOW_MAPS = True
 MAX_POIS = 50
 
-"""
-MMR private
-ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
-    ('Giovanni Toffoli', 'toffoli@linkroma.it'),
-)
-
-MANAGERS = ADMINS
-
-
-DATABASES = {
-    'default': {
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.contrib.gis.db.backends.postgis', # 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'roma',                  # Or path to database file if using sqlite3.
-        'USER': 'admin',                 # Not used with sqlite3.
-        'PASSWORD': 'giotto',            # Not used with sqlite3.
-        'HOST': 'localhost',             # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
-"""
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -200,70 +177,6 @@ LOGIN_REDIRECT_URL = ''
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'roma.wsgi.application'
 
-"""
-from django import VERSION
-if VERSION[:3] >= (1, 8, 0):
-    TEMPLATES = [
-        {
-            'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': (
-                 sys.platform.count('linux') and '/home/ubuntu/django/roma/roma/templates' or '/django11/roma/roma/templates',
-                 ),
-            'OPTIONS': {
-                'context_processors': [
-                    # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
-                    # list if you haven't customized them:
-                    'django.contrib.auth.context_processors.auth',
-                    'django.template.context_processors.debug', # MMR added
-                    'django.template.context_processors.i18n',
-                    'django.template.context_processors.media',
-                    'django.template.context_processors.static',
-                    # MMR added ??? - 'django.template.context_processors.tz',
-                    'django.template.context_processors.csrf',
-                    'django.contrib.messages.context_processors.messages',
-                    'django.template.context_processors.request',
-                    # MMR temporaneamente disattivato - 'richtext_blog.context_processors.blog_global',
-                    'roma.context_processors.context_processor',
-                    # "allauth.account.context_processors.account",
-                    # "allauth.socialaccount.context_processors.socialaccount",
-                ],
-                'loaders': [
-                    'django.template.loaders.filesystem.Loader',
-                    'django.template.loaders.app_directories.Loader',
-                ]
-            },
-        },
-    ]
-else:
-    # List of callables that know how to import templates from various sources.
-    TEMPLATE_LOADERS = (
-        'django.template.loaders.filesystem.Loader',
-        'django.template.loaders.app_directories.Loader',
-    #     'django.template.loaders.eggs.Loader',
-    )
-
-    TEMPLATE_DIRS = (
-        # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-        # Always use forward slashes, even on Windows.
-        # Don't forget to use absolute paths, not relative paths.
-        sys.platform.count('linux') and '/home/ubuntu/django/roma/roma/templates' or '/django11/roma/roma/templates',
-    )
-    
-    # MMR 20130422
-    TEMPLATE_CONTEXT_PROCESSORS = (
-         'django.core.context_processors.request',
-         'django.contrib.auth.context_processors.auth',
-         'django.core.context_processors.i18n',
-         'django.core.context_processors.media',
-         'django.core.context_processors.static',
-         'django.core.context_processors.csrf',
-         'django.contrib.messages.context_processors.messages',
-         #MMR temporaneamente disattivato - 'richtext_blog.context_processors.blog_global',
-         'roma.context_processors.context_processor',
-         "allauth.account.context_processors.account",
-         "allauth.socialaccount.context_processors.socialaccount",
-    )
-"""
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -345,8 +258,8 @@ INSTALLED_APPS = (
     # 'rosetta-grappelli',
     # MMR 'rosetta',
     'datatrans',
-    # MMR 'rest_framework',
-    # MMR 'django_filters',
+    'rest_framework',
+    'django_filters',
     # MMR 'fairvillage',
     #MMR added
     'macros',
