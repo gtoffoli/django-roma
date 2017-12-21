@@ -368,13 +368,14 @@
                 }
                 $("#menu").on('click', function(event) {
                     event.preventDefault();
-                    $("body").css("cursor","defsult")
+                    $("body").css("cursor","default")
                 }); 
                 $("#closemenu").on('click', function(event) {
                     event.preventDefault();
                     $("body").css("cursor","default")
                 }); 
-                $(window).scroll(function(){
+                $(window).scroll(function(event){
+                    event.preventDefault();
                     if ($(this).scrollTop() > 100) {
                         $('.scrollup').fadeIn();
                     } else {
@@ -382,7 +383,8 @@
                     }
                 });
                 
-                $('.scrollup').click(function(){
+                $('.scrollup').click(function(event){
+                    event.preventDefault();
                     $("body").css("cursor","default")
                     $("html, body").animate({ scrollTop: 0 }, 600);
                     return false;

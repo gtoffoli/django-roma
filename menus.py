@@ -59,11 +59,13 @@ def zones_children(request):
              url='/tipi-di-zona',
              weight=80,
              ))
+    """
     if user.is_authenticated():
         children.append(MenuItem("Muoversi a Roma",
                  url='/muoviroma',
                  weight=80,
                  ))
+    """
     return children
 
 def project_children(request):
