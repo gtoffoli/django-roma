@@ -42,7 +42,8 @@ from fairvillage.api import fv_router
 
 urlpatterns = [
     
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^rest/', include(fv_router.urls)),
     url(r'^api/', include(fv_router.urls)),
     url(r'^rest/get_components/$', get_components),
@@ -97,7 +98,8 @@ urlpatterns = [
     # Import urls from app pois
     # MMR 20130422 - aggiunto namespace
     # url(r'^pois/', include('pois.urls')),
-    url(r'^pois/', include('pois.urls', namespace='pois')),
+    # url(r'^pois/', include('pois.urls', namespace='pois')),
+    url(r'^pois/', include('pois.urls')),
 
     # Import urls from app autocomplete_light
     # MMR - url(r'autocomplete/', include('autocomplete_light.urls')),
