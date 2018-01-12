@@ -85,7 +85,8 @@ urlpatterns = [
     url(r'^poitypes$', TemplateView.as_view(template_name='pois/poitype_index.html'), name='poitypes',),
 
     # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
+    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     # Import urls from app autocomplete_light
