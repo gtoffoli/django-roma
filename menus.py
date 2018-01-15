@@ -61,7 +61,7 @@ def zones_children(request):
              weight=80,
              ))
     """
-    if user.is_authenticated():
+    if user.is_authenticated:
         children.append(MenuItem("Muoversi a Roma",
                  url='/muoviroma',
                  weight=80,
@@ -210,19 +210,19 @@ def community_children(request):
     
 def user_children(request):
     children = []
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         children.append (MenuItem(
              "Login",
              url='/accounts/login/',
              weight=80,
             ))
-    if request.user.is_authenticated() and request.user.is_superuser:
+    if request.user.is_authenticated and request.user.is_superuser:
         children.append (MenuItem(
              "Admin",
              reverse("admin:index"),
              weight=80,
              ))
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         children.append (MenuItem(
              "Logout",
              url='/accounts/logout/',
@@ -231,7 +231,7 @@ def user_children(request):
     return children
 
 def user_menu_title(request):
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         user = request.user
         fullname = '%s %s' % (user.first_name, user.last_name)
         if fullname.strip():
