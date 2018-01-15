@@ -1,44 +1,25 @@
 from __future__ import unicode_literals
 
-# from django.conf.urls.defaults import patterns, include, url
-# MMR old version - from django.conf.urls import patterns, include, url
-
+from django.views.generic import TemplateView
+from django.conf import settings
 from django.conf.urls import include, url
-#MMR added
-from pois.views import StreetAutocomplete, ZoneAutocomplete, PoiAutocomplete, TagAutocomplete, RouteAutocomplete, UserAutocomplete
+# from filebrowser.sites import site
+
 from roma import views as roma_views
+from roma.models import Newsfeed
+from pois.views import StreetAutocomplete, ZoneAutocomplete, PoiAutocomplete, TagAutocomplete, RouteAutocomplete, UserAutocomplete
 from pois import views as pois_views
 from pois import search_indexes as pois_searchindexes
 
-"""
-from roma import settings
-from roma.fairvillage.api import get_components, server_version, search_keys, radial_search, street_search, bbox_search, zone_search, get_pois
-"""
 import fairvillage
 from fairvillage.api import get_components, server_version, search_keys, radial_search, street_search, bbox_search, zone_search
 from fairvillage.api import get_pois, add_poi
+from fairvillage.api import fv_router # Routers provide an easy way of automatically determining the URL conf
 
-from django.views.generic import TemplateView
-from django.conf import settings
-
-# Add before admin.autodiscover() and any form import for that matter:
-"""
-import autocomplete_light
-autocomplete_light.autodiscover()
-"""
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 from django.contrib.gis import admin
 admin.autodiscover()
-
-# from filebrowser.sites import site
-from roma.models import Newsfeed
-
-# from pois.views import street_autocomplete
-
-# Routers provide an easy way of automatically determining the URL conf.
-from fairvillage.api import fv_router
-
 
 urlpatterns = [
     
