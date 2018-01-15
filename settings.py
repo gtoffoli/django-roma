@@ -135,6 +135,8 @@ MMMR - private
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '758_qm%=o1bb$rummz$63_kag1teyc)bsnc-0*26z1&amp;$z^4v*5'
 """
+
+"""
 MIDDLEWARE_CLASSES = []
 MIDDLEWARE_CLASSES.append('django.middleware.cache.UpdateCacheMiddleware')
 if DEBUG and DEBUG_TOOLBAR:
@@ -155,19 +157,25 @@ MIDDLEWARE_CLASSES.extend((
     # 'cuser.middleware.CuserMiddleware',
     'django_user_agents.middleware.UserAgentMiddleware',)
 )
-
-"""
-if VERSION > 15:
-    MIDDLEWARE_CLASSES.append('django.middleware.clickjacking.XFrameOptionsMiddleware')
-"""
 MIDDLEWARE_CLASSES.append('django.middleware.clickjacking.XFrameOptionsMiddleware')
- 
-
 # MMR temporaneamente disattivato
 if DEBUG:
     MIDDLEWARE_CLASSES.append('django_cprofile_middleware.middleware.ProfilerMiddleware')
 
 MIDDLEWARE_CLASSES.append('django.middleware.cache.FetchFromCacheMiddleware')
+"""
+MIDDLEWARE = [
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
+]
 
 ROOT_URLCONF = 'roma.urls'
 
@@ -265,7 +273,7 @@ INSTALLED_APPS = (
     'macros',
     'roma',
     'pois',
-    'django_user_agents',
+    # 'django_user_agents',
     # 'djorm_pgtrgm',
 )
 if DEBUG and DEBUG_TOOLBAR:
