@@ -4,116 +4,70 @@
 
 # MMR new
 PRODUCTION = False
-DEBUG_TOOLBAR= False
+DEBUG_TOOLBAR = False
 
 from roma.private import *
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# import os, sys, django
 import sys, django
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-"""
-VERSION = django.VERSION[0]*10 + django.VERSION[1]
-if VERSION > 15:
-    srid_OSM = 3857
-else:
-    srid_OSM = 900913
-"""
-srid_OSM = 3857
-# GT >
 PROJECT_ROOT = os.path.dirname(__file__)
 PARENT_ROOT = os.path.dirname(PROJECT_ROOT)
-GRANDPARENT_ROOT = os.path.dirname(PARENT_ROOT)
-
-FAIRVILLAGE_ROOT = os.path.join(GRANDPARENT_ROOT, 'fairvillage')
-sys.path.insert(0, FAIRVILLAGE_ROOT)
-
-sys.path.insert(0, GRANDPARENT_ROOT)
 sys.path.insert(0, PARENT_ROOT)
 sys.path.insert(0, PROJECT_ROOT)
-# GT <
 
 PROJECT_HOME = os.path.dirname(os.path.realpath(__file__))  # vedi https://pypi.python.org/pypi/django-richtext-blog
 SEARCH_BACKEND = None
 
-
 if PRODUCTION:
     DEBUG = False
     DEBUG_TOOLBAR = False
-    USE_PGTRGM = False
     USE_HAYSTACK = True
     SEARCH_BACKEND = "whoosh"
 else:
     DEBUG = True
     DEBUG_TOOLBAR = False
-    USE_PGTRGM = False
     USE_HAYSTACK = True
     SEARCH_BACKEND = "whoosh"
     # MMR old version - TEMPLATE_STRING_IF_INVALID = '%s'
 # TEMPLATE_DEBUG = DEBUG
 
-USE_LOCALEURL = False
 SHOW_MAPS = True
 MAX_POIS = 50
+srid_OSM = 3857
 
-# Local time zone for this installation. Choices can be found here:
-# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# On Unix systems, a value of None will cause Django to use the same
-# timezone as the operating system.
-# If running in a Windows environment this must be set to the same as your
-# system time zone.
-# TIME_ZONE = 'America/Chicago'
+# Internationalization
+# https://docs.djangoproject.com/en/2.0/topics/i18n/
 TIME_ZONE = 'Europe/Rome'
-
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-# LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'it'
+# If you set this to False, Django will make some optimizations so as not to load the internationalization machinery.
+USE_I18N = True
+# If you set this to False, Django will not format dates, numbers and alendars according to the current locale.
+USE_L10N = True
+# If you set this to False, Django will not use timezone-aware datetimes.
+USE_TZ = True
 
 ONLINE_DOMAIN = 'www.romapaese.it'
 SITE_ID = 1
-
-# MMR 20130419
 SITE_NAME = 'RomaPaese'
-# GRAPPELLI_ADMIN_TITLE e' assegnato in settings.py di grappelli
-# GRAPPELLI_ADMIN_TITLE='Amministrazione RomaPaese'
-
-
-# If you set this to False, Django will make some optimizations so as not
-# to load the internationalization machinery.
-USE_I18N = True
-
-# If you set this to False, Django will not format dates, numbers and
-# calendars according to the current locale.
-USE_L10N = True
-
-# If you set this to False, Django will not use timezone-aware datetimes.
-USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
 # MEDIA_ROOT = ''
 MEDIA_ROOT = os.path.join(PARENT_ROOT, 'media')
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash.
-# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-# MEDIA_URL = ''
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a # trailing slash.
 MEDIA_URL = '/media/' # vedi https://pypi.python.org/pypi/django-richtext-blog
-
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
-# in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/home/media/media.lawrence.com/static/"
-# STATIC_ROOT = ''
 STATIC_ROOT = PARENT_ROOT+'/static/'
 # STATIC_ROOT = os.path.join(PROJECT_HOME, 'static') # vedi https://pypi.python.org/pypi/django-richtext-blog
- 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
-ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/' # vedi https://pypi.python.org/pypi/django-richtext-blog
+# ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/' # vedi https://pypi.python.org/pypi/django-richtext-blog
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -130,40 +84,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
-"""
-MMMR - private
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '758_qm%=o1bb$rummz$63_kag1teyc)bsnc-0*26z1&amp;$z^4v*5'
-"""
 
-"""
-MIDDLEWARE_CLASSES = []
-MIDDLEWARE_CLASSES.append('django.middleware.cache.UpdateCacheMiddleware')
-if DEBUG and DEBUG_TOOLBAR:
-    MIDDLEWARE_CLASSES.append('debug_toolbar.middleware.DebugToolbarMiddleware')
-if USE_LOCALEURL:
-    MIDDLEWARE_CLASSES.append('localeurl.middleware.LocaleURLMiddleware')
-MIDDLEWARE_CLASSES.append('django.contrib.sessions.middleware.SessionMiddleware')
-if not USE_LOCALEURL:
-    MIDDLEWARE_CLASSES.append('django.middleware.locale.LocaleMiddleware')
-MIDDLEWARE_CLASSES.extend((
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'cuser.middleware.CuserMiddleware',
-    'django_user_agents.middleware.UserAgentMiddleware',)
-)
-MIDDLEWARE_CLASSES.append('django.middleware.clickjacking.XFrameOptionsMiddleware')
-# MMR temporaneamente disattivato
-if DEBUG:
-    MIDDLEWARE_CLASSES.append('django_cprofile_middleware.middleware.ProfilerMiddleware')
-
-MIDDLEWARE_CLASSES.append('django.middleware.cache.FetchFromCacheMiddleware')
-"""
 MIDDLEWARE = [
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -180,10 +101,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'roma.urls'
 
 LOGIN_REDIRECT_URL = ''
-
-
-# Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'roma.wsgi.application'
 
 TEMPLATES = [
     {
@@ -242,14 +159,11 @@ INSTALLED_APPS = (
     'dal_select2',
     'dal_queryset_sequence',
     'dal_select2_queryset_sequence',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'django.contrib.flatpages',
     'django.contrib.redirects',
     'django.contrib.gis',
-    # 'cuser',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -278,10 +192,6 @@ INSTALLED_APPS = (
 )
 if DEBUG and DEBUG_TOOLBAR:
     INSTALLED_APPS = list(INSTALLED_APPS) + ['debug_toolbar']
-if USE_LOCALEURL:
-    INSTALLED_APPS = ['localeurl'] + list(INSTALLED_APPS)
-if USE_PGTRGM:
-    INSTALLED_APPS = ['djorm_pgtrgm'] + list(INSTALLED_APPS)
 if USE_HAYSTACK:
     INSTALLED_APPS = ['haystack'] + list(INSTALLED_APPS)
 
@@ -493,11 +403,6 @@ FILEBROWSER_DIRECTORY = 'uploads/'
 
 """
 20170928 MMR
-# Grappelli settings
-GRAPPELLI_INDEX_DASHBOARD = \
-    'richtext_blog.custom_dashboard.CustomIndexDashboard'
-    # 'roma.dashboard.CustomIndexDashboard'
-
 # richtext_blog settings
 SLUGS_EDITABLE = True
 SITE_DESCRIPTION = 'Blog di prova'
@@ -517,14 +422,6 @@ if sys.platform.count('linux'):
     DEFAULT_FROM_EMAIL = 'RomaPaese <noreply@linkroma.it>'
 else:
     DEFAULT_FROM_EMAIL = 'RomaPaese <noreply@localhost>'
-
-"""
-MMR private
-EMAIL_HOST = 'smtp.linkroma.it'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = 'postmaster@linkroma.it'
-EMAIL_HOST_PASSWORD = '94a56c8465'
-"""
 
 ACCOUNT_AUTHENTICATION_METHOD = "email" # "username"
 ACCOUNT_USERNAME_REQUIRED = False # True

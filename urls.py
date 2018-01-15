@@ -224,11 +224,6 @@ if settings.DEBUG and settings.DEBUG_TOOLBAR:
     urlpatterns += [
         url(r'^__debug__/', include(debug_toolbar.urls)),
     ]
-if settings.USE_LOCALEURL:
-    #MMR old version - urlpatterns += patterns('',
-    urlpatterns += [
-        url(r'^localeurl/', include('localeurl.urls')),
-    ]
 
 if settings.USE_HAYSTACK:
     # urlpatterns += patterns('', url(r'^haystack/', include('haystack.urls')),
