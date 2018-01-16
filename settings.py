@@ -2,9 +2,11 @@
 
 # Django settings for roma project.
 
+"""
 # MMR new
 PRODUCTION = False
 DEBUG_TOOLBAR = False
+"""
 
 from roma.private import *
 
@@ -96,6 +98,7 @@ MIDDLEWARE = [
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
+    'django_user_agents.middleware.UserAgentMiddleware',
 ]
 
 ROOT_URLCONF = 'roma.urls'
@@ -106,7 +109,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': (
-             # sys.platform.count('linux') and '/home/ubuntu/django/roma/roma/templates' or '/django11/roma/roma/templates',
              os.path.join(PROJECT_ROOT, 'templates'),
              ),
         'OPTIONS': {
@@ -150,9 +152,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
-    # MMR 'grappelli.dashboard',
-    # MMR 'grappelli',
-    # MMR 'filebrowser',
     'bootstrap3',
     'captcha',
     'dal',
@@ -172,23 +171,16 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount.providers.openid',
     # 'allauth.socialaccount.providers.twitter',
     # MMR 'richtext_blog',
-    # MMR 'autocomplete_light',
-    # 'portlets',
-    # MMR 'romaportlets.text',
     'menu',
     # 'paypal.standard.ipn',
-    # 'rosetta-grappelli',
-    # MMR 'rosetta',
     'datatrans',
     'rest_framework',
     'django_filters',
     # MMR 'fairvillage',
-    #MMR added
     'macros',
     'roma',
     'pois',
-    # 'django_user_agents',
-    # 'djorm_pgtrgm',
+    'django_user_agents',
 )
 if DEBUG and DEBUG_TOOLBAR:
     INSTALLED_APPS = list(INSTALLED_APPS) + ['debug_toolbar']
@@ -330,27 +322,6 @@ ROSETTA_STORAGE_CLASS = 'rosetta.storage.SessionRosettaStorage'
 # TinyMCE settings
 TINYMCE_COMPRESSOR = False
 
-"""
-TINYMCE_DEFAULT_CONFIG = {
-    'width': '760',
-    'height': '480',
-    'plugins': 'fullscreen,media,preview,paste,table',
-    'theme': 'advanced',
-    'relative_urls': False,
-    'theme_advanced_toolbar_location': 'top',
-    'theme_advanced_toolbar_align': 'left',
-    'theme_advanced_buttons1': 'undo,redo,|,formatselect,bold,italic,underline,|,' \
-        'justifyleft,justifycenter,justifyright,justifyfull,|,forecolor,backcolor,' \
-        'sub,sup,charmap,|,bullist,numlist,|,indent,outdent,|,link,unlink,anchor,image,media',
-    'theme_advanced_buttons2': '|,tablecontrols,|,cut,copy,paste,pasteword,pastetext,selectall,|,removeformat,cleanup,|,visualaid,code,preview,fullscreen',
-    'theme_advanced_buttons3': '',
-    'theme_advanced_blockformats': 'p,pre,address,blockquote,h1,h2,h3,h4,' \
-        'h5,h6',
-    'plugin_preview_width' : '800',
-    'plugin_preview_height' : '600',
-    'paste_auto_cleanup_on_paste': 'true',
-    }
-"""
 TINYMCE_DEFAULT_CONFIG = {
     'schema': "html5",
     'resize' : "both",
@@ -402,7 +373,6 @@ TINYMCE_DEFAULT_CONFIG = {
 FILEBROWSER_DIRECTORY = 'uploads/'
 
 """
-20170928 MMR
 # richtext_blog settings
 SLUGS_EDITABLE = True
 SITE_DESCRIPTION = 'Blog di prova'
