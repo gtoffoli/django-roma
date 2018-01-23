@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 import datetime
-import feedparser
+# import feedparser
 
 from django.core.cache import caches
 from django.http import HttpResponse, HttpResponseRedirect
@@ -292,10 +292,12 @@ def home_data(request, fv=False):
             if n:
                 by_prov_list.append([zone.code, zone.name, zone.slug, n])
         data_dict['by_prov_list'] = by_prov_list
+        """
         site_url = request.META["HTTP_HOST"]
         d = feedparser.parse('http://%s/feed' % site_url)
         feed = d.entries and d or []
         data_dict['feed'] = feed
+        """
         if not fv:
             cache.set(key, data_dict)
     data_dict.update(zone_dict)

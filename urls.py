@@ -16,13 +16,15 @@ from fairvillage.api import get_components, server_version, search_keys, radial_
 from fairvillage.api import get_pois, add_poi
 from fairvillage.api import fv_router # Routers provide an easy way of automatically determining the URL conf
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
+# MMR 20181701
+from django.contrib import admin
+admin.site.site_header = 'Amministrazione di Romapaese'
+admin.site.site_title = 'Amministrazione Romapaese'
+
 from django.contrib.gis import admin
 admin.autodiscover()
 
 urlpatterns = [
-    
     # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^rest/', include(fv_router.urls)),
@@ -42,7 +44,7 @@ urlpatterns = [
     url(r'^add_poi/$', add_poi),
 
     # urlpatterns = patterns('',
-    url(r'^fairvillage/$', roma_views.fairvillage, name='fairvillage'),
+    # url(r'^fairvillage/$', roma_views.fairvillage, name='fairvillage'),
     url(r'^slim$', roma_views.slim, name='slim'),
     url(r'^search$', roma_views.search, name='search'),
     url(r'^tags', roma_views.tags, name='tags'),
@@ -184,13 +186,7 @@ urlpatterns += [
     url(r'^accounts/profile/', TemplateView.as_view(template_name='account/profile.html'), name='welcome',),
 ]   
 
-"""
-MMR temporaneamente disattivato
-if 'rosetta' in settings.INSTALLED_APPS:
-    urlpatterns += patterns('',
-        url(r'^rosetta/', include('rosetta.urls')),
-    )
-"""
+
 from django.views import static as django_views_static
 # MMMR old version - urlpatterns += patterns('',
 urlpatterns += [

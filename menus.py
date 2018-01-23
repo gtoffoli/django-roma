@@ -5,9 +5,6 @@ from menu import Menu, MenuItem
 from django.urls import reverse
 from django.utils.translation import ugettext as _, ugettext_lazy
 
-from django.conf import settings
-SITE_NAME = settings.SITE_NAME
-
 def zones_children(request):
     user = request.user
     children = []

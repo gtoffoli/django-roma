@@ -191,7 +191,7 @@
                             <a href="{% url "account_signup" %}" class="btn my_header-btn" title="{% trans "Signup" %}"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
                         {% endif %}
                         <form action="/i18n/setlang/" method="post" class="form-lang">{% csrf_token %}
-                            <div class="select-wrapper"><select name="language" onchange='this.form.submit()'>
+                            <div class="select-wrapper"><select name="language" onchange="this.form.submit()">
                             {% for lang in LANGUAGES %}
                                 <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %}selected="selected"{% endif %}>{{ lang.0|upper }}</option>
                             {% endfor %}
@@ -294,7 +294,7 @@
                     </div>
                 </div>
             {% endif %}
-            <div class="row">
+            <div class="row mB20">
                 <div class="col-sm-12 col-md-10 col-lg-10">
 {% block top-banner %}
 {% include 'google/anntop.html' %}

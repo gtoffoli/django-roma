@@ -23,8 +23,10 @@ table.res-news {border-collapse: separate; border-spacing: 30px 0; margin-left: 
 {% block content %}
 
     <div class="mLR-15">
+        {% comment %}
         <div><img src="{{ MEDIA_URL }}home.jpg" class="img-responsive"></div>
-        <div class="mLR30">{{ summary|safe }}</div>
+        {% endcomment %}
+        <div class="mT20 mLR30">{{ summary|safe }}</div>
     </div>
     <div class="boxcontent">
     <div class="hidden-xs hidden-sm hidden-md visible-lg">

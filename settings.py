@@ -2,12 +2,6 @@
 
 # Django settings for roma project.
 
-"""
-# MMR new
-PRODUCTION = False
-DEBUG_TOOLBAR = False
-"""
-
 from roma.private import *
 
 import sys, django
@@ -177,7 +171,6 @@ INSTALLED_APPS = (
     'rest_framework',
     'django_filters',
     # MMR 'fairvillage',
-    'macros',
     'roma',
     'pois',
     'django_user_agents',
@@ -313,11 +306,14 @@ LANGUAGES = (
 # django-localeurl settings
 PREFIX_DEFAULT_LOCALE = False
 
+"""
+MMR 20181701
 ROSETTA_MESSAGES_PER_PAGE = 20
 ROSETTA_ENABLE_TRANSLATION_SUGGESTIONS = False
 ROSETTA_MESSAGES_SOURCE_LANGUAGE_CODE = 'en'
 ROSETTA_MESSAGES_SOURCE_LANGUAGE_NAME = 'English'
 ROSETTA_STORAGE_CLASS = 'rosetta.storage.SessionRosettaStorage'
+"""
 
 # TinyMCE settings
 TINYMCE_COMPRESSOR = False
@@ -369,8 +365,11 @@ TINYMCE_DEFAULT_CONFIG = {
     # 'convert_urls' : False,
     'relative_urls' : False,
 }
+"""
+MMR 20181701
 # Filebrowser settings
 FILEBROWSER_DIRECTORY = 'uploads/'
+"""
 
 """
 # richtext_blog settings
