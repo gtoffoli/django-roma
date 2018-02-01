@@ -18,3 +18,5 @@ User-agent: BLEXBot
 Disallow: /
 User-agent: spbot
 Disallow: /
+User-agent: SemrushBot
+Disallow: /
