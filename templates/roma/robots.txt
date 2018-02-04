@@ -1,9 +1,13 @@
 User-agent: *
-Disallow: /navigation_autocomplete
-Disallow: /my_resources
-Disallow: /viewport
 Disallow: /pois/
+Disallow: /cerca
+Disallow: /navigation_autocomplete
+Disallow: /feed
+Disallow: /viewport
+Disallow: /my_resources
 Disallow: /annota-risorsa/
+Disallow: /la-mia-zona
+Disallow: /tipo-di-zona
 # Disallow: /zona/00
 # Disallow: /zona/municipio
 Disallow: /zona/roma
