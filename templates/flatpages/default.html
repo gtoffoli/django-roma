@@ -4,25 +4,11 @@
 {% block head_title %}{{ flatpage.title }}{% endblock %}
 
 {% block content %}
-<div class="boxcontent">
-    <div class="container">
-{% comment %}
-{% if site_url == 'www.romapaese.it' %}
-<div style="margin-bottom: 10px;"> 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Display largo -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-4724989678310844"
-     data-ad-slot="7474169816"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
-{% endif %}
-{% endcomment %}
-
-{{ flatpage.content|safe }}
-    </div>
+    <div class="boxcontent">
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-9">
+                {{ flatpage.content|safe }}
+            </div>
+        </div>
 </div>
 {% endblock content %}

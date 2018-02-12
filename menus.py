@@ -53,7 +53,7 @@ def zones_children(request):
              url='/cap',
              weight=80,
              ))
-        children.append(MenuItem(_("Zone types") + " (" + _("list") + ")",
+        children.append(MenuItem(_("Zone types"),
              url='/tipi-di-zona',
              weight=80,
              ))

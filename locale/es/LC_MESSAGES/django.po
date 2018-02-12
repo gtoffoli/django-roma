@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-21 11:32+0100\n"
-"PO-Revision-Date: 2017-11-21 12:11+0100\n"
+"POT-Creation-Date: 2018-02-12 10:38+0100\n"
+"PO-Revision-Date: 2018-02-12 10:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,164 +18,161 @@ msgstr ""
 "Language: es\n"
 "X-Generator: Poedit 1.7.6\n"
 
-#: .\forms.py:36 .\templates\account\profile.html:12
+#: .\roma\forms.py:36 .\roma\templates\account\profile.html:12
 msgid "First name"
 msgstr "Nombre"
 
-#: .\forms.py:41 .\templates\account\profile.html:13
+#: .\roma\forms.py:41 .\roma\templates\account\profile.html:13
 msgid "Last name"
 msgstr "Apellido"
 
-#: .\menus.py:20
+#: .\roma\menus.py:18
 msgid "Macrozones"
 msgstr "Macro zonas"
 
-#: .\menus.py:24
+#: .\roma\menus.py:22
 msgid "Municipalities"
 msgstr "Municipi"
 
-#: .\menus.py:28
+#: .\roma\menus.py:26
 msgid "Historical quarters"
 msgstr "Barrios históricos"
 
-#: .\menus.py:32
+#: .\roma\menus.py:30
 msgid "Quarters"
 msgstr "Barrios"
 
-#: .\menus.py:36
+#: .\roma\menus.py:34
 msgid "Quarter extensions"
 msgstr "Ampliacións de barrios"
 
-#: .\menus.py:40
+#: .\roma\menus.py:38
 msgid "Suburban zones"
 msgstr "Zonas suburbanas"
 
-#: .\menus.py:45
+#: .\roma\menus.py:43
 msgid "Traditional city districts"
-msgstr ""
+msgstr "Barrios urbanos tradicionales"
 
-#: .\menus.py:49
+#: .\roma\menus.py:47
 msgid "Provinces"
 msgstr "Provincias"
 
-#: .\menus.py:54
+#: .\roma\menus.py:52
 msgid "Zipcode areas"
 msgstr "Áreas de código postal"
 
-#: .\menus.py:58
+#: .\roma\menus.py:56
 msgid "Zone types"
 msgstr "Tipología de zonas"
 
-#: .\menus.py:58
-msgid "list"
-msgstr "lista"
-
-#: .\menus.py:72
+#: .\roma\menus.py:72
 msgid "About"
 msgstr "Quienes somos"
 
-#: .\menus.py:77
+#: .\roma\menus.py:77
 msgid "Our partners"
 msgstr "Nuestros partners"
 
-#: .\menus.py:82
+#: .\roma\menus.py:82
 msgid "Help us"
 msgstr "Danos una mano"
 
-#: .\menus.py:87
+#: .\roma\menus.py:87
 msgid "RomaPaese and the schools"
 msgstr "RomaPaese y las escuelas"
 
-#: .\menus.py:92
+#: .\roma\menus.py:92
 msgid "Donate"
 msgstr "Haz una donación"
 
-#: .\menus.py:97
+#: .\roma\menus.py:97
 msgid "Contacts"
 msgstr "Contactos"
 
-#: .\menus.py:107
+#: .\roma\menus.py:107
 msgid "By theme area"
 msgstr "Por área temática"
 
-#: .\menus.py:112
+#: .\roma\menus.py:112
 msgid "By category"
 msgstr "Por categoría"
 
-#: .\menus.py:119
+#: .\roma\menus.py:119
 msgid "By affiliation"
 msgstr "Por afiliación"
 
-#: .\menus.py:124
+#: .\roma\menus.py:124
 msgid "Routes"
 msgstr "Itinerari"
 
-#: .\menus.py:129
+#: .\roma\menus.py:129
 msgid "Resource networks"
 msgstr "Redes de recursos"
 
-#: .\menus.py:134
+#: .\roma\menus.py:134
 msgid "New entries"
 msgstr "Añadidos de reciente"
 
-#: .\menus.py:139
+#: .\roma\menus.py:139
 msgid "Updates"
 msgstr "Revisións"
 
-#: .\menus.py:144
+#: .\roma\menus.py:144
 msgid "To be reviewed"
-msgstr ""
+msgstr "Por revisar"
 
-#: .\menus.py:149
+#: .\roma\menus.py:149
 msgid "Top contributors"
 msgstr "Mayor contribuidores"
 
-#: .\menus.py:166
+#: .\roma\menus.py:166
 msgid "Suggest a resource"
 msgstr "Sugiere un recurso"
 
-#: .\menus.py:182
+#: .\roma\menus.py:182
 msgid "From the schools"
 msgstr "De las escuelas"
 
-#: .\menus.py:187
+#: .\roma\menus.py:187
 msgid "Citizens' committees"
 msgstr "De los comités"
 
-#: .\menus.py:192
+#: .\roma\menus.py:192
 msgid "Ethnic and linguistic communities"
 msgstr "Comunidades étnicas y lingüísticas"
 
-#: .\menus.py:197
+#: .\roma\menus.py:197
 msgid "Social networks"
 msgstr "Redes sociales"
 
-#: .\menus.py:202
+#: .\roma\menus.py:202
 msgid "Why register"
 msgstr "Por qué registrarse"
 
-#: .\menus.py:245
+#: .\roma\menus.py:245
 msgid "The resources"
 msgstr "Los recursos"
 
-#: .\menus.py:250
+#: .\roma\menus.py:250
 msgid "The zones"
 msgstr "Las zonas"
 
-#: .\menus.py:255
+#: .\roma\menus.py:255
 msgid "The project"
 msgstr "El proyecto"
 
-#: .\menus.py:260
+#: .\roma\menus.py:260
 msgid "Community"
 msgstr "Comunidad"
 
-#: .\templates\account\login.html:6 .\templates\account\login.html:12
-#: .\templates\account\login.html:44
+#: .\roma\templates\account\login.html:6
+#: .\roma\templates\account\login.html:12
+#: .\roma\templates\account\login.html:44
 msgid "Sign In"
 msgstr "Iniciar sesión"
 
-#: .\templates\account\login.html:17
+#: .\roma\templates\account\login.html:17
 #, python-format
 msgid ""
 "Please sign in with one\n"
@@ -187,11 +184,11 @@ msgstr ""
 "cuenta de otra red social. O, <a href=\"%(signup_url)s\">regístrese</a> \n"
 "como usuario de %(site_name)s e inicie sesión a continuación:"
 
-#: .\templates\account\login.html:27
+#: .\roma\templates\account\login.html:27
 msgid "or"
 msgstr "o"
 
-#: .\templates\account\login.html:34
+#: .\roma\templates\account\login.html:34
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
@@ -200,34 +197,36 @@ msgstr ""
 "Si todavía no has creado una cuenta, entonces por favor\n"
 "<a href=\"%(signup_url)s\">regístrate</a> primero."
 
-#: .\templates\account\login.html:45
+#: .\roma\templates\account\login.html:45
 msgid "Forgot Password?"
 msgstr "¿Olvidó su contraseña?"
 
-#: .\templates\account\logout.html:5 .\templates\account\logout.html:11
-#: .\templates\account\logout.html:20 .\templates\roma\roma_base.html:189
-#: .\templates\roma\roma_base.html:293
+#: .\roma\templates\account\logout.html:5
+#: .\roma\templates\account\logout.html:11
+#: .\roma\templates\account\logout.html:20
+#: .\roma\templates\roma\roma_base.html:189
+#: .\roma\templates\roma\roma_base.html:293
 msgid "Sign Out"
 msgstr "Cerrar sesión"
 
-#: .\templates\account\logout.html:13
+#: .\roma\templates\account\logout.html:13
 msgid "Are you sure you want to sign out?"
 msgstr "¿Está seguro de querer cerrar sesión?"
 
-#: .\templates\account\password_change.html:5
-#: .\templates\account\password_change.html:11
-#: .\templates\account\password_change.html:16
+#: .\roma\templates\account\password_change.html:5
+#: .\roma\templates\account\password_change.html:11
+#: .\roma\templates\account\password_change.html:16
 msgid "Change Password"
 msgstr "Cambiar Contraseña"
 
-#: .\templates\account\password_reset.html:6
-#: .\templates\account\password_reset.html:12
-#: .\templates\account\password_reset_done.html:6
-#: .\templates\account\password_reset_done.html:12
+#: .\roma\templates\account\password_reset.html:6
+#: .\roma\templates\account\password_reset.html:12
+#: .\roma\templates\account\password_reset_done.html:6
+#: .\roma\templates\account\password_reset_done.html:12
 msgid "Password Reset"
 msgstr "Restablecer Contraseña"
 
-#: .\templates\account\password_reset.html:17
+#: .\roma\templates\account\password_reset.html:17
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
@@ -235,17 +234,17 @@ msgstr ""
 "¿Ha olvidado su contraseña? Ingrese su correo electrónico y le enviaremos un "
 "correo que le permitirá restablecerla."
 
-#: .\templates\account\password_reset.html:22
+#: .\roma\templates\account\password_reset.html:22
 msgid "Reset My Password"
 msgstr "Restablecer mi contraseña"
 
-#: .\templates\account\password_reset.html:25
+#: .\roma\templates\account\password_reset.html:25
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
 "Si tiene alguna dificultad para restablecer su contraseña, por favor "
 "contáctenos."
 
-#: .\templates\account\password_reset_done.html:18
+#: .\roma\templates\account\password_reset_done.html:18
 msgid ""
 "We have sent you an e-mail. Please contact us if you do not receive it "
 "within a few minutes."
@@ -253,52 +252,56 @@ msgstr ""
 "Le hemos enviado un correo electrónico. Por favor contáctenos si no recibe "
 "el correo en unos minutos."
 
-#: .\templates\account\profile.html:4 .\templates\account\profile.html:9
+#: .\roma\templates\account\profile.html:4
+#: .\roma\templates\account\profile.html:9
 msgid "Welcome page"
 msgstr "Página de bienvenida"
 
-#: .\templates\account\profile.html:10
+#: .\roma\templates\account\profile.html:10
 msgid "here is your user profile"
 msgstr "aquí tu perfil de usuario"
 
-#: .\templates\account\profile.html:11
+#: .\roma\templates\account\profile.html:11
 msgid "Username"
 msgstr "Nombre de usuario"
 
-#: .\templates\account\profile.html:14
+#: .\roma\templates\account\profile.html:14
 msgid "E-mail"
 msgstr "correo electrónico"
 
-#: .\templates\account\profile.html:18
+#: .\roma\templates\account\profile.html:18
 msgid "Social network account"
 msgstr "Cuenta de red social"
 
-#: .\templates\account\profile.html:20 .\templates\account\profile.html:25
+#: .\roma\templates\account\profile.html:20
+#: .\roma\templates\account\profile.html:25
 msgid "Go to the"
 msgstr "Ir a la"
 
-#: .\templates\account\signup.html:5 .\templates\roma\roma_base.html:192
-#: .\templates\roma\roma_base.html:255
+#: .\roma\templates\account\signup.html:5
+#: .\roma\templates\roma\roma_base.html:192
+#: .\roma\templates\roma\roma_base.html:255
 msgid "Signup"
 msgstr "Regístrate"
 
-#: .\templates\account\signup.html:11 .\templates\account\signup.html:19
+#: .\roma\templates\account\signup.html:11
+#: .\roma\templates\account\signup.html:19
 msgid "Sign Up"
 msgstr "Regístrate"
 
-#: .\templates\account\signup.html:12
+#: .\roma\templates\account\signup.html:12
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
 "¿Ya tiene una cuenta? Por favor <a href=\"%(login_url)s\">inicie sesión</a>."
 
-#: .\templates\account\verification_sent.html:5
-#: .\templates\account\verification_sent.html:11
+#: .\roma\templates\account\verification_sent.html:5
+#: .\roma\templates\account\verification_sent.html:11
 msgid "Verify Your E-mail Address"
 msgstr "Verifica tu dirección de correo electrónico"
 
-#: .\templates\account\verification_sent.html:13
+#: .\roma\templates\account\verification_sent.html:13
 msgid ""
 "We have sent an e-mail to you for verification. Follow the link provided to "
 "finalize the signup process. Please contact us if you do not receive it "
@@ -308,94 +311,101 @@ msgstr ""
 "para completar el proceso de registro. Por favor contáctenos si no recibe el "
 "correo en unos minutos."
 
-#: .\templates\roma\donate.html:4 .\templates\roma\donate.html:9
+#: .\roma\templates\roma\donate.html:4 .\roma\templates\roma\donate.html:9
 msgid "Donate to"
 msgstr "Haz una donación a"
 
-#: .\templates\roma\donate_thanks.html:4
-#: .\templates\roma\donate_thanks.html:10
+#: .\roma\templates\roma\donate_thanks.html:4
+#: .\roma\templates\roma\donate_thanks.html:10
 msgid "Thanks for your donation to"
 msgstr "Gracias por tu donación a"
 
-#: .\templates\roma\home.html:5
+#: .\roma\templates\roma\home.html:5
 msgid "culture, well-being, solidarity"
 msgstr "cultura, bienestár, solidariedád"
 
-#: .\templates\roma\home.html:34 .\templates\roma\home.html:109
-#: .\templates\roma\home.html:189 .\templates\roma\home.html:266
+#: .\roma\templates\roma\home.html:35 .\roma\templates\roma\home.html:110
+#: .\roma\templates\roma\home.html:190 .\roma\templates\roma\home.html:267
 msgid "resources by theme area"
 msgstr "recursos por área temática"
 
-#: .\templates\roma\home.html:38 .\templates\roma\home.html:41
-#: .\templates\roma\home.html:113 .\templates\roma\home.html:116
-#: .\templates\roma\home.html:193 .\templates\roma\home.html:196
-#: .\templates\roma\home.html:270 .\templates\roma\home.html:273
+#: .\roma\templates\roma\home.html:39 .\roma\templates\roma\home.html:42
+#: .\roma\templates\roma\home.html:114 .\roma\templates\roma\home.html:117
+#: .\roma\templates\roma\home.html:194 .\roma\templates\roma\home.html:197
+#: .\roma\templates\roma\home.html:271 .\roma\templates\roma\home.html:274
 msgid "show an index of resources for"
 msgstr "muestra un índice de recursos por"
 
-#: .\templates\roma\home.html:50 .\templates\roma\home.html:125
-#: .\templates\roma\home.html:205 .\templates\roma\home.html:280
+#: .\roma\templates\roma\home.html:51 .\roma\templates\roma\home.html:126
+#: .\roma\templates\roma\home.html:206 .\roma\templates\roma\home.html:281
 msgid "resources by zones of Roma"
 msgstr "recursos por las zonas de Roma"
 
-#: .\templates\roma\home.html:58 .\templates\roma\home.html:72
-#: .\templates\roma\home.html:133 .\templates\roma\home.html:147
-#: .\templates\roma\home.html:213 .\templates\roma\home.html:227
-#: .\templates\roma\home.html:287 .\templates\roma\home.html:298
+#: .\roma\templates\roma\home.html:59 .\roma\templates\roma\home.html:73
+#: .\roma\templates\roma\home.html:134 .\roma\templates\roma\home.html:148
+#: .\roma\templates\roma\home.html:214 .\roma\templates\roma\home.html:228
+#: .\roma\templates\roma\home.html:288 .\roma\templates\roma\home.html:299
 msgid "show an index of resources in the zone"
 msgstr "muestra un índice de recursos situados en la zona"
 
-#: .\templates\roma\home.html:68 .\templates\roma\home.html:143
-#: .\templates\roma\home.html:223 .\templates\roma\home.html:295
+#: .\roma\templates\roma\home.html:69 .\roma\templates\roma\home.html:144
+#: .\roma\templates\roma\home.html:224 .\roma\templates\roma\home.html:296
 msgid "resources by zones of Lazio"
 msgstr "recursos por las zonas de Lazio"
 
-#: .\templates\roma\home.html:78 .\templates\roma\home.html:156
-#: .\templates\roma\home.html:236 .\templates\roma\home.html:303
+#: .\roma\templates\roma\home.html:79 .\roma\templates\roma\home.html:157
+#: .\roma\templates\roma\home.html:237 .\roma\templates\roma\home.html:304
 msgid "in the spotlight"
 msgstr "en el punto de mira"
 
-#: .\templates\roma\home.html:81 .\templates\roma\home.html:158
-#: .\templates\roma\home.html:238 .\templates\roma\home.html:306
+#: .\roma\templates\roma\home.html:82 .\roma\templates\roma\home.html:159
+#: .\roma\templates\roma\home.html:239 .\roma\templates\roma\home.html:307
 msgid "show the resources on the map by category"
 msgstr "mostrar los recursos en el mapa por categoría"
 
-#: .\templates\roma\home.html:87 .\templates\roma\home.html:164
-#: .\templates\roma\home.html:244 .\templates\roma\home.html:311
+#: .\roma\templates\roma\home.html:88 .\roma\templates\roma\home.html:165
+#: .\roma\templates\roma\home.html:245 .\roma\templates\roma\home.html:312
 msgid "featured resources"
 msgstr "recursos en primer plano"
 
-#: .\templates\roma\home.html:93 .\templates\roma\home.html:98
-#: .\templates\roma\home.html:170 .\templates\roma\home.html:172
-#: .\templates\roma\home.html:250 .\templates\roma\home.html:252
-#: .\templates\roma\home.html:315 .\templates\roma\partners.html:5
-#: .\templates\roma\partners.html:16 .\templates\roma\partners.html:17
-#: .\templates\roma\partners.html:18 .\templates\roma\partners.html:26
-#: .\templates\roma\partners.html:39 .\templates\roma\partners.html:40
-#: .\templates\roma\partners.html:41 .\templates\roma\partners.html:50
-#: .\templates\roma\partners.html:62 .\templates\roma\partners.html:63
-#: .\templates\roma\partners.html:64
+#: .\roma\templates\roma\home.html:94 .\roma\templates\roma\home.html:99
+#: .\roma\templates\roma\home.html:171 .\roma\templates\roma\home.html:173
+#: .\roma\templates\roma\home.html:251 .\roma\templates\roma\home.html:253
+#: .\roma\templates\roma\home.html:316 .\roma\templates\roma\partners.html:5
+#: .\roma\templates\roma\partners.html:20
+#: .\roma\templates\roma\partners.html:21
+#: .\roma\templates\roma\partners.html:22
+#: .\roma\templates\roma\partners.html:30
+#: .\roma\templates\roma\partners.html:43
+#: .\roma\templates\roma\partners.html:44
+#: .\roma\templates\roma\partners.html:45
+#: .\roma\templates\roma\partners.html:54
+#: .\roma\templates\roma\partners.html:66
+#: .\roma\templates\roma\partners.html:67
+#: .\roma\templates\roma\partners.html:68
 msgid "show resource"
 msgstr "muestra el recurso"
 
-#: .\templates\roma\partners.html:4 .\templates\roma\partners.html:25
-#: .\templates\roma\partners.html:49
+#: .\roma\templates\roma\partners.html:4
+#: .\roma\templates\roma\partners.html:29
+#: .\roma\templates\roma\partners.html:53
 msgid "sponsors"
 msgstr "patrocinadores"
 
-#: .\templates\roma\partners.html:9 .\templates\roma\partners.html:30
-#: .\templates\roma\partners.html:54
+#: .\roma\templates\roma\partners.html:9
+#: .\roma\templates\roma\partners.html:34
+#: .\roma\templates\roma\partners.html:58
 msgid "partners"
 msgstr "partners"
 
-#: .\templates\roma\roma_base.html:10
+#: .\roma\templates\roma\roma_base.html:10
 msgid ""
 "Roma, Lazio, quarters, house, family, health, school, work, culture, services"
 msgstr ""
 "Roma, Lazio, barrios, casa, familia, salud, escuela, trabajo, cultura, "
 "servicios"
 
-#: .\templates\roma\roma_base.html:11
+#: .\roma\templates\roma\roma_base.html:11
 msgid ""
 "Culture, well-being, solidarity: geolocated resources for Roma zones and "
 "municipalities in Lazio"
@@ -403,45 +413,55 @@ msgstr ""
 "Cultura, bienestár, solidariedád: recursos geolocalizados para las zonas de "
 "Roma y los municipios de Lazio"
 
-#: .\templates\roma\roma_base.html:181 .\templates\roma\roma_base.html:226
-#: .\templates\roma\roma_base.html:355 .\templates\roma\roma_base.html:365
+#: .\roma\templates\roma\roma_base.html:181
+#: .\roma\templates\roma\roma_base.html:226
+#: .\roma\templates\roma\roma_base.html:355
+#: .\roma\templates\roma\roma_base.html:365
 msgid "enter"
 msgstr "escribe"
 
-#: .\templates\roma\roma_base.html:181 .\templates\roma\roma_base.html:226
-#: .\templates\roma\roma_base.html:355 .\templates\roma\roma_base.html:365
+#: .\roma\templates\roma\roma_base.html:181
+#: .\roma\templates\roma\roma_base.html:226
+#: .\roma\templates\roma\roma_base.html:355
+#: .\roma\templates\roma\roma_base.html:365
 msgid "characters or a few more"
 msgstr "caracteres o unos pocos más"
 
-#: .\templates\roma\roma_base.html:191 .\templates\roma\roma_base.html:254
+#: .\roma\templates\roma\roma_base.html:191
+#: .\roma\templates\roma\roma_base.html:254
 msgid "Log In"
 msgstr "Ingrese"
 
-#: .\templates\roma\roma_base.html:203 .\templates\roma\roma_base.html:233
+#: .\roma\templates\roma\roma_base.html:203
+#: .\roma\templates\roma\roma_base.html:233
 msgid "close"
 msgstr "cerrar"
 
-#: .\templates\roma\roma_base.html:277 .\templates\roma\roma_base.html:287
+#: .\roma\templates\roma\roma_base.html:277
+#: .\roma\templates\roma\roma_base.html:287
 msgid "user"
 msgstr "usuario"
 
-#: .\templates\roma\roma_base.html:279 .\templates\roma\roma_base.html:289
+#: .\roma\templates\roma\roma_base.html:279
+#: .\roma\templates\roma\roma_base.html:289
 msgid "Admin"
 msgstr "Administrador"
 
-#: .\templates\roma\roma_base.html:281 .\templates\roma\roma_base.html:291
+#: .\roma\templates\roma\roma_base.html:281
+#: .\roma\templates\roma\roma_base.html:291
 msgid "My profile"
 msgstr "Mi perfil"
 
-#: .\templates\roma\roma_base.html:282 .\templates\roma\roma_base.html:292
+#: .\roma\templates\roma\roma_base.html:282
+#: .\roma\templates\roma\roma_base.html:292
 msgid "My resources"
 msgstr "Mis recursos"
 
-#: .\templates\roma\roma_base.html:293
+#: .\roma\templates\roma\roma_base.html:293
 msgid "Logout"
 msgstr "cerrar sesión"
 
-#: .\templates\roma\roma_base.html:331
+#: .\roma\templates\roma\roma_base.html:331
 msgid ""
 "We use cookies to personalise content and ads, to provide social media "
 "features and to analyse our traffic. We also share information about your "
@@ -456,10 +476,13 @@ msgstr ""
 "combinarla con otra información que les haya proporcionado o que hayan "
 "recopilado a partir del uso que haya hecho de sus servicios."
 
-#: .\templates\roma\roma_base.html:331
+#: .\roma\templates\roma\roma_base.html:331
 msgid "learn more"
 msgstr "más información"
 
-#: .\views.py:238
+#: .\roma\views.py:238
 msgid "PayPal - The safer, easier way to pay online!"
 msgstr "PayPal - La forma más segura de pagar en Internet!"
+
+#~ msgid "list"
+#~ msgstr "lista"

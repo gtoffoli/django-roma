@@ -218,3 +218,5 @@ a.color-white:hover {color: #ffffff;}
 ::-webkit-scrollbar:horizontal {height: 6px;}
 ::-webkit-scrollbar-thumb {background-color: rgba(0, 0, 0, .5); border-radius: 4px; border: 2px solid #ffffff;}
 ::-webkit-scrollbar-track {border-radius: 4px; background-color: #ffffff;}
+
+.error {color: red !important;}

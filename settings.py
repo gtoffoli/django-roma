@@ -98,7 +98,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'roma.urls'
 
-LOGIN_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
