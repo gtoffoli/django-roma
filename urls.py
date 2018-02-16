@@ -56,7 +56,7 @@ urlpatterns = [
     # url(r'^navigation_autocomplete$', pois_views.navigation_autocomplete, name='navigation_autocomplete'),
     # url(r'^cerca/(?P<q>.*)/$', pois.views.search_all', name='search_all'),
     # url(r'^cerca/', 'pois_views.search_all', name='search_all'),
-    url(r'^feed', Newsfeed(),),
+    # url(r'^feed', Newsfeed(),),
 
     # MMR 20130422
     # url(r'^$', TemplateView.as_view(template_name='roma/index.html'), name='index',),

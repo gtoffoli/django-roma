@@ -15,7 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block extra_meta %}{% endblock extra_meta %}
 {% block ann_lev_page %}
+{% if not user.is_superuser or not user.is_staff %}
 {% include 'google/annlevelpage.html' %}
+{% endif %}
 {% endblock ann_lev_page %}
     <title>{% block head_title %}{% endblock %}{% if site_name %} | {{ site_name }}{% endif %}</title>
     <link rel="icon" href="{% static 'roma/img/icon-rp.png' %}" type="image/x-icon">
@@ -163,9 +165,11 @@
             display: inline-block;
         }
 {% if site_url == "www.romapaese.it" %}
+{% if not user.is_superuser or not user.is_staff %}
 .banner-pub { width: 320px; height: 100px; }
 @media(min-width: 500px) { .banner-pub { width: 468px; height: 60px; } }
 @media(min-width: 800px) { .banner-pub { width: 728px; height: 90px; } }
+{% endif %}
 {% endif %}
     </style>
     {% block extra_style %}{% endblock extra_style %}
@@ -297,11 +301,15 @@
             <div class="row mB20">
                 <div class="col-sm-12 col-md-10 col-lg-10">
 {% block top-banner %}
+{% if not user.is_superuser or not user.is_staff %}
 {% include 'google/anntop.html' %}
+{% endif %}
 {% endblock top-banner %}
                     {% block content %}{% endblock content %}
 {% block bottom-banner %}
+{% if not user.is_superuser or not user.is_staff %}
 {% include 'google/annbottom.html' %}
+{% endif %}
 {% endblock bottom-banner %}
                 </div>
                 <div class="col-sm-12 col-md-2 col-lg-2">
@@ -335,7 +343,7 @@
         {% endif %}
         <script type="text/javascript" src="{% static 'autocomplete_light/autocomplete.js' %}"></script>
         {% if map %}
-        <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3.29&key={{maps_key}}"></script>
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3.30&key={{maps_key}}"></script>
         <script type="text/javascript" src="{% static 'roma/ol/OpenLayers.js' %}"></script>
         {% block mapjs %}{% endblock mapjs %}
         {% endif %}
