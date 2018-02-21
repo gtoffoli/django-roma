@@ -6,6 +6,7 @@ Disallow: /feed
 Disallow: /viewport
 Disallow: /set_viewport
 Disallow: /my_resources
+Disallow: /nuova-risorsa
 Disallow: /annota-risorsa/
 Disallow: /la-mia-zona
 Disallow: /tipo-di-zona

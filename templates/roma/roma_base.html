@@ -14,11 +14,13 @@
     <meta name="author" content="LINK srl - Giovanni Toffoli, Mariarosaria Manco">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block extra_meta %}{% endblock extra_meta %}
+
 {% block ann_lev_page %}
-{% if not user.is_superuser or not user.is_staff %}
+{% if site_url == "www.romapaese.it" %}{% if show_element %}{% if not user.is_superuser or not user.is_staff %}
 {% include 'google/annlevelpage.html' %}
-{% endif %}
+{% endif %}{% endif %}{% endif %}
 {% endblock ann_lev_page %}
+
     <title>{% block head_title %}{% endblock %}{% if site_name %} | {{ site_name }}{% endif %}</title>
     <link rel="icon" href="{% static 'roma/img/icon-rp.png' %}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{% static 'roma/img/icon-rp.png' %}" type="image/png">
@@ -165,13 +167,11 @@
         .img-inline {
             display: inline-block;
         }
-{% if site_url == "www.romapaese.it" %}
-{% if not user.is_superuser or not user.is_staff %}
+{% if site_url == "www.romapaese.it" %}{% if show_element %}{% if not user.is_superuser or not user.is_staff %}
 .banner-pub { width: 320px; height: 100px; }
 @media(min-width: 500px) { .banner-pub { width: 468px; height: 60px; } }
 @media(min-width: 800px) { .banner-pub { width: 728px; height: 90px; } }
-{% endif %}
-{% endif %}
+{% endif %}{% endif %}{% endif %}
     </style>
     {% block extra_style %}{% endblock extra_style %}
 </head>
@@ -301,17 +301,21 @@
             {% endif %}
             <div class="row mB20">
                 <div class="col-sm-12 col-md-10 col-lg-10">
+
 {% block top-banner %}
-{% if not user.is_superuser or not user.is_staff %}
+{% if site_url == "www.romapaese.it" %}{% if show_element %}{% if not user.is_superuser or not user.is_staff %}
 {% include 'google/anntop.html' %}
-{% endif %}
+{% endif %}{% endif %}{% endif %}
 {% endblock top-banner %}
+
                     {% block content %}{% endblock content %}
+                    
 {% block bottom-banner %}
-{% if not user.is_superuser or not user.is_staff %}
+{% if site_url == "www.romapaese.it" %}{% if show_element %}{% if not user.is_superuser or not user.is_staff %}
 {% include 'google/annbottom.html' %}
-{% endif %}
+{% endif %}{% endif %}{% endif %}
 {% endblock bottom-banner %}
+
                 </div>
                 <div class="col-sm-12 col-md-2 col-lg-2">
                     {% block pub-content %}
