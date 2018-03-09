@@ -1,5 +1,7 @@
 User-agent: *
 Disallow: /pois/
+Disallow: /accounts/
+Disallow: /admin/
 Disallow: /cerca
 Disallow: /navigation_autocomplete
 Disallow: /feed

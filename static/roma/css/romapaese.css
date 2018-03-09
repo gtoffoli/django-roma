@@ -94,6 +94,18 @@ table.table-res>tbody>tr>td {border-top:1px solid transparent;}
 table.table-list {border-bottom: 1px solid #ddd;}
 td.td-total-white {background: #fff; border-top: 1px solid #fff !important; border-bottom: 1px solid #fff;}
 
+.panel-home {
+margin-top: 0;
+padding: 10px;
+color: #333;
+font-weight: 600;
+}
+.panel-home a {
+text-decoration: none !important
+}
+.panel-home a span {
+color: #333 !important;
+}
 .panel-header {
 padding: 10px;
 letter-spacing: 1.5px;
@@ -106,9 +118,21 @@ color: white;
 background: transparent;
 font-size: 17px;
 padding:1px 1px 0px 2px;
+text-decoration: none !important;
 }
-.panel-header a:hover{color: #77DDFF; background: white;}
-.panel-header a:focus {color: white; background: transparent;}
+.panel-header a i {
+    font: normal normal normal 22px/1 FontAwesome;
+    padding: 2px;
+}
+.panel-header a span {
+color: #666;
+background: transparent;
+padding:0;
+}
+.panel-header a:hover i {color: #77DDFF; background: white;}
+.panel-header a:focus i {color: white; background: transparent;}
+.panel-header a:hover span {color: white; background: transparent;}
+.panel-header a:focus span {color: #666; background: transparent;}
 ul.elenco {list-style-type:none; padding-left: 0;}
 ul.elenco li {margin-bottom: 5px; margin-right: 10px; display:inline-block;}
 ul.elenco li label {display:inline-block !important; border:1px solid white; color : #A63840; padding:0 3px 3px 3px;}
@@ -214,9 +238,9 @@ a.color-white:hover {color: #ffffff;}
 .text-pre-wrap {white-space: pre;}
 
 ::-webkit-scrollbar {-webkit-appearance: none;}
-::-webkit-scrollbar:vertical {width: 6px;}
-::-webkit-scrollbar:horizontal {height: 6px;}
-::-webkit-scrollbar-thumb {background-color: rgba(0, 0, 0, .5); border-radius: 4px; border: 2px solid #ffffff;}
+::-webkit-scrollbar:vertical {width: 10px;}
+::-webkit-scrollbar:horizontal {height: 8px;}
+::-webkit-scrollbar-thumb {background-color: rgba(0, 0, 0, .3); border-radius: 4px; border: 2px solid #ffffff;}
 ::-webkit-scrollbar-track {border-radius: 4px; background-color: #ffffff;}
 
 .error {color: red !important;}

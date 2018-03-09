@@ -52,7 +52,7 @@ table.res-news {border-collapse: separate; border-spacing: 30px 0; margin-left: 
                 <div id="accordion" class="mL10">
                 {% for topotype_name_plural, topotype_sublist in by_zone_list|slice:":4" %}
                     <div>
-                        <h5 class="color-base mT0 pTBLR10 demiBold"><a href="#" class="toggleIcon"><i class="fa fa-plus-square"></i></a> {{ topotype_name_plural|capfirst }}</h5>
+                        <h5 class="panel-home"><a href="#" class="toggleIcon"><i class="fa fa-plus-square"></i> {{ topotype_name_plural|capfirst }}</a></h5>
                         <article id="zona_{{ forloop.counter }}" class="view-list box-scroll" style="{% if topotype_sublist|length > 6 %}height: 20vh; {% endif %}display:none">
                         {% for zone_code, zone_name, zone_slug, n in topotype_sublist %}
                             <p>{{ zone_name }} <small>({{ zone_code }})</small> <span class="text-pre-wrap">[ <a href="/indice-zona/{{ zone_slug }}/" title="{% trans "show an index of resources in the zone" %}: {{ zone_name }}">{{ n }}</a> ]</span></p>
