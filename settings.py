@@ -399,6 +399,12 @@ ACCOUNT_EMAIL_REQUIRED = True # False
 ACCOUNT_EMAIL_VERIFICATION = "mandatory" # "optional"
 SOCIALACCOUNT_EMAIL_VERIFICATION = "none" # ACCOUNT_EMAIL_VERIFICATION
 
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        'VERSION': 'v2.12',
+    }
+}
+
 INTERNAL_IPS = ('127.0.0.1',)
 
 if SEARCH_BACKEND == 'whoosh':
