@@ -7,7 +7,7 @@ from django.conf.urls import include, url
 
 from roma import views as roma_views
 from roma.models import Newsfeed
-from pois.views import StreetAutocomplete, ZoneAutocomplete, PoiAutocomplete, TagAutocomplete, RouteAutocomplete, UserAutocomplete
+from pois.views import StreetAutocomplete, ZoneAutocomplete, PoiAutocomplete, TagAutocomplete, RouteAutocomplete, UserAutocomplete, PoiOkAutocomplete, PoitypeAutocomplete
 from pois import views as pois_views
 from pois import search_indexes as pois_searchindexes
 
@@ -168,7 +168,9 @@ urlpatterns = [
     url(r'^toponimo-autocomplete/$', StreetAutocomplete.as_view(),name='toponimo-autocomplete'),
     url(r'^zona-autocomplete/$', ZoneAutocomplete.as_view(),name='zona-autocomplete'),
     url(r'^risorsa-autocomplete/$', PoiAutocomplete.as_view(),name='risorsa-autocomplete'),
+    url(r'^risorsa-ok-autocomplete/$', PoiOkAutocomplete.as_view(),name='risorsa-ok-autocomplete'),
     url(r'^tema-autocomplete/$', TagAutocomplete.as_view(),name='tema-autocomplete'),
+    url(r'^categoria-autocomplete/$', PoitypeAutocomplete.as_view(),name='categoria-autocomplete'),
     url(r'^itinerario-autocomplete/$', RouteAutocomplete.as_view(),name='itinerario-autocomplete'),
     url(r'^utente-autocomplete/$', UserAutocomplete.as_view(),name='utente-autocomplete'),
     url(r'^navigation_autocomplete$', pois_searchindexes.navigation_autocomplete, name='navigation_autocomplete'),
