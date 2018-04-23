@@ -67,6 +67,7 @@ def zones_children(request):
     return children
 
 def project_children(request):
+    user = request.user
     children = []
     children.append (MenuItem(
          _("About"),
@@ -88,16 +89,20 @@ def project_children(request):
          url='/project/schools',
          weight=80,
         ))
-    children.append (MenuItem(
-         _("Donate"),
-         url='/donate',
-         weight=80,
-        ))
+    if (user.is_superuser or user.is_staff):
+        children.append (MenuItem(
+            _("Donate"),
+            url='/donate',
+            weight=80,
+            ))
+    
+    """
     children.append (MenuItem(
          _("Contacts"),
-         url='/project/contacts',
+         url='/contatti',
          weight=80,
         ))
+    """
     return children
 
 def resources_children(request):
@@ -165,6 +170,11 @@ def resources_children(request):
     children.append (MenuItem(
         _("Suggest a resource"),
         url='/nuova-risorsa',
+        weight=80,
+    ))
+    children.append (MenuItem(
+        _("Promote your business"),
+        url='/promuovere-attivita-roma-lazio/',
         weight=80,
     ))
     return children
@@ -252,6 +262,8 @@ Menu.add_item("main", MenuItem(ugettext_lazy("The zones"),
                                weight=20,
                                children=zones_children,
                                separator=True))
+"""
+180420 MMR
 Menu.add_item("main", MenuItem(ugettext_lazy("The project"),
                                url='/p',
                                weight=30,
@@ -261,4 +273,14 @@ Menu.add_item("main", MenuItem(ugettext_lazy("Community"),
                            url='/c',
                            weight=40,
                            children=community_children,
+                           separator=True))
+"""
+#180420 MMR
+Menu.add_item("main", MenuItem(ugettext_lazy("Project"),
+                           url='/about-us',
+                           weight=40,
+                           separator=True))
+Menu.add_item("main", MenuItem(ugettext_lazy("Contacts"),
+                           url='/contatti',
+                           weight=40,
                            separator=False))

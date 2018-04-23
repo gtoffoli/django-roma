@@ -1,0 +1,55 @@
+{% extends "roma/roma_base.html" %}
+{% load staticfiles i18n %}
+
+{% block head_title %}{% trans "Contacts" %}{% endblock %}
+{% block content %}
+    <div class="boxcontent">
+        <div class="row mB30">
+            <div class="col-lg-offset-2 col-lg-9">
+                <div class="mB30">{{ text_body|safe }}</div>
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <p class="fontSize60"><i class="fa fa-phone color-roma" aria-hidden="true"></i></p>
+                        <h3 class=" mT-10 color-roma">{% trans "call us"|capfirst %}</h3>
+                        <p>+39 0644231115</p>
+                    </div>
+                    <div class="col-lg-6 text-center ">
+                        <p class="fontSize60"><i class="fa fa-envelope color-copper" aria-hidden="true"></i></p>
+                        <h3 class=" mT-10 color-copper">{% trans "send us an email"|capfirst %}</h3>
+                        <p>romapaese@linkroma.it</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row back-box mL-30 pTB20">
+            <div class="col-lg-offset-3 col-lg-7">
+                {% if not success %}
+                    <p class="text-center fontSize60"><i class="fa fa-pencil" aria-hidden="true"></i></p>
+                    <h3 class=" mT-10 mB30 text-center">{% trans "write us a message"|capfirst %}</h3>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <fieldset>
+                            {% for field in form.visible_fields %}
+                                <div class="form-group">
+                                    {% if field.errors %}<div class="error">{{ field.errors }}</div>{% endif %}
+                                    {{ field }}{% if field.name == 'permission' %} <div style="display:inline">{{ field.label}}</div>{% endif %}
+                                    {% if field.help_text %}<small id="{{ field.name }}helpBlock" class="help-block mT0">{{ field.help_text }}</small>{% endif %}
+                                </div>
+                            {% endfor %}
+                            <div class="form-actions mB20">
+                                <button type="submit" class="btn btn-default">{% trans "Send" %}</button>
+                            </div>
+                        </fieldset>
+                        <p class="fontSize13">{% trans "All fields are required" %}</p>
+                    </form>
+                 {% else %}
+                    <h4>{{ name }}</h4>
+                    <h4>Grazie per averci contattato! Ti risponderemo al pi&ugrave; presto.</h4>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}
+

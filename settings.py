@@ -175,6 +175,7 @@ INSTALLED_APPS = (
     'roma',
     'pois',
     'django_user_agents',
+    'django_cleanup',
 )
 if DEBUG and DEBUG_TOOLBAR:
     INSTALLED_APPS = list(INSTALLED_APPS) + ['debug_toolbar']

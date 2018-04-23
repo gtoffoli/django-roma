@@ -7,6 +7,8 @@ from __future__ import unicode_literals
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
+from captcha.fields import CaptchaField, CaptchaTextInput
+
 class LivesearchForm(forms.Form):
     '''
     live search of all searchable contents based on full-text search
@@ -47,3 +49,16 @@ class SignupForm(allauthSignupForm):
             user.first_name = self.cleaned_data["first_name"]
             user.last_name = self.cleaned_data["last_name"]
             user.save()
+
+#180417 MMR
+class ContactForm(forms.Form):
+    from_name = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control','placeholder':_("Full Name"),}))
+    from_email = forms.EmailField(required=True,widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder':_("Email"),}))
+    subject = forms.CharField(required=True,widget=forms.TextInput(attrs={'class': 'form-control','placeholder':_("Subject")}))
+    message = forms.CharField(required=True, widget=forms.Textarea(attrs={'class': 'form-control','placeholder':_("Message")}))
+    permission = forms.BooleanField(required=True, label=_('Pursuant to art. 13 of Legislative Decree 30 June 2003 n. 196 we wish to inform you that the personal data supplied by you with the completion and submission of this form will be used only to respond to your request.'), widget=forms.CheckboxInput())
+    captcha = CaptchaField(
+            label=_("control string"),
+            help_text=_("Enter these 5 characters in the textbox on the right"),
+            widget=CaptchaTextInput(attrs={'class': 'form-control'})
+            )

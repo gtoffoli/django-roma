@@ -1,85 +1,66 @@
 {% load i18n staticfiles %}
-<div class="hidden-xs hidden-sm visible-md visible-lg mT10">
-<dl class="mB30" style="border: 1px solid #0380AE;">
-<dd class="text-center"><a href="/nuova-risorsa" title="{% trans "Suggest a resource" %}"><img src="{{MEDIA_URL}}segnala_risorsa.jpg" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="text-center fontSize18 color-white demiBold" style="background:#027FB3;"><a href="/nuova-risorsa" class="color-white" title="{% trans "Suggest a resource" %}">{% trans "Suggest a resource" %}</a></dd>
-</dl>
-<dl class="back-Zone mB20">
-<dt class="text-center fontSize18 color-white">{% trans "sponsors"|capfirst %}</dt>
-<dd class="back-white text-center"><a href="/risorsa/officina-edizioni/" title="{% trans "show resource" %}: Officina Edizioni"><img src="/media/logos/logo_oe.png" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="back-Zone text-center fontSize16 color-white"><a href="/project/sponsor/" class="color-white">Diventa Sponsor<br>ti conviene!</a></dd>
-</dl>
-<dl class="back-LightSkyBlue mT20 pB20">
-<dt class="text-center fontSize18 color-base">{% trans "partners"|capfirst %}</dt>
-<dd class="text-center"><a href="http://digilab.uniroma1.it" title="DigiLab-Sapienza" target="_blank"><img src="{{MEDIA_URL}}logos/logo_digilab.jpg" alt="logo DigiLab-Sapienza" class="img-responsive img-inline"></a></dd>
-</dl>
-{% comment %}
-<dl class="mTB60">
-<dd class="text-center"><a href="/help/ads/" title=""><img src="{{MEDIA_URL}}adsense-million.jpg" alt="" class="img-responsive img-inline"></a></dd>
-</dl>
-{% endcomment %}
-<dl class="pTB20 mB0 back-copper">
-<dd class="mB20 text-center"><a href="/risorsa/biblioteche-di-roma/" title="{% trans "show resource" %}: Biblioteche di Roma"><img src="{{MEDIA_URL}}logos/logo_bibliotechediroma.png" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="mB20 text-center"><a href="/risorsa/legacoopsociali-lazio/" title="{% trans "show resource" %}: Legacoop sociale"><img src="{{MEDIA_URL}}logos/logo_legacoopsociali.png" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="text-center"><a href="/risorsa/caritas-diocesana-di-roma/" title="{% trans "show resource" %}: Caritas diocesana di Roma"><img src="{{MEDIA_URL}}logos/logo_caritasroma.png" alt="" class="img-responsive img-inline"></a></dd>
-</dl>
+<div class="hidden-sm visible-xs visible-md visible-lg mT10">
+    <dl class="pTB20 mB20 back-Zone">
+        <dd class="back-box p20">
+            <div class="text-center color-roma fontSize60"><i class="fa fa-map-marker"></i></div>
+            <div class="text-center">
+                <h4 class="color-roma mT0"><strong>{% trans "Suggest a resource" %}</strong></h4>
+                <p class="mT10 mB20 fontSize13">{% trans "If you know useful facilities and services, you can insert them for free, helping to expand the resource map." %}</p>
+                <a href="/nuova-risorsa" class="button-resource" style="font-size:14px" title="">{% trans "add now"|capfirst %}</a>
+            </div>
+        </dd>
+    </dl>
+    <dl class="pTB20 mB30 back-copper">
+        <dd class="back-box p20">
+            <div class="text-center color-copper fontSize60"><i class="fa fa-home"></i></div>
+            <div class="text-center">
+                <h4 class="color-copper mT0"><strong>{% trans "Promote your business" %}</strong></h4>
+                <p class="mT10 mB20 fontSize13" >{% trans "With RomaPaese you can gain visibility on the web and easily get in touch with new potential customers." %}</p>
+                <a href="/promuovere-attivita-roma-lazio/" class="button-activity" style="font-size:14px" title="">{% trans "read more"|capfirst %}</a>
+            </div>
+        </dd>
+    </dl>
+    <dl class="pTB20 mB0 back-LightSkyBlue">
+        <dd class="mB20 text-center"><a href="/risorsa/biblioteche-di-roma/" title="{% trans "show resource" %}: Biblioteche di Roma"><img src="{{MEDIA_URL}}logos/logo_bibliotechediroma.png" alt="" class="img-responsive img-inline"></a></dd>
+        <dd class="mB20 text-center"><a href="/risorsa/legacoopsociali-lazio/" title="{% trans "show resource" %}: Legacoop sociale"><img src="{{MEDIA_URL}}logos/logo_legacoopsociali.png" alt="" class="img-responsive img-inline"></a></dd>
+        <dd class="text-center"><a href="/risorsa/caritas-diocesana-di-roma/" title="{% trans "show resource" %}: Caritas diocesana di Roma"><img src="{{MEDIA_URL}}logos/logo_caritasroma.png" alt="" class="img-responsive img-inline"></a></dd>
+    </dl>
 </div>
 <div class="hidden-xs hidden-md hidden-lg visible-sm mT10">
-<div class="row">
-<div class="col-sm-6">
-<dl class="mB30" style="border: 1px solid #0380AE;">
-<dd class="text-center"><a href="/nuova-risorsa" title="{% trans "Suggest a resource" %}"><img src="{{MEDIA_URL}}segnala_risorsa.jpg" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="text-center fontSize18 color-white demiBold" style="background:#027FB3;"><a href="/nuova-risorsa" class="color-white" title="{% trans "Suggest a resource" %}">{% trans "Suggest a resource" %}</a></dd>
-</dl>
-<dl class="back-Zone mB20">
-<dt class="text-center fontSize18 color-white">{% trans "sponsors"|capfirst %}</dt>
-<dd class="back-white text-center"><a href="/risorsa/officina-edizioni/" title="{% trans "show resource" %} Officina Edizioni"><img src="/media/logos/logo_oe.png" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="back-Zone text-center fontSize16 color-white"><a href="/project/sponsor/" class="color-white">Diventa Sponsor<br>ti conviene!</a></dd>
-</dl>
+    <div class="row">
+        <div class="col-sm-6">
+            <dl class="pTB20 mB20 back-Zone">
+                <dd class="back-box p20">
+                    <div class="text-center color-roma fontSize60"><i class="fa fa-map-marker"></i></div>
+                    <div class="text-center">
+                        <h4 class="color-roma mT0"><strong>{% trans "Suggest a resource" %}</strong></h4>
+                        <p class="mT10 mB20 fontSize13">{% trans "If you know useful facilities and services, you can insert them for free, helping to expand the resource map." %}</p>
+                        <a href="/nuova-risorsa" class="button-resource" style="font-size:14px" title="">{% trans "add now"|capfirst %}</a>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <div class="col-sm-6">
+            <dl class="pTB20 mB30 back-copper">
+                <dd class="back-box p20">
+                    <div class="text-center color-copper fontSize60"><i class="fa fa-home"></i></div>
+                    <div class="text-center">
+                        <h4 class="color-copper mT0"><strong>{% trans "Promote your business" %}</strong></h4>
+                        <p class="mT10 mB20 fontSize13" >{% trans "With RomaPaese you can gain visibility on the web and easily get in touch with new potential customers." %}</p>
+                        <a href="/promuovere-attivita-roma-lazio/" class="button-activity" style="font-size:14px" title="">{% trans "read more"|capfirst %}</a>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">   
+            <dl class="pTB20 mB30 back-LightSkyBlue">
+                <dd class="mB20 text-center"><a href="/risorsa/biblioteche-di-roma/" title="{% trans "show resource" %} Biblioteche di Roma"><img src="{{MEDIA_URL}}logos/logo_bibliotechediroma.png" alt="" class="img-responsive img-inline"></a></dd>
+                <dd class="mB20 text-center"><a href="/risorsa/legacoopsociali-lazio/" title="{% trans "show resource" %} Legacoop sociale"><img src="{{MEDIA_URL}}logos/logo_legacoopsociali.png" alt="" class="img-responsive img-inline"></a></dd>
+                <dd class="text-center"><a href="/risorsa/caritas-diocesana-di-roma/" title="{% trans "show resource" %} Caritas diocesana di Roma"><img src="{{MEDIA_URL}}logos/logo_caritasroma.png" alt="" class="img-responsive img-inline"></a></dd>
+            </dl>
+        </div>
+    </div>
+</div>
 
-{% comment %}
-<dl class="mTB60">
-<dd class="text-center"><a href="/help/ads/" title=""><img src="{{MEDIA_URL}}adsense-million.jpg" alt="" class="img-responsive img-inline"></a></dd>
-</dl>
-{% endcomment %}
-</div>
-<div class="col-sm-6">
-<dl class="pTB20 mB30 back-copper">
-<dd class="mB20 text-center"><a href="/risorsa/biblioteche-di-roma/" title="{% trans "show resource" %} Biblioteche di Roma"><img src="{{MEDIA_URL}}logos/logo_bibliotechediroma.png" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="mB20 text-center"><a href="/risorsa/legacoopsociali-lazio/" title="{% trans "show resource" %} Legacoop sociale"><img src="{{MEDIA_URL}}logos/logo_legacoopsociali.png" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="text-center"><a href="/risorsa/caritas-diocesana-di-roma/" title="{% trans "show resource" %} Caritas diocesana di Roma"><img src="{{MEDIA_URL}}logos/logo_caritasroma.png" alt="" class="img-responsive img-inline"></a></dd>
-</dl>
-<dl class="back-LightSkyBlue pB20">
-<dt class="text-center fontSize18 color-base">{% trans "partners"|capfirst %}</dt>
-<dd class="text-center"><a href="http://digilab.uniroma1.it" title="DigiLab-Sapienza"><img src="{{MEDIA_URL}}logos/logo_digilab.jpg" alt="logo DigiLab-Sapienza" class="img-responsive img-inline"></a></dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="hidden-sm hidden-md hidden-lg visible-xs text-center mLR15">
-<div class="box-partner">
-<dl class="mB30" style="border: 1px solid #0380AE; #027FB3">
-<dd class="text-center"><a href="/nuova-risorsa" title="{% trans "Suggest a resource" %}"><img src="{{MEDIA_URL}}segnala_risorsa.jpg" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="text-center fontSize18 color-white demiBold" style="background:#027FB3;"><a href="/nuova-risorsa" class="color-white" title="{% trans "Suggest a resource" %}">{% trans "Suggest a resource" %}</a></dd>
-</dl>
-<dl class="back-Zone mB20">
-<dt class="text-center fontSize18 color-white">{% trans "sponsors"|capfirst %}</dt>
-<dd class="text-center back-white"><a href="/risorsa/officina-edizioni/" title="{% trans "show resource" %} Officina Edizioni"><img src="/media/logos/logo_oe.png" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="back-Zone text-center fontSize16 color-white"><a href="/project/sponsor/" class="color-white">Diventa Sponsor<br>ti conviene!</a></dd>
-</dl>
-<dl class="back-LightSkyBlue mT20 pB20">
-<dt class="text-center fontSize18 color-base">{% trans "partners"|capfirst %}</dt>
-<dd class="text-center back-white"><a href="http://digilab.uniroma1.it" title="DigiLab-Sapienza"><img src="{{MEDIA_URL}}logos/logo_digilab.jpg" alt="logo DigiLab-Sapienza" class="img-responsive img-inline"></a></dd>
-</dl>
-</div>
-{% comment %}
-<dl class="mTB60">
-<dd class="text-center"><a href="/help/ads/" title=""><img src="{{MEDIA_URL}}adsense-million.jpg" alt="" class="img-responsive img-inline"></a></dd>
-</dl>
-{% endcomment %}
-<dl class="box-partner pTB20 mB0 back-copper">
-<dd class="mB20 text-center back-white"><a href="/risorsa/biblioteche-di-roma/" title="{% trans "show resource" %} Biblioteche di Roma"><img src="{{MEDIA_URL}}logos/logo_bibliotechediroma.png" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="mB20 text-center back-white"><a href="/risorsa/legacoopsociali-lazio/" title="{% trans "show resource" %} Legacoop sociale"><img src="{{MEDIA_URL}}logos/logo_legacoopsociali.png" alt="" class="img-responsive img-inline"></a></dd>
-<dd class="text-center back-white"><a href="/risorsa/caritas-diocesana-di-roma/" title="{% trans "show resource" %} Caritas diocesana di Roma"><img src="{{MEDIA_URL}}logos/logo_caritasroma.png" alt="" class="img-responsive img-inline"></a></dd>
-</dl>
-</div>

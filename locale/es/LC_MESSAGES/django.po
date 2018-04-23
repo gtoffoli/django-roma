@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-12 10:38+0100\n"
-"PO-Revision-Date: 2018-02-12 10:38+0100\n"
+"POT-Creation-Date: 2018-04-23 12:34+0200\n"
+"PO-Revision-Date: 2018-04-23 12:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,13 +18,48 @@ msgstr ""
 "Language: es\n"
 "X-Generator: Poedit 1.7.6\n"
 
-#: .\roma\forms.py:36 .\roma\templates\account\profile.html:12
+#: .\roma\forms.py:38 .\roma\templates\account\profile.html:12
 msgid "First name"
 msgstr "Nombre"
 
-#: .\roma\forms.py:41 .\roma\templates\account\profile.html:13
+#: .\roma\forms.py:43 .\roma\templates\account\profile.html:13
 msgid "Last name"
 msgstr "Apellido"
+
+#: .\roma\forms.py:55
+msgid "Full Name"
+msgstr "Nombre Completo"
+
+#: .\roma\forms.py:56
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: .\roma\forms.py:57
+msgid "Subject"
+msgstr "Asunto"
+
+#: .\roma\forms.py:58
+msgid "Message"
+msgstr "Mensaje"
+
+#: .\roma\forms.py:59
+msgid ""
+"Pursuant to art. 13 of Legislative Decree 30 June 2003 n. 196 we wish to "
+"inform you that the personal data supplied by you with the completion and "
+"submission of this form will be used only to respond to your request."
+msgstr ""
+"De conformidad con el art. 13 del Decreto Legislativo 30 de junio de 2003 n. "
+"196 deseamos informarle que los datos personales proporcionados por usted "
+"con la compilación y el envío de este formulario solo servirán para tener un "
+"contacto para este informe."
+
+#: .\roma\forms.py:61
+msgid "control string"
+msgstr "tira de control"
+
+#: .\roma\forms.py:62
+msgid "Enter these 5 characters in the textbox on the right"
+msgstr "Escribe estos 5 caracteres en el cuadro de texto a la derecha"
 
 #: .\roma\menus.py:18
 msgid "Macrozones"
@@ -66,105 +101,109 @@ msgstr "Áreas de código postal"
 msgid "Zone types"
 msgstr "Tipología de zonas"
 
-#: .\roma\menus.py:72
+#: .\roma\menus.py:73
 msgid "About"
 msgstr "Quienes somos"
 
-#: .\roma\menus.py:77
+#: .\roma\menus.py:78
 msgid "Our partners"
 msgstr "Nuestros partners"
 
-#: .\roma\menus.py:82
+#: .\roma\menus.py:83
 msgid "Help us"
 msgstr "Danos una mano"
 
-#: .\roma\menus.py:87
+#: .\roma\menus.py:88
 msgid "RomaPaese and the schools"
 msgstr "RomaPaese y las escuelas"
 
-#: .\roma\menus.py:92
+#: .\roma\menus.py:94
 msgid "Donate"
 msgstr "Haz una donación"
 
-#: .\roma\menus.py:97
-msgid "Contacts"
-msgstr "Contactos"
-
-#: .\roma\menus.py:107
+#: .\roma\menus.py:112
 msgid "By theme area"
 msgstr "Por área temática"
 
-#: .\roma\menus.py:112
+#: .\roma\menus.py:117
 msgid "By category"
 msgstr "Por categoría"
 
-#: .\roma\menus.py:119
+#: .\roma\menus.py:124
 msgid "By affiliation"
 msgstr "Por afiliación"
 
-#: .\roma\menus.py:124
+#: .\roma\menus.py:129
 msgid "Routes"
 msgstr "Itinerari"
 
-#: .\roma\menus.py:129
+#: .\roma\menus.py:134
 msgid "Resource networks"
 msgstr "Redes de recursos"
 
-#: .\roma\menus.py:134
+#: .\roma\menus.py:139
 msgid "New entries"
 msgstr "Añadidos de reciente"
 
-#: .\roma\menus.py:139
+#: .\roma\menus.py:144
 msgid "Updates"
 msgstr "Revisións"
 
-#: .\roma\menus.py:144
+#: .\roma\menus.py:149
 msgid "To be reviewed"
 msgstr "Por revisar"
 
-#: .\roma\menus.py:149
+#: .\roma\menus.py:154
 msgid "Top contributors"
 msgstr "Mayor contribuidores"
 
-#: .\roma\menus.py:166
+#: .\roma\menus.py:171 .\roma\templates\roma\home.html:46
+#: .\roma\templates\roma\partners.html:7
+#: .\roma\templates\roma\partners.html:36
 msgid "Suggest a resource"
 msgstr "Sugiere un recurso"
 
-#: .\roma\menus.py:182
+#: .\roma\menus.py:176 .\roma\templates\roma\home.html:54
+#: .\roma\templates\roma\partners.html:17
+#: .\roma\templates\roma\partners.html:48
+msgid "Promote your business"
+msgstr "promueva su actividad"
+
+#: .\roma\menus.py:192
 msgid "From the schools"
 msgstr "De las escuelas"
 
-#: .\roma\menus.py:187
+#: .\roma\menus.py:197
 msgid "Citizens' committees"
 msgstr "De los comités"
 
-#: .\roma\menus.py:192
+#: .\roma\menus.py:202
 msgid "Ethnic and linguistic communities"
 msgstr "Comunidades étnicas y lingüísticas"
 
-#: .\roma\menus.py:197
+#: .\roma\menus.py:207
 msgid "Social networks"
 msgstr "Redes sociales"
 
-#: .\roma\menus.py:202
+#: .\roma\menus.py:212
 msgid "Why register"
 msgstr "Por qué registrarse"
 
-#: .\roma\menus.py:245
+#: .\roma\menus.py:255
 msgid "The resources"
 msgstr "Los recursos"
 
-#: .\roma\menus.py:250
+#: .\roma\menus.py:260
 msgid "The zones"
 msgstr "Las zonas"
 
-#: .\roma\menus.py:255
-msgid "The project"
+#: .\roma\menus.py:279
+msgid "Project"
 msgstr "El proyecto"
 
-#: .\roma\menus.py:260
-msgid "Community"
-msgstr "Comunidad"
+#: .\roma\menus.py:283 .\roma\templates\roma\contacts.html:4
+msgid "Contacts"
+msgstr "Contactos"
 
 #: .\roma\templates\account\login.html:6
 #: .\roma\templates\account\login.html:12
@@ -204,8 +243,8 @@ msgstr "¿Olvidó su contraseña?"
 #: .\roma\templates\account\logout.html:5
 #: .\roma\templates\account\logout.html:11
 #: .\roma\templates\account\logout.html:20
-#: .\roma\templates\roma\roma_base.html:189
-#: .\roma\templates\roma\roma_base.html:293
+#: .\roma\templates\roma\roma_base.html:197
+#: .\roma\templates\roma\roma_base.html:304
 msgid "Sign Out"
 msgstr "Cerrar sesión"
 
@@ -279,8 +318,8 @@ msgid "Go to the"
 msgstr "Ir a la"
 
 #: .\roma\templates\account\signup.html:5
-#: .\roma\templates\roma\roma_base.html:192
-#: .\roma\templates\roma\roma_base.html:255
+#: .\roma\templates\roma\roma_base.html:200
+#: .\roma\templates\roma\roma_base.html:265
 msgid "Signup"
 msgstr "Regístrate"
 
@@ -311,6 +350,26 @@ msgstr ""
 "para completar el proceso de registro. Por favor contáctenos si no recibe el "
 "correo en unos minutos."
 
+#: .\roma\templates\roma\contacts.html:13
+msgid "call us"
+msgstr "llámenos por teléfono"
+
+#: .\roma\templates\roma\contacts.html:18
+msgid "send us an email"
+msgstr "envíenos un e-mail"
+
+#: .\roma\templates\roma\contacts.html:29
+msgid "write us a message"
+msgstr "escríbenos un mensaje"
+
+#: .\roma\templates\roma\contacts.html:41
+msgid "Send"
+msgstr "Envía"
+
+#: .\roma\templates\roma\contacts.html:44
+msgid "All fields are required"
+msgstr "Todos los campos son obligatorios"
+
 #: .\roma\templates\roma\donate.html:4 .\roma\templates\roma\donate.html:9
 msgid "Donate to"
 msgstr "Haz una donación a"
@@ -324,79 +383,91 @@ msgstr "Gracias por tu donación a"
 msgid "culture, well-being, solidarity"
 msgstr "cultura, bienestár, solidariedád"
 
-#: .\roma\templates\roma\home.html:35 .\roma\templates\roma\home.html:110
-#: .\roma\templates\roma\home.html:190 .\roma\templates\roma\home.html:267
+#: .\roma\templates\roma\home.html:35
+msgid "search for resources in Rome and Lazio"
+msgstr "buscar recursos en Roma y Lazio"
+
+#: .\roma\templates\roma\home.html:36 .\roma\templates\roma\roma_base.html:189
+#: .\roma\templates\roma\roma_base.html:276
+#: .\roma\templates\roma\roma_base.html:380
+#: .\roma\templates\roma\roma_base.html:390
+msgid "enter"
+msgstr "escribe"
+
+#: .\roma\templates\roma\home.html:36 .\roma\templates\roma\roma_base.html:189
+#: .\roma\templates\roma\roma_base.html:276
+#: .\roma\templates\roma\roma_base.html:380
+#: .\roma\templates\roma\roma_base.html:390
+msgid "characters or a few more"
+msgstr "caracteres o unos pocos más"
+
+#: .\roma\templates\roma\home.html:47 .\roma\templates\roma\partners.html:8
+#: .\roma\templates\roma\partners.html:37
+msgid ""
+"If you know useful facilities and services, you can insert them for free, "
+"helping to expand the resource map."
+msgstr ""
+"Si conoces instalaciones y servicios útiles puedes introducirlos de forma "
+"gratuita ayudando a ampliar el mapa de recursos."
+
+#: .\roma\templates\roma\home.html:48 .\roma\templates\roma\partners.html:9
+#: .\roma\templates\roma\partners.html:38
+msgid "add now"
+msgstr "añadir ahora"
+
+#: .\roma\templates\roma\home.html:55 .\roma\templates\roma\partners.html:18
+#: .\roma\templates\roma\partners.html:49
+msgid ""
+"With RomaPaese you can gain visibility on the web and easily get in touch "
+"with new potential customers."
+msgstr ""
+"Con RomaPaese puede ganar visibilidad en la web y ponerse en contacto "
+"fácilmente con nuevos clientes potenciales."
+
+#: .\roma\templates\roma\home.html:56 .\roma\templates\roma\partners.html:19
+#: .\roma\templates\roma\partners.html:50
+msgid "read more"
+msgstr "leer más"
+
+#: .\roma\templates\roma\home.html:72 .\roma\templates\roma\home.html:121
 msgid "resources by theme area"
 msgstr "recursos por área temática"
 
-#: .\roma\templates\roma\home.html:39 .\roma\templates\roma\home.html:42
-#: .\roma\templates\roma\home.html:114 .\roma\templates\roma\home.html:117
-#: .\roma\templates\roma\home.html:194 .\roma\templates\roma\home.html:197
-#: .\roma\templates\roma\home.html:271 .\roma\templates\roma\home.html:274
+#: .\roma\templates\roma\home.html:76 .\roma\templates\roma\home.html:79
+#: .\roma\templates\roma\home.html:125 .\roma\templates\roma\home.html:128
 msgid "show an index of resources for"
 msgstr "muestra un índice de recursos por"
 
-#: .\roma\templates\roma\home.html:51 .\roma\templates\roma\home.html:126
-#: .\roma\templates\roma\home.html:206 .\roma\templates\roma\home.html:281
+#: .\roma\templates\roma\home.html:88 .\roma\templates\roma\home.html:137
 msgid "resources by zones of Roma"
 msgstr "recursos por las zonas de Roma"
 
-#: .\roma\templates\roma\home.html:59 .\roma\templates\roma\home.html:73
-#: .\roma\templates\roma\home.html:134 .\roma\templates\roma\home.html:148
-#: .\roma\templates\roma\home.html:214 .\roma\templates\roma\home.html:228
-#: .\roma\templates\roma\home.html:288 .\roma\templates\roma\home.html:299
+#: .\roma\templates\roma\home.html:96 .\roma\templates\roma\home.html:110
+#: .\roma\templates\roma\home.html:145 .\roma\templates\roma\home.html:159
 msgid "show an index of resources in the zone"
 msgstr "muestra un índice de recursos situados en la zona"
 
-#: .\roma\templates\roma\home.html:69 .\roma\templates\roma\home.html:144
-#: .\roma\templates\roma\home.html:224 .\roma\templates\roma\home.html:296
+#: .\roma\templates\roma\home.html:106 .\roma\templates\roma\home.html:155
 msgid "resources by zones of Lazio"
 msgstr "recursos por las zonas de Lazio"
 
-#: .\roma\templates\roma\home.html:79 .\roma\templates\roma\home.html:157
-#: .\roma\templates\roma\home.html:237 .\roma\templates\roma\home.html:304
+#: .\roma\templates\roma\home.html:177
 msgid "in the spotlight"
 msgstr "en el punto de mira"
 
-#: .\roma\templates\roma\home.html:82 .\roma\templates\roma\home.html:159
-#: .\roma\templates\roma\home.html:239 .\roma\templates\roma\home.html:307
+#: .\roma\templates\roma\home.html:185 .\roma\templates\roma\home.html:197
+#: .\roma\templates\roma\home.html:207 .\roma\templates\roma\home.html:218
 msgid "show the resources on the map by category"
 msgstr "mostrar los recursos en el mapa por categoría"
 
-#: .\roma\templates\roma\home.html:88 .\roma\templates\roma\home.html:165
-#: .\roma\templates\roma\home.html:245 .\roma\templates\roma\home.html:312
-msgid "featured resources"
-msgstr "recursos en primer plano"
-
-#: .\roma\templates\roma\home.html:94 .\roma\templates\roma\home.html:99
-#: .\roma\templates\roma\home.html:171 .\roma\templates\roma\home.html:173
-#: .\roma\templates\roma\home.html:251 .\roma\templates\roma\home.html:253
-#: .\roma\templates\roma\home.html:316 .\roma\templates\roma\partners.html:5
-#: .\roma\templates\roma\partners.html:20
-#: .\roma\templates\roma\partners.html:21
-#: .\roma\templates\roma\partners.html:22
-#: .\roma\templates\roma\partners.html:30
-#: .\roma\templates\roma\partners.html:43
-#: .\roma\templates\roma\partners.html:44
-#: .\roma\templates\roma\partners.html:45
-#: .\roma\templates\roma\partners.html:54
-#: .\roma\templates\roma\partners.html:66
-#: .\roma\templates\roma\partners.html:67
-#: .\roma\templates\roma\partners.html:68
+#: .\roma\templates\roma\partners.html:24
+#: .\roma\templates\roma\partners.html:25
+#: .\roma\templates\roma\partners.html:26
+#: .\roma\templates\roma\partners.html:59
+#: .\roma\templates\roma\partners.html:60
+#: .\roma\templates\roma\partners.html:61
 msgid "show resource"
 msgstr "muestra el recurso"
-
-#: .\roma\templates\roma\partners.html:4
-#: .\roma\templates\roma\partners.html:29
-#: .\roma\templates\roma\partners.html:53
-msgid "sponsors"
-msgstr "patrocinadores"
-
-#: .\roma\templates\roma\partners.html:9
-#: .\roma\templates\roma\partners.html:34
-#: .\roma\templates\roma\partners.html:58
-msgid "partners"
-msgstr "partners"
 
 #: .\roma\templates\roma\roma_base.html:10
 msgid ""
@@ -413,55 +484,41 @@ msgstr ""
 "Cultura, bienestár, solidariedád: recursos geolocalizados para las zonas de "
 "Roma y los municipios de Lazio"
 
-#: .\roma\templates\roma\roma_base.html:181
-#: .\roma\templates\roma\roma_base.html:226
-#: .\roma\templates\roma\roma_base.html:355
-#: .\roma\templates\roma\roma_base.html:365
-msgid "enter"
-msgstr "escribe"
-
-#: .\roma\templates\roma\roma_base.html:181
-#: .\roma\templates\roma\roma_base.html:226
-#: .\roma\templates\roma\roma_base.html:355
-#: .\roma\templates\roma\roma_base.html:365
-msgid "characters or a few more"
-msgstr "caracteres o unos pocos más"
-
-#: .\roma\templates\roma\roma_base.html:191
-#: .\roma\templates\roma\roma_base.html:254
+#: .\roma\templates\roma\roma_base.html:199
+#: .\roma\templates\roma\roma_base.html:264
 msgid "Log In"
 msgstr "Ingrese"
 
-#: .\roma\templates\roma\roma_base.html:203
-#: .\roma\templates\roma\roma_base.html:233
+#: .\roma\templates\roma\roma_base.html:211
+#: .\roma\templates\roma\roma_base.html:243
 msgid "close"
 msgstr "cerrar"
 
-#: .\roma\templates\roma\roma_base.html:277
-#: .\roma\templates\roma\roma_base.html:287
+#: .\roma\templates\roma\roma_base.html:288
+#: .\roma\templates\roma\roma_base.html:298
 msgid "user"
 msgstr "usuario"
 
-#: .\roma\templates\roma\roma_base.html:279
-#: .\roma\templates\roma\roma_base.html:289
+#: .\roma\templates\roma\roma_base.html:290
+#: .\roma\templates\roma\roma_base.html:300
 msgid "Admin"
 msgstr "Administrador"
 
-#: .\roma\templates\roma\roma_base.html:281
-#: .\roma\templates\roma\roma_base.html:291
+#: .\roma\templates\roma\roma_base.html:292
+#: .\roma\templates\roma\roma_base.html:302
 msgid "My profile"
 msgstr "Mi perfil"
 
-#: .\roma\templates\roma\roma_base.html:282
-#: .\roma\templates\roma\roma_base.html:292
+#: .\roma\templates\roma\roma_base.html:293
+#: .\roma\templates\roma\roma_base.html:303
 msgid "My resources"
 msgstr "Mis recursos"
 
-#: .\roma\templates\roma\roma_base.html:293
+#: .\roma\templates\roma\roma_base.html:304
 msgid "Logout"
 msgstr "cerrar sesión"
 
-#: .\roma\templates\roma\roma_base.html:331
+#: .\roma\templates\roma\roma_base.html:356
 msgid ""
 "We use cookies to personalise content and ads, to provide social media "
 "features and to analyse our traffic. We also share information about your "
@@ -476,13 +533,25 @@ msgstr ""
 "combinarla con otra información que les haya proporcionado o que hayan "
 "recopilado a partir del uso que haya hecho de sus servicios."
 
-#: .\roma\templates\roma\roma_base.html:331
+#: .\roma\templates\roma\roma_base.html:356
 msgid "learn more"
 msgstr "más información"
 
-#: .\roma\views.py:238
+#: .\roma\views.py:240
 msgid "PayPal - The safer, easier way to pay online!"
 msgstr "PayPal - La forma más segura de pagar en Internet!"
+
+#~ msgid "Community"
+#~ msgstr "Comunidad"
+
+#~ msgid "sponsors"
+#~ msgstr "patrocinadores"
+
+#~ msgid "partners"
+#~ msgstr "partners"
+
+#~ msgid "featured resources"
+#~ msgstr "recursos en primer plano"
 
 #~ msgid "list"
 #~ msgstr "lista"

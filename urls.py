@@ -153,6 +153,7 @@ urlpatterns = [
     url(r'^nuova-risorsa$', pois_views.poi_new),
     url(r'^nuova-risorsa/(?P<poi_id>.+)/$', pois_views.poi_view),
     url(r'^annota-risorsa/(?P<poi_slug>.+)/$', pois_views.poi_add_note_by_slug, name='feedback'),
+    url(r'^promuovere-attivita-roma-lazio/$', pois_views.poi_promote),
     url(r'^risorse-recenti$', pois_views.pois_recent, name='risorse recenti'),
     url(r'^risorse-aggiornate$', pois_views.pois_updates, name='risorse aggiornate'),
     url(r'^poi-contributors$', pois_views.poi_contributors, name='contributors'),
@@ -164,7 +165,7 @@ urlpatterns = [
     url(r'^viewport_pois$', pois_views.viewport_pois, name='risorse in viewport'),
     url(r'^update_colocations$', pois_views.pois_update_colocations, name='pois_update_colocations'),
     url(r'^analisi-risorse$', pois_views.poi_analysis, name='poi_analysis'),
-    
+    url(r'^contatti$',roma_views.contactsView, name='contacts'),
     url(r'^toponimo-autocomplete/$', StreetAutocomplete.as_view(),name='toponimo-autocomplete'),
     url(r'^zona-autocomplete/$', ZoneAutocomplete.as_view(),name='zona-autocomplete'),
     url(r'^risorsa-autocomplete/$', PoiAutocomplete.as_view(),name='risorsa-autocomplete'),

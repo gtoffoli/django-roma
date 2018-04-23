@@ -5,6 +5,7 @@ import datetime
 # import feedparser
 
 from django.core.cache import caches
+from django.core.mail import send_mail, EmailMessage, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.template import RequestContext
@@ -13,9 +14,10 @@ from django.utils.translation import ugettext as _
 from django.contrib.flatpages.models import FlatPage
 
 import roma.models
-from roma.forms import SearchForm
+from roma.forms import SearchForm, ContactForm
+from roma.settings import SERVER_EMAIL, SITE_NAME, ONLINE_DOMAIN
 import pois.views
-from pois.models import Tag, TagTag, Zone, Poi, Poitype
+from pois.models import Tag, TagTag, Zone, Poi, Poitype, Confighome
 from pois.models import MACROZONE, TOPOZONE, MUNICIPIO
 # from roma.fairvillage.api import poitypes as categories
 
@@ -250,7 +252,7 @@ from pois.models import resources_by_theme_count, resources_by_topo_count
 from pois.models import zone_prefix_dict
 
 def home_data(request, fv=False):
-    zone_dict = zone_index_map(request, zonetype_id=0, render_view=False)
+    #zone_dict = zone_index_map(request, zonetype_id=0, render_view=False)
     language = translation.get_language() or 'en'
     cache = caches['custom']
     key = 'homebody_' + language
@@ -263,8 +265,10 @@ def home_data(request, fv=False):
         data_dict = {}
         summary = FlatPage.objects.get(url='/project/summary/').content
         data_dict['summary'] = summary
+        """
         news = FlatPage.objects.get(url='/project/news/').content
         data_dict['news'] = news
+        """
         by_theme_list = []
         themes = Tag.objects.all().order_by('weight')
         for theme in themes:
@@ -292,6 +296,11 @@ def home_data(request, fv=False):
             if n:
                 by_prov_list.append([zone.code, zone.name, zone.slug, n])
         data_dict['by_prov_list'] = by_prov_list
+        poitypes_spotlight = Confighome.objects.exclude(poitype__isnull=True).filter(view=True).order_by('order')
+        data_dict['poitypes_spotlight'] = poitypes_spotlight
+        for e in poitypes_spotlight:
+            print (e.image)
+            print (e.poitype.name)
         """
         site_url = request.META["HTTP_HOST"]
         d = feedparser.parse('http://%s/feed' % site_url)
@@ -300,16 +309,18 @@ def home_data(request, fv=False):
         """
         if not fv:
             cache.set(key, data_dict)
-    data_dict.update(zone_dict)
+    #data_dict.update(zone_dict)
     return data_dict
 
 def home(request):
     data_dict = home_data(request)
+    """
     poitype_list = Poitype.objects.filter(slug__in=['caf','secondarie-superiori'])
     pois_list = Poi.objects.filter(id__in=[1819, 6039, 2202])
     data_dict['poitype_list']=poitype_list
     pois_dict_list=[poi.make_dict() for poi in pois_list]
     data_dict['pois_list']=pois_dict_list
+    """
     return render(request, 'roma/home.html', data_dict )
     
 def test(request):
@@ -323,3 +334,28 @@ class SignupView(allauthSignupView):
     form_class = SignupForm
 
 signup = SignupView.as_view()
+
+#180417 MMR
+def contactsView(request):
+    flatpage = FlatPage.objects.get(url='/project/contacts/')
+    text_body = flatpage.content
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['from_name']
+            from_email = form.cleaned_data['from_email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            text_message = "Da %s (%s)\n\n%s\n\n---------------\nEmail inviata dal sito di %s (https://%s)" % (name, from_email, message, SITE_NAME, request.META.get('HTTP_HOST', ONLINE_DOMAIN))
+            try:
+                email = EmailMessage(subject, text_message, SERVER_EMAIL,
+                [SERVER_EMAIL,], headers = {'Reply-To': from_email})
+                email.send()
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return render (request, "roma/contacts.html", {'success': True, 'text_body': text_body, 'name': name, 'message': message})
+        else:
+            return render(request, 'roma/contacts.html', {'success': False, 'form': form, 'text_body': text_body, 'name': '', 'message': ''})
+    else:
+        form=ContactForm()
+    return render(request, "roma/contacts.html", {'success': False, 'form': form, 'text_body': text_body, 'name': '', 'message': ''})
