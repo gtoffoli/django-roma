@@ -17,6 +17,8 @@ def context_processor(request):
         'map': show_map,
         'show_element': show_element,
         'maps_key': settings.GOOGLE_MAPS_KEY,
+        'version_maps' : settings.VERSION_GOOGLE_MAPS,
+        'indice_zona' : '/risorse-utili-'
     }
 
     return my_settings

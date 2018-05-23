@@ -16,27 +16,27 @@ def zones_children(request):
          ))
     """
     children.append(MenuItem(_("Macrozones"),
-         url='/macrozone',
+         url='/macrozone-roma',
          weight=10,
     ))
     children.append(MenuItem(_("Municipalities"),
-         url='/municipi',
+         url='/municipi-roma',
          weight=10,
          ))
     children.append(MenuItem(_("Historical quarters"),
-         url='/rioni',
+         url='/rioni-roma',
          weight=10,
     ))
     children.append(MenuItem(_("Quarters"),
-             url='/quartieri',
+             url='/quartieri-roma',
              weight=10,
              ))
     children.append(MenuItem(_("Quarter extensions"),
-             url='/suburbi',
+             url='/suburbi-roma',
              weight=10,
              ))
     children.append(MenuItem(_("Suburban zones"),
-             url='/agro-romano',
+             url='/zone-agro-romano',
              weight=10,
              ))
     if user.is_superuser or user.is_staff:
@@ -45,7 +45,7 @@ def zones_children(request):
                  weight=10,
                  ))
     children.append(MenuItem(_("Provinces"),
-         url='/province',
+         url='/province-lazio',
          weight=10,
          ))
     if (user.is_superuser or user.is_staff):
@@ -54,7 +54,7 @@ def zones_children(request):
              weight=80,
              ))
         children.append(MenuItem(_("Zone types"),
-             url='/tipi-di-zona',
+             url='report/tipi-di-zona',
              weight=80,
              ))
     """
@@ -110,49 +110,49 @@ def resources_children(request):
     children = []
     children.append (MenuItem(
         _("By theme area"),
-        url='/aree-tematiche',
+        url='/risorse-utili-roma-lazio-aree-tematiche',
         weight=80,
     ))
     children.append (MenuItem(
         _("By category"),
-        url='/categorie-di-risorsa',
+        url='/risorse-utili-roma-lazio-categorie',
         weight=80,
     ))
     if user.is_superuser or user.is_staff:
 
         children.append (MenuItem(
             _("By affiliation"),
-            url='/reti-di-risorse',
+            url='/report/reti-di-risorse',
             weight=80,
         ))
         children.append(MenuItem(
             _("Routes"),
-            url='/itinerari',
+            url='/report/itinerari',
             weight=80,
         ))
         children.append (MenuItem(
             _("Resource networks"),
-            url='/mappe-di-risorse',
+            url='/report/mappe-di-risorse',
             weight=80,
         ))
         children.append (MenuItem(
             _("New entries"),
-            url='/risorse-recenti',
+            url='/report/risorse-recenti',
             weight=80,
         ))
         children.append (MenuItem(
             _("Updates"),
-            url='/risorse-aggiornate',
+            url='/report/risorse-aggiornate',
             weight=80,
         ))
         children.append (MenuItem(
             _("To be reviewed"),
-            url='/analisi-risorse',
+            url='/report/analisi-risorse',
             weight=80,
         ))
         children.append (MenuItem(
         _("Top contributors"),
-            url='/poi-contributors',
+            url='/report/poi-contributors',
             weight=80,
         ))
     """
@@ -281,6 +281,6 @@ Menu.add_item("main", MenuItem(ugettext_lazy("Project"),
                            weight=40,
                            separator=True))
 Menu.add_item("main", MenuItem(ugettext_lazy("Contacts"),
-                           url='/contatti',
+                           url='/contattare-redazione-romapaese',
                            weight=40,
                            separator=False))

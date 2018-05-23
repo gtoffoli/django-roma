@@ -367,7 +367,7 @@
         {% endif %}
         <script type="text/javascript" src="{% static 'autocomplete_light/autocomplete.js' %}"></script>
         {% if map %}
-        <script type="text/javascript" src="//maps.google.com/maps/api/js?v=3.30&key={{maps_key}}"></script>
+        <script type="text/javascript" src="//maps.google.com/maps/api/js?v={{version_maps}}&key={{maps_key}}"></script>
         <script type="text/javascript" src="{% static 'roma/ol/OpenLayers.js' %}"></script>
         {% block mapjs %}{% endblock mapjs %}
         {% endif %}

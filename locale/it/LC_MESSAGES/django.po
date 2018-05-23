@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-23 12:34+0200\n"
-"PO-Revision-Date: 2018-04-23 12:34+0100\n"
+"POT-Creation-Date: 2018-05-23 12:26+0200\n"
+"PO-Revision-Date: 2018-05-23 12:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -201,7 +201,7 @@ msgstr "Le zone"
 msgid "Project"
 msgstr "Il progetto"
 
-#: .\roma\menus.py:283 .\roma\templates\roma\contacts.html:4
+#: .\roma\menus.py:283
 msgid "Contacts"
 msgstr "Contatti"
 
@@ -243,8 +243,6 @@ msgstr "Hai dimenticato la Password?"
 #: .\roma\templates\account\logout.html:5
 #: .\roma\templates\account\logout.html:11
 #: .\roma\templates\account\logout.html:20
-#: .\roma\templates\roma\roma_base.html:197
-#: .\roma\templates\roma\roma_base.html:304
 msgid "Sign Out"
 msgstr "Disconnetti"
 
@@ -316,8 +314,6 @@ msgid "Go to the"
 msgstr "Vai alla"
 
 #: .\roma\templates\account\signup.html:5
-#: .\roma\templates\roma\roma_base.html:200
-#: .\roma\templates\roma\roma_base.html:265
 msgid "Signup"
 msgstr "Registrati"
 
@@ -347,23 +343,39 @@ msgstr ""
 "completare il procedimento di verifica clicca sul Link. Contattaci se non "
 "ricevi la mail entro qualche minuto."
 
-#: .\roma\templates\roma\contacts.html:13
+#: .\roma\templates\roma\contacts.html:4
+msgid "How to contact our editorial staff"
+msgstr "Come contattare la nostra redazione"
+
+#: .\roma\templates\roma\contacts.html:5
+msgid "How to contact the RomaPaese editorial office."
+msgstr "Come contattare la redazione di RomaPaese."
+
+#: .\roma\templates\roma\contacts.html:5
+msgid ""
+"Call us or send us a message for information, collaborations and propose "
+"ideas and ideas to improve the service."
+msgstr ""
+"Telefonaci o inviaci un messaggio per informazioni, collaborazioni e "
+"proporci idee e spunti per migliorare il servizio."
+
+#: .\roma\templates\roma\contacts.html:14
 msgid "call us"
 msgstr "telefonaci"
 
-#: .\roma\templates\roma\contacts.html:18
+#: .\roma\templates\roma\contacts.html:19
 msgid "send us an email"
 msgstr "inviaci una e-mail"
 
-#: .\roma\templates\roma\contacts.html:29
+#: .\roma\templates\roma\contacts.html:30
 msgid "write us a message"
 msgstr "scrivici un messaggio"
 
-#: .\roma\templates\roma\contacts.html:41
+#: .\roma\templates\roma\contacts.html:42
 msgid "Send"
 msgstr "Invia"
 
-#: .\roma\templates\roma\contacts.html:44
+#: .\roma\templates\roma\contacts.html:45
 msgid "All fields are required"
 msgstr "Tutti i campi sono obbligatori"
 
@@ -384,17 +396,21 @@ msgstr "cultura, benessere, solidarietà"
 msgid "search for resources in Rome and Lazio"
 msgstr "cerca risorse a Roma e nel Lazio"
 
-#: .\roma\templates\roma\home.html:36 .\roma\templates\roma\roma_base.html:189
-#: .\roma\templates\roma\roma_base.html:276
-#: .\roma\templates\roma\roma_base.html:380
-#: .\roma\templates\roma\roma_base.html:390
+#: .\roma\templates\roma\home.html:36 .\roma\templates\roma\roma_base -iubenda
+#: - Copia.html:193 Copia.html:284 Copia.html:403 Copia.html:413
+#: .\roma\templates\roma\roma_base.html:191
+#: .\roma\templates\roma\roma_base.html:282
+#: .\roma\templates\roma\roma_base.html:392
+#: .\roma\templates\roma\roma_base.html:402
 msgid "enter"
 msgstr "digita"
 
-#: .\roma\templates\roma\home.html:36 .\roma\templates\roma\roma_base.html:189
-#: .\roma\templates\roma\roma_base.html:276
-#: .\roma\templates\roma\roma_base.html:380
-#: .\roma\templates\roma\roma_base.html:390
+#: .\roma\templates\roma\home.html:36 .\roma\templates\roma\roma_base -iubenda
+#: - Copia.html:193 Copia.html:284 Copia.html:403 Copia.html:413
+#: .\roma\templates\roma\roma_base.html:191
+#: .\roma\templates\roma\roma_base.html:282
+#: .\roma\templates\roma\roma_base.html:392
+#: .\roma\templates\roma\roma_base.html:402
 msgid "characters or a few more"
 msgstr "caratteri o pochi più"
 
@@ -466,14 +482,16 @@ msgstr "mostra le risorse sulla mappa per la categoria"
 msgid "show resource"
 msgstr "mostra la risorsa"
 
-#: .\roma\templates\roma\roma_base.html:10
+#: .\roma\templates\roma\roma_base -iubenda - Copia.html:13
+#: .\roma\templates\roma\roma_base.html:12
 msgid ""
 "Roma, Lazio, quarters, house, family, health, school, work, culture, services"
 msgstr ""
 "Roma, Lazio, quartieri, casa, famiglia, salute, scuola, lavor, cultura, "
 "servizi"
 
-#: .\roma\templates\roma\roma_base.html:11
+#: .\roma\templates\roma\roma_base -iubenda - Copia.html:14
+#: .\roma\templates\roma\roma_base.html:13
 msgid ""
 "Culture, well-being, solidarity: geolocated resources for Roma zones and "
 "municipalities in Lazio"
@@ -481,41 +499,25 @@ msgstr ""
 "Cultura, benessere, solidarietà: risorse geolocalizzate per le zone di Roma "
 "e i comuni del Lazio"
 
-#: .\roma\templates\roma\roma_base.html:199
-#: .\roma\templates\roma\roma_base.html:264
-msgid "Log In"
-msgstr "Accedi"
-
-#: .\roma\templates\roma\roma_base.html:211
-#: .\roma\templates\roma\roma_base.html:243
+#: .\roma\templates\roma\roma_base -iubenda - Copia.html:216 Copia.html:248
+#: .\roma\templates\roma\roma_base.html:214
+#: .\roma\templates\roma\roma_base.html:246
 msgid "close"
 msgstr "chiudi"
 
-#: .\roma\templates\roma\roma_base.html:288
-#: .\roma\templates\roma\roma_base.html:298
+#: .\roma\templates\roma\roma_base -iubenda - Copia.html:296 Copia.html:309
+#: .\roma\templates\roma\roma_base.html:294
+#: .\roma\templates\roma\roma_base.html:307
 msgid "user"
 msgstr "utente"
 
-#: .\roma\templates\roma\roma_base.html:290
-#: .\roma\templates\roma\roma_base.html:300
+#: .\roma\templates\roma\roma_base -iubenda - Copia.html:298 Copia.html:311
+#: .\roma\templates\roma\roma_base.html:296
+#: .\roma\templates\roma\roma_base.html:309
 msgid "Admin"
 msgstr "Amministratore"
 
-#: .\roma\templates\roma\roma_base.html:292
-#: .\roma\templates\roma\roma_base.html:302
-msgid "My profile"
-msgstr "Il mio profilo"
-
-#: .\roma\templates\roma\roma_base.html:293
-#: .\roma\templates\roma\roma_base.html:303
-msgid "My resources"
-msgstr "Le mie risorse"
-
-#: .\roma\templates\roma\roma_base.html:304
-msgid "Logout"
-msgstr "Esci"
-
-#: .\roma\templates\roma\roma_base.html:356
+#: .\roma\templates\roma\roma_base.html:368
 msgid ""
 "We use cookies to personalise content and ads, to provide social media "
 "features and to analyse our traffic. We also share information about your "
@@ -530,13 +532,24 @@ msgstr ""
 "i quali potrebbero combinarle con altre informazioni che hai fornito loro o "
 "che hanno raccolto in base al tuo utilizzo dei loro servizi."
 
-#: .\roma\templates\roma\roma_base.html:356
+#: .\roma\templates\roma\roma_base.html:368
 msgid "learn more"
 msgstr "leggi di più"
 
-#: .\roma\views.py:240
-msgid "PayPal - The safer, easier way to pay online!"
-msgstr "PayPal - Il sistema di pagamento online più facile e sicuro!"
+#~ msgid "Log In"
+#~ msgstr "Accedi"
+
+#~ msgid "My profile"
+#~ msgstr "Il mio profilo"
+
+#~ msgid "My resources"
+#~ msgstr "Le mie risorse"
+
+#~ msgid "Logout"
+#~ msgstr "Esci"
+
+#~ msgid "PayPal - The safer, easier way to pay online!"
+#~ msgstr "PayPal - Il sistema di pagamento online più facile e sicuro!"
 
 #~ msgid "Community"
 #~ msgstr "Comunità"

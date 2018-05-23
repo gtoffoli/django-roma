@@ -144,6 +144,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.sitemaps',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
@@ -436,3 +437,5 @@ REST_FRAMEWORK = {
     ),
 """
 POITYPE_SLUGS = []
+
+VERSION_GOOGLE_MAPS = '3.31'

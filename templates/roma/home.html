@@ -93,7 +93,7 @@ div.section2 > div {padding:20px 0; margin:0 240px;}
                             <h5 class="panel-home"><a href="#" class="toggleIcon"><i class="fa fa-plus-square"></i> <span>{{ topotype_name_plural|capfirst }}</span></a></h5>
                             <article id="zona_{{ forloop.counter }}" class="view-list-home box-scroll" style="{% if topotype_sublist|length > 6 %}height: 20vh; {% endif %}display:none">
                             {% for zone_code, zone_name, zone_slug, n in topotype_sublist %}
-                                <p>{{ zone_name }} <small>({{ zone_code }})</small> <span class="text-pre-wrap">[ <a href="/indice-zona/{{ zone_slug }}/" title="{% trans "show an index of resources in the zone" %}: {{ zone_name }}">{{ n }}</a> ]</span></p>
+                                <p>{{ zone_name }} <small>({{ zone_code }})</small> <span class="text-pre-wrap">[ <a href="{{indice_zona}}{{ zone_slug }}/" title="{% trans "show an index of resources in the zone" %}: {{ zone_name }}">{{ n }}</a> ]</span></p>
                             {% endfor %}
                             </article>
                         </div>
@@ -107,7 +107,7 @@ div.section2 > div {padding:20px 0; margin:0 240px;}
                     <div><img class="mapHome" src="{{ MEDIA_URL }}img_home/mappa_lazio.jpg"></div>
                     <article id="prov" class="view-list-home">
                     {% for zone_code, zone_name, zone_slug, n in by_prov_list %}
-                        <p>{{ zone_name }} <span class="text-pre-wrap">[ <a href="/indice-zona/{{ zone_slug }}/" title="{% trans "show an index of resources in the zone" %}: {{ zone_name }}">{{ n }}</a> ]</span></p>
+                        <p>{{ zone_name }} <span class="text-pre-wrap">[ <a href="{{indice_zona}}{{ zone_slug }}/" title="{% trans "show an index of resources in the zone" %}: {{ zone_name }}">{{ n }}</a> ]</span></p>
                     {% endfor %}
                     </article>
                 </div>
@@ -142,7 +142,7 @@ div.section2 > div {padding:20px 0; margin:0 240px;}
                             <h5 class="panel-home"><a href="#" class="toggleIcon"><i class="fa fa-plus-square"></i> <span>{{ topotype_name_plural|capfirst }}</span></a></h5>
                             <article id="zona_{{ forloop.counter }}" class="view-list-home box-scroll" style="{% if topotype_sublist|length > 6 %}height: 20vh; {% endif %}display:none">
                             {% for zone_code, zone_name, zone_slug, n in topotype_sublist %}
-                                <p>{{ zone_name }} <small>({{ zone_code }})</small> <span class="text-pre-wrap">[ <a href="/indice-zona/{{ zone_slug }}/" title="{% trans "show an index of resources in the zone" %}: {{ zone_name }}">{{ n }}</a> ]</span></p>
+                                <p>{{ zone_name }} <small>({{ zone_code }})</small> <span class="text-pre-wrap">[ <a href="{{indice_zona}}{{ zone_slug }}/" title="{% trans "show an index of resources in the zone" %}: {{ zone_name }}">{{ n }}</a> ]</span></p>
                             {% endfor %}
                             </article>
                         </div>
@@ -156,7 +156,7 @@ div.section2 > div {padding:20px 0; margin:0 240px;}
                     <div><img class="mapHome" src="{{ MEDIA_URL }}mappe/mappa_lazio.jpg"></div>
                     <article id="prov" class="view-list-home">
                     {% for zone_code, zone_name, zone_slug, n in by_prov_list %}
-                        <p>{{ zone_name }} <span class="text-pre-wrap">[ <a href="/indice-zona/{{ zone_slug }}/" title="{% trans "show an index of resources in the zone" %}: {{ zone_name }}">{{ n }}</a> ]</span></p>
+                        <p>{{ zone_name }} <span class="text-pre-wrap">[ <a href="{{indice_zona}}{{ zone_slug }}/" title="{% trans "show an index of resources in the zone" %}: {{ zone_name }}">{{ n }}</a> ]</span></p>
                     {% endfor %}
                     </article>
                 </div>

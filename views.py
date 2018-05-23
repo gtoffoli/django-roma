@@ -208,7 +208,8 @@ def current_datetime(request):
     now = datetime.datetime.now()
     html = "<html><body>It is now %s.</body></html>" % now
     return HttpResponse(html)
-
+"""
+MMR 20180517
 # inizialmente copiata da https://github.com/pgcd/asphalto3/blob/master/donations/views.py
 # poi rifatta
 def donate(request):
@@ -245,7 +246,7 @@ def donate(request):
 # corrisponde al return address dell'interfaccia PayPal
 def donate_thanks(request):
     return render(request, "roma/donate_thanks.html")
-
+"""
 from pois.views import zone_index_map
 # from pois.models import resources_by_theme, resources_by_topo
 from pois.models import resources_by_theme_count, resources_by_topo_count
