@@ -69,14 +69,14 @@ class PoitypeZoneSitemap(Sitemap):
         poitypes = Poitype.objects.filter(klass__in=poitype_ids)
         zones = Zone.objects.filter(zonetype_id__in=(0,3,7)).exclude(code='ROMA')
         poitypezone = []
-        for zone in zones:
+        for zone in zones[:10]:
             if zone.zonetype_id == 0:
                 subzones = zone.zones.filter(zonetype_id=7)
                 zone_ids = [subzone.id for subzone in subzones]
                 q = Q(zones__in=zone_ids)
             else:
                 q = Q(zones=zone)
-            for poitype in poitypes:
+            for poitype in poitypes[:10]:
                 poi_list = Poi.objects.filter(q & Q(poitype_id=poitype.klass, state=1))
                 if poi_list:
                     poitypezone.append(make_PoitypeZone([poitype.slug,zone.slug,]))       
@@ -119,7 +119,7 @@ section = make_section('temi')
 sitemap = TagSitemap()
 all_sitemaps[section.name] = sitemap
 
-section = make_section('categoriazona')
+section = make_section('categoriezone')
 sitemap = PoitypeZoneSitemap()
 all_sitemaps[section.name] = sitemap
 
