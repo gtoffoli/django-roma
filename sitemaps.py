@@ -1,7 +1,7 @@
+from django.db.models import Q
 from django.contrib.sitemaps import Sitemap
 from django.urls import reverse
-from pois.models import Poi, Poitype, Tag, Zone, PoiZone
-from pois.views import resources_by_category_and_zone
+from pois.models import Poi, Poitype, Tag, Zone
 
 class PoiSitemap(Sitemap):
     changefreq = "weekly"
@@ -46,7 +46,7 @@ class TagSitemap(Sitemap):
         
     def lastmod(self, obj):
         return obj.modified
-        
+
 class PoitypeZone(object):
     slugs = []
     
@@ -57,8 +57,8 @@ class PoitypeZone(object):
 
 def make_PoitypeZone(slugs):
     return PoitypeZone(slugs)
-    
-class PoitypeZoneSitemap (Sitemap):
+
+class PoitypeZoneSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.5
     protocol = "https"
@@ -67,13 +67,17 @@ class PoitypeZoneSitemap (Sitemap):
         poi_list = Poi.objects.filter(state=1).order_by('poitype_id')
         poitype_ids = poi_list.values_list('poitype_id', flat=True).distinct()
         poitypes = Poitype.objects.filter(klass__in=poitype_ids)
-        poizones = PoiZone.objects.all().order_by('zone_id')
-        poizones_ids = poizones.values_list('zone_id', flat=True).distinct()
-        zones = Zone.objects.filter(zonetype_id__in=(0,3,7),pk__in=poizones_ids)
+        zones = Zone.objects.filter(zonetype_id__in=(0,3,7)).exclude(code='ROMA')
         poitypezone = []
         for zone in zones:
+            if zone.zonetype_id == 0:
+                subzones = zone.zones.filter(zonetype_id=7)
+                zone_ids = [subzone.id for subzone in subzones]
+                q = Q(zones__in=zone_ids)
+            else:
+                q = Q(zones=zone)
             for poitype in poitypes:
-                poi_list = resources_by_category_and_zone(poitype.klass, zone, select_related=True)
+                poi_list = Poi.objects.filter(q & Q(poitype_id=poitype.klass, state=1))
                 if poi_list:
                     poitypezone.append(make_PoitypeZone([poitype.slug,zone.slug,]))       
         return poitypezone
