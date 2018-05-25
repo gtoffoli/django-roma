@@ -26,11 +26,10 @@ Disallow: /suburbio/
 Disallow: /zona-toponomastica/
 Disallow: /zona-urbanistica/
 Disallow: /zona-cap/
-Disallow: /mappa-zona/
-Disallow: /categoria/*/zona/roma
+Disallow: /categoria/*/zona/roma/
 Disallow: /categoria/*/tema/
 Disallow: /tema/*/zona/
 
 Crawl-delay: 10
 
-# Sitemap: https://www.romapaese.it/sitemap-index.xml
+Sitemap: https://www.romapaese.it/sitemap-index.xml
