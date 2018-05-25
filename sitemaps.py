@@ -1,7 +1,7 @@
 from django.db.models import Q
 from django.contrib.sitemaps import Sitemap
 from django.urls import reverse
-from pois.models import Poi, Poitype, Tag, Zone
+from pois.models import Poi, Poitype, Tag, Zone, PoiZone
 
 class PoiSitemap(Sitemap):
     changefreq = "weekly"
@@ -58,7 +58,143 @@ class PoitypeZone(object):
 def make_PoitypeZone(slugs):
     return PoitypeZone(slugs)
 
-class PoitypeZoneSitemap(Sitemap):
+def poitypes_with_resources():
+    poi_list = Poi.objects.filter(state=1).order_by('poitype_id')
+    poitype_ids = poi_list.values_list('poitype_id', flat=True).distinct()
+    poitypes = Poitype.objects.filter(klass__in=poitype_ids)
+    return poitypes
+
+def zones_with_resources():
+    zone_list = PoiZone.objects.filter(poi__state=1).order_by('zone_id')
+    zone_ids = zone_list.values_list('zone_id', flat=True).distinct()
+    zones = Zone.objects.filter(pk__in=zone_ids)
+    return zones
+
+def make_poitypeszone(zones, poitypes):
+    poitypezone = []
+    for zone in zones:
+        q = Q(zones=zone)
+        for poitype in poitypes:
+            poi_list = Poi.objects.filter(q & Q(poitype_id=poitype.klass, state=1))
+            if poi_list:
+                poitypezone.append(make_PoitypeZone([poitype.slug,zone.slug,]))
+    return poitypezone
+    
+class PoitypeMacrozoneSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.5
+    protocol = "https"
+    
+    def items(self):
+        poitypes = poitypes_with_resources()
+        zones = Zone.objects.filter(zonetype_id = 0).exclude(code='ROMA')
+        poitypezone = []
+        for zone in zones:
+            subzones = zone.zones.filter(zonetype_id=7)
+            zone_ids = [subzone.id for subzone in subzones]
+            q = Q(zones__in=zone_ids)
+            for poitype in poitypes:
+                poi_list = Poi.objects.filter(q & Q(poitype_id=poitype.klass, state=1))
+                if poi_list:
+                    poitypezone.append(make_PoitypeZone([poitype.slug,zone.slug,]))       
+        return poitypezone
+         
+    def location (self, obj):
+        return '/categoria/%s/zona/%s/' % (obj.data[0],obj.data[1])
+
+class PoitypeMunicipiSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.5
+    protocol = "https"
+    
+    def items(self):
+        poitypes = poitypes_with_resources()
+        zones_ids = zones_with_resources()
+        zones = Zone.objects.filter(pk__in=zones_ids, zonetype_id = 7, code__startswith='M.')
+        poitypezone = make_poitypeszone(zones, poitypes)
+        return poitypezone
+         
+    def location (self, obj):
+        return '/categoria/%s/zona/%s/' % (obj.data[0],obj.data[1])
+
+class PoitypeQuartieriSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.5
+    protocol = "https"
+    
+    def items(self):
+        poitypes = poitypes_with_resources()
+        zones_ids = zones_with_resources()
+        zones = Zone.objects.filter(pk__in=zones_ids, zonetype_id = 3, code__startswith='Q.')
+        poitypezone = make_poitypeszone(zones, poitypes)     
+        return poitypezone
+         
+    def location (self, obj):
+        return '/categoria/%s/zona/%s/' % (obj.data[0],obj.data[1])
+
+class PoitypeRioniSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.5
+    protocol = "https"
+    
+    def items(self):
+        poitypes = poitypes_with_resources()
+        zones_ids = zones_with_resources()
+        zones = Zone.objects.filter(pk__in=zones_ids, zonetype_id = 3, code__startswith='R.')
+        poitypezone = make_poitypeszone(zones, poitypes)
+        return poitypezone
+         
+    def location (self, obj):
+        return '/categoria/%s/zona/%s/' % (obj.data[0],obj.data[1])
+
+class PoitypeSuburbiSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.5
+    protocol = "https"
+    
+    def items(self):
+        poitypes = poitypes_with_resources()
+        zones_ids = zones_with_resources()
+        zones = Zone.objects.filter(pk__in=zones_ids, zonetype_id = 3, code__startswith='S.')
+        poitypezone = make_poitypeszone(zones, poitypes)
+        return poitypezone
+         
+    def location (self, obj):
+        return '/categoria/%s/zona/%s/' % (obj.data[0],obj.data[1])
+
+class PoitypeAgroromanoSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.5
+    protocol = "https"
+    
+    def items(self):
+        poitypes = poitypes_with_resources()
+        zones_ids = zones_with_resources()
+        zones = Zone.objects.filter(pk__in=zones_ids, zonetype_id = 3, code__startswith='Z.')
+        poitypezone = []
+        poitypezone = make_poitypeszone(zones, poitypes)
+        return poitypezone
+         
+    def location (self, obj):
+        return '/categoria/%s/zona/%s/' % (obj.data[0],obj.data[1])
+
+class PoitypeComuniSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.5
+    protocol = "https"
+    
+    def items(self):
+        poitypes = poitypes_with_resources()
+        zones_ids = zones_with_resources()
+        zones = Zone.objects.filter(pk__in=zones_ids, zonetype_id = 7, code__startswith='COM.')
+        poitypezone = make_poitypeszone(zones, poitypes)
+        return poitypezone
+         
+    def location (self, obj):
+        return '/categoria/%s/zona/%s/' % (obj.data[0],obj.data[1])
+        
+"""
+class PoitypeMunicipiSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.5
     protocol = "https"
@@ -84,7 +220,7 @@ class PoitypeZoneSitemap(Sitemap):
          
     def location (self, obj):
         return '/categoria/%s/zona/%s/' % (obj.data[0],obj.data[1])
-
+"""
 class StaticSitemap(Sitemap):
     priority = 0.5
     changefreq = 'monthly'
@@ -119,8 +255,32 @@ section = make_section('temi')
 sitemap = TagSitemap()
 all_sitemaps[section.name] = sitemap
 
-section = make_section('categoriezone')
-sitemap = PoitypeZoneSitemap()
+section = make_section('categoriemacrozone')
+sitemap = PoitypeMacrozoneSitemap()
+all_sitemaps[section.name] = sitemap
+
+section = make_section('categoriemunicipi')
+sitemap = PoitypeMunicipiSitemap()
+all_sitemaps[section.name] = sitemap
+
+section = make_section('categoriequartieri')
+sitemap = PoitypeQuartieriSitemap()
+all_sitemaps[section.name] = sitemap
+
+section = make_section('categorierioni')
+sitemap = PoitypeRioniSitemap()
+all_sitemaps[section.name] = sitemap
+
+section = make_section('categoriesuburbi')
+sitemap = PoitypeSuburbiSitemap()
+all_sitemaps[section.name] = sitemap
+
+section = make_section('categorieagroromano')
+sitemap = PoitypeAgroromanoSitemap()
+all_sitemaps[section.name] = sitemap
+
+section = make_section('categoriecomuni')
+sitemap = PoitypeComuniSitemap()
 all_sitemaps[section.name] = sitemap
 
 section = make_section('static')
