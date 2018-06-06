@@ -12,7 +12,7 @@ class PoiSitemap(Sitemap):
         return Poi.objects.filter(state=1).order_by('name')
 
     def location (self, obj):
-        return '/risorsa/%s' % obj.slug
+        return '/risorsa/%s/' % obj.slug
         
     def lastmod(self, obj):
         return obj.modified
@@ -28,7 +28,7 @@ class PoitypeSitemap(Sitemap):
         return Poitype.objects.filter(klass__in=poitype_ids)
 
     def location (self, obj):
-        return '/categoria/%s' % obj.slug
+        return '/categoria/%s/' % obj.slug
         
     def lastmod(self, obj):
         return obj.modified
@@ -42,7 +42,7 @@ class TagSitemap(Sitemap):
         return Tag.objects.all().exclude(id=49)
 
     def location (self, obj):
-        return '/tema/%s' % obj.slug
+        return '/tema/%s/' % obj.slug
         
     def lastmod(self, obj):
         return obj.modified
@@ -223,11 +223,11 @@ class PoitypeMunicipiSitemap(Sitemap):
 """
 class StaticSitemap(Sitemap):
     priority = 0.5
-    changefreq = 'monthly'
+    changefreq = 'weekly'
     protocol = 'https'
 
     def items(self):
-        return ['/nuova-risorsa', '/promuovere-attivita-roma-lazio/', '/about-us/', '/contattare-redazione-romapaese']
+        return ['/', '/nuova-risorsa', '/promuovere-attivita-roma-lazio/', '/about-us/', '/contattare-redazione-romapaese']
 
     def location(self, item):
         return item

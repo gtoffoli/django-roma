@@ -299,9 +299,6 @@ def home_data(request, fv=False):
         data_dict['by_prov_list'] = by_prov_list
         poitypes_spotlight = Confighome.objects.exclude(poitype__isnull=True).filter(view=True).order_by('order')
         data_dict['poitypes_spotlight'] = poitypes_spotlight
-        for e in poitypes_spotlight:
-            print (e.image)
-            print (e.poitype.name)
         """
         site_url = request.META["HTTP_HOST"]
         d = feedparser.parse('http://%s/feed' % site_url)
