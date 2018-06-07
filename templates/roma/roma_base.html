@@ -348,7 +348,7 @@
     {% block footer_base %}
         <div class="container-fluid fontSize13 pT10 pB20" style="background:#027FB3; color:#aaa"><a href="#" class="scrollup">Scroll</a>
             <div class="container">
-                <div class="pull-left">&copy; {% now "Y" %} LINK SRL - P. IVA 02098911007 :: Via Udine 30 - 00161 Roma :: <a href="mailto:info@linkroma.it" style="color:#ddd">romapaese@linkroma.it</a> - www.romapaese.it</div><div class="pull-right"><a href="/help/privacy" style="color:#ddd">PRIVACY</a></div>
+                <div class="pull-left">&copy; {% now "Y" %} LINK SRL - P. IVA 02098911007 :: Via Udine 30 - 00161 Roma :: <a href="mailto:info@linkroma.it" style="color:#ddd">romapaese@linkroma.it</a> - www.romapaese.it</div><div class="pull-right"><a href="/privacy/" style="color:#ddd">PRIVACY</a></div>
             </div>
         </div>
     {% endblock footer_base %}
@@ -359,7 +359,7 @@
         <script type="text/javascript" src="{% static "roma/js/cookiechoices.js" %}"></script>
         <script>
         document.addEventListener('DOMContentLoaded', function(event) {
-        cookieChoices.showCookieConsentBar('{% trans "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information you’ve provided to them or they’ve collected from your use of their services." %}', 'OK', '{% trans "learn more"|upper %}', '/help/privacy');
+        cookieChoices.showCookieConsentBar('{% trans "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information you’ve provided to them or they’ve collected from your use of their services." %}', 'OK', '{% trans "learn more"|upper %}', '/privacy/');
         });
         </script>
         {% if help %}
