@@ -58,6 +58,15 @@ div.actions div.help-templates {display: none;}
 .box-res>div.table-responsive {margin-bottom: 0 !important; border:1px solid transparent !important;}
 .box-res>iframe {width:100%; height:100%;}
 .box-scroll {overflow: auto; -webkit-overflow-scrolling: touch;}
+@media print {
+    header .pull-right,
+    header .navbar-xs,
+    header .search-xs,
+    .actions,
+    .box-fb,
+    .noprint {display:none;}
+    .box-res {height:auto;}
+}
 .display-box {display: table;}
 .display-box>div {display: table-cell; vertical-align: middle; text-align: center; font-size:1.5em; color: #999;}
 .box-header {background: #EFEFEF; font-weight: 600; padding: 6px 12px;}

@@ -334,7 +334,7 @@
 {% endblock bottom-banner %}
 
                 </div>
-                <div class="col-sm-12 col-md-2 col-lg-2">
+                <div class="col-sm-12 col-md-2 col-lg-2 noprint">
                     {% block pub-content %}
                         {% include 'roma/partners.html' %}
                     {% endblock pub-content %}
@@ -348,7 +348,7 @@
     {% block footer_base %}
         <div class="container-fluid fontSize13 pT10 pB20" style="background:#027FB3; color:#aaa"><a href="#" class="scrollup">Scroll</a>
             <div class="container">
-                <div class="pull-left">&copy; {% now "Y" %} LINK SRL - P. IVA 02098911007 :: Via Udine 30 - 00161 Roma :: <a href="mailto:info@linkroma.it" style="color:#ddd">romapaese@linkroma.it</a> - www.romapaese.it</div><div class="pull-right"><a href="/privacy/" style="color:#ddd">PRIVACY</a></div>
+                <div class="pull-left">&copy; {% now "Y" %} LINK SRL - P. IVA 02098911007 :: Via Udine 30 - 00161 Roma :: <a href="mailto:info@linkroma.it" style="color:#ddd">romapaese@linkroma.it</a> - www.romapaese.it</div><div class="pull-right noprint"><a href="/privacy/" style="color:#ddd">PRIVACY</a></div>
             </div>
         </div>
     {% endblock footer_base %}
@@ -377,7 +377,7 @@
                 $("body").css("cursor","default")
                 $("a").on("click", function() {$("body").css("cursor","wait")});
                 $("a.dropdown-toggle").on("click", function() {$("body").css("cursor","default")});
-
+                $("a.cursordefault").on("click", function() {$("body").css("cursor","default")});
                 if ($('#navigation_autocomplete').length > 0) {
                     $('#navigation_autocomplete').yourlabsAutocomplete({
                         url: '{% url 'navigation_autocomplete' %}',
