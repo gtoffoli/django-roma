@@ -277,7 +277,7 @@ Menu.add_item("main", MenuItem(ugettext_lazy("Community"),
 """
 #180420 MMR
 Menu.add_item("main", MenuItem(ugettext_lazy("Project"),
-                           url='/about-us',
+                           url='/about-us/',
                            weight=40,
                            separator=True))
 Menu.add_item("main", MenuItem(ugettext_lazy("Contacts"),
