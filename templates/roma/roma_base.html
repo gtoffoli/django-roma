@@ -209,13 +209,13 @@
                         </form>
                     </div>
                     <div class="collapse my_navbar-collapse">
-                        <ul class="nav text-left border-dotted"><li><a href="#" data-toggle="collapse" id="closemenu" data-target=".my_navbar-collapse"><i class="fa fa-times" style="font: normal normal normal 22px/1 FontAwesome" aria-hidden="true"></i> {% trans "close" %}</a></li></ul>
+                        <ul class="nav text-left border-dotted"><li><a href="#" data-toggle="collapse" id="closemenu" data-target=".my_navbar-collapse" rel="nofollow"><i class="fa fa-times" style="font: normal normal normal 22px/1 FontAwesome" aria-hidden="true"></i> {% trans "close" %}</a></li></ul>
                         {% with menu=menus.main %}
                         <ul class="nav text-left list-inline">
                         {% for item in menu %}
                             <li class="{% if item.selected %}active{% endif %}{% if item.children %} dropdown{% endif %}" id="top-menu-{{ item.slug }}">
                             {% if item.children %}
-                                <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" aria-extended="true">{% if item.icon %}<i class="icon-{{ item.icon }} icon-white"></i>&nbsp;{% endif %}{{ item.title }}&nbsp;<b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" aria-extended="true" rel="nofollow">{% if item.icon %}<i class="icon-{{ item.icon }} icon-white"></i>&nbsp;{% endif %}{{ item.title }}&nbsp;<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                 {% for child in item.children %}
                                     <li{% if child.selected %} class="active"{% endif %}><a href="{{ child.url }}">{{ child.title }}</a></li>
@@ -241,13 +241,13 @@
 
                 </div>
                 <div class="clear-both collapse my_navbar-collapse">
-                    <ul class="nav text-left boder-dotted"><li><a href="#" data-toggle="collapse" id="closemenu" data-target=".my_navbar-collapse"><i class="fa fa-times" style="font: normal normal normal 22px/1 FontAwesome" aria-hidden="true"></i> {% trans "close" %}</a></li></ul>
+                    <ul class="nav text-left boder-dotted"><li><a href="#" data-toggle="collapse" id="closemenu" data-target=".my_navbar-collapse" rel="nofollow"><i class="fa fa-times" style="font: normal normal normal 22px/1 FontAwesome" aria-hidden="true"></i> {% trans "close" %}</a></li></ul>
                     {% with menu=menus.main %}
                     <ul class="nav text-left list-inline">
                     {% for item in menu %}
                         <li class="{% if item.selected %}active{% endif %}{% if item.children %} dropdown{% endif %}" id="top-menu-{{ item.slug }}">
                         {% if item.children %}
-                            <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" aria-extended="true">{% if item.icon %}<i class="icon-{{ item.icon }} icon-white"></i>&nbsp;{% endif %}{{ item.title }}&nbsp;<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" aria-extended="true" rel="nofollow">{% if item.icon %}<i class="icon-{{ item.icon }} icon-white"></i>&nbsp;{% endif %}{{ item.title }}&nbsp;<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                             {% for child in item.children %}
                                 <li{% if child.selected %} class="active"{% endif %}><a href="{{ child.url }}">{{ child.title }}</a></li>
@@ -346,7 +346,7 @@
     {% endblock content_base %}
     
     {% block footer_base %}
-        <div class="container-fluid fontSize13 pT10 pB20" style="background:#027FB3; color:#aaa"><a href="#" class="scrollup">Scroll</a>
+        <div class="container-fluid fontSize13 pT10 pB20" style="background:#027FB3; color:#aaa"><a href="#" class="scrollup" rel="nofollow">Scroll</a>
             <div class="container">
                 <div class="pull-left">&copy; {% now "Y" %} LINK SRL - P. IVA 02098911007 :: Via Udine 30 - 00161 Roma :: <a href="mailto:info@linkroma.it" style="color:#ddd">romapaese@linkroma.it</a> - www.romapaese.it</div><div class="pull-right noprint"><a href="/privacy/" style="color:#ddd">PRIVACY</a></div>
             </div>
