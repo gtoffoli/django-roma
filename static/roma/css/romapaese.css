@@ -107,7 +107,9 @@ table.table-res>tbody>tr>td {border-top:1px solid transparent; }
 table.table-list {border-bottom: 1px solid #ddd;}
 td.td-total-white {background: #fff; border-top: 1px solid #fff !important; border-bottom: 1px solid #fff;}
 @media screen and (max-width: 767px) {
+    table.table-res>tbody>tr>th,
     table.table-res>tbody>tr>td {white-space:normal !important; }
+    .box-res {height:auto; }
 }
 .panel-home {
 margin-top: 0;
