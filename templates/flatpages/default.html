@@ -7,9 +7,15 @@
 {% block content %}
     <div class="boxcontent">
         <div class="row">
-            <div class="col-lg-offset-2 col-lg-9">
+            <div class="col-lg-offset-2 col-lg-9"> 
+            {% if request.user.is_superuser and request.LANGUAGE_CODE == 'it' %}
+                <div class="actions">
+                    <div><a href="/admin/flatpages/flatpage/{{ flatpage.id }}/" title=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <small>{% trans "edit" %}</small></a></div>
+                    <div><a href="/datatrans/translate/flatpage/{{ flatpage.id }}/" title=""><i class="fa fa-language" aria-hidden="true"></i> <small>{% trans "translate" %}</small></a></div>
+                </div>
+                {% endif %}
                 {{ flatpage.content|safe }}
             </div>
         </div>
-</div>
+    </div>
 {% endblock content %}

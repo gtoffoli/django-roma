@@ -186,7 +186,7 @@ from datatrans.utils import register
 from django.contrib.flatpages.models import FlatPage
 
 class FlatPageTranslation(object):
-    fields = ('title', 'content')
+    fields = ('content')
 register(FlatPage, FlatPageTranslation)
 
 """

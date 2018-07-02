@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-28 11:38+0200\n"
-"PO-Revision-Date: 2018-06-28 11:42+0100\n"
+"POT-Creation-Date: 2018-07-02 11:18+0200\n"
+"PO-Revision-Date: 2018-07-02 11:26+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -60,6 +60,14 @@ msgstr "tira de control"
 #: .\roma\forms.py:62
 msgid "Enter these 5 characters in the textbox on the right"
 msgstr "Escribe estos 5 caracteres en el cuadro de texto a la derecha"
+
+#: .\roma\forms.py:68
+msgid "title"
+msgstr ""
+
+#: .\roma\forms.py:69
+msgid "page content"
+msgstr ""
 
 #: .\roma\menus.py:18
 msgid "Macrozones"
@@ -345,6 +353,26 @@ msgstr ""
 "Le hemos enviado un correo electrónico para su verificación. Siga el enlace "
 "para completar el proceso de registro. Por favor contáctenos si no recibe el "
 "correo en unos minutos."
+
+#: .\roma\templates\datatrans\translate.html:5
+msgid "Translations of"
+msgstr ""
+
+#: .\roma\templates\datatrans\translate.html:46
+msgid "Translations for"
+msgstr ""
+
+#: .\roma\templates\datatrans\translate.html:59
+msgid "Save"
+msgstr ""
+
+#: .\roma\templates\flatpages\default.html:13
+msgid "edit"
+msgstr ""
+
+#: .\roma\templates\flatpages\default.html:14
+msgid "translate"
+msgstr ""
 
 #: .\roma\templates\roma\contacts.html:4
 msgid "How to contact our editorial staff"

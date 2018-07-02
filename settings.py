@@ -438,4 +438,10 @@ REST_FRAMEWORK = {
 """
 POITYPE_SLUGS = []
 
-VERSION_GOOGLE_MAPS = '3.31'
+DATATRANS_TRANSLATE_MAP = {
+    'flatpage': ('%s', 'url', 'title', 'roma.forms.FlatPageForm',),
+    'poi': ('/risorsa/%s/', 'slug', 'name', 'pois.forms.PoiForm',),
+}
+
+VERSION_GOOGLE_MAPS = '3.32'
+

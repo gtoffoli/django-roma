@@ -1,0 +1,74 @@
+{% extends "roma/roma_base.html" %}
+
+{% load staticfiles i18n %}
+
+{% block head_title %}{% trans "Translations of" %} {{ model_title }} {{ object_title }}{% endblock %}
+{% block extra_style %}
+{% if user.is_superuser or user.is_staff %}
+	<script type="text/javascript" src="{% static "tinymce/js/tinymce/tinymce.min.js" %}"></script>
+	
+	<script type="text/javascript">
+  var language = '{{LANGUAGE_CODE}}';
+	tinymce.init({
+	    schema: "html5",
+	    mode: "specific_textareas",
+	    editor_selector: "richtext",
+	    resize: "both",
+      menubar: false,
+      height : 350,
+      branding: false,
+      language: language,
+	    plugins: "paste lists advlist charmap textcolor colorpicker link visualblocks code fullscreen preview",
+	    toolbar: 'undo redo removeformat | formatselect styleselect bold italic underline | alignleft aligncenter alignright alignjustify | forecolor backcolor subscript superscript charmap | bullist numlist outdent indent | link unlink | visualblocks code fullscreen preview',
+      style_formats: [
+        {title: '10px', inline: 'span', styles: {'font-size': '10px'}},
+        {title: '11px', inline: 'span', styles: {'font-size': '11px'}},
+        {title: '12px', inline: 'span', styles: {'font-size': '12px'}},
+        {title: '13px', inline: 'span', styles: {'font-size': '13px'}},
+        {title: '14px', inline: 'span', styles: {'font-size': '14px'}},
+        {title: '15px', inline: 'span', styles: {'font-size': '15px'}},
+        {title: '16px', inline: 'span', styles: {'font-size': '16px'}},
+        {title: '17px', inline: 'span', styles: {'font-size': '17px'}},
+        {title: '18px', inline: 'span', styles: {'font-size': '18px'}},
+        {title: 'clear floats', block: 'div', styles: {'clear': 'both'}},
+      ],
+      paste_as_text: true,            
+	    content_css : "{% static "tinymce/mycontent.css" %}",
+	    invalid_elements: "script,applet,embed,meta,object,style,img,table,tbody,tr,th,button,fieldset,form,input,label,legend,link,noscript,optgroup,option,param,select,textarea",
+	});	
+
+	</script>
+{% endif %}
+{% endblock extra_style %}
+
+{% block content %}
+{% if user.is_superuser or user.is_staff %}
+    <h2 class="mB20"><small>{% trans "Translations for" %} </small>{{ object_title }}</h2>
+    {% if original_language %}
+        {% for field_forms in form_sets %}
+        <div style="padding:20px 0 10px 0;{% if not forloop.last %} border-bottom: 2px solid #888888" {% endif %}>
+            {% for form_language, field_form in field_forms %}
+                <form action="{{ action_url }}" method='POST'>
+                    {% csrf_token %}
+                    <fieldset>
+                    {% if form_language == original_language %}
+                        <div style="color: #aeaeae; padding-bottom:20px">{{ field_form.as_p }}</div>
+                    {% else %}
+                        <div style="padding-bottom:20px">
+                        {{ field_form.as_p }}
+                        <input type="submit" name="save" class="btn btn-default" value="{% trans "Save" %}">
+                        </div>
+                    {% endif %}
+                    </fieldset>
+                </form>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    {% endif %}
+    <div class="mT10 mB10 fontSize16 demiBold"><a href="{{object_url}}">Visualizza {% if model == 'poi' %}la risorsa{% elif model == 'flatpage' %}la pagina{% endif %}</a></div>
+{% endif %}
+
+{% endblock content %}
+
+
+

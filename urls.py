@@ -206,6 +206,7 @@ urlpatterns += [
     # Media
     url(r'^media/(?P<path>.*)$', django_views_static.serve,
         {'document_root': settings.MEDIA_ROOT}),
+    url(r'^datatrans/', include('datatrans.urls')),
 ]
 
 
@@ -240,3 +241,4 @@ if settings.USE_HAYSTACK:
                 load_all=False
             ), name='haystack_search'),
     ]
+

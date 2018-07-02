@@ -62,3 +62,8 @@ class ContactForm(forms.Form):
             help_text=_("Enter these 5 characters in the textbox on the right"),
             widget=CaptchaTextInput(attrs={'class': 'form-control'})
             )
+
+#180702 MMR
+class FlatPageForm(forms.Form):
+    title = forms.CharField(required=True, label=_('title'), widget=forms.TextInput(attrs={'class':'form-control',}))
+    content = forms.CharField(required=False, label=_('page content'), widget=forms.Textarea(attrs={'class':'form-control richtext', 'rows': 8, 'cols': 80,}))
