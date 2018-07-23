@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-02 11:18+0200\n"
-"PO-Revision-Date: 2018-07-02 11:26+0100\n"
+"POT-Creation-Date: 2018-07-23 14:34+0200\n"
+"PO-Revision-Date: 2018-07-23 14:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -167,13 +167,13 @@ msgstr "Mayor contribuidores"
 
 #: .\roma\menus.py:171 .\roma\templates\roma\home.html:46
 #: .\roma\templates\roma\partners.html:7
-#: .\roma\templates\roma\partners.html:36
+#: .\roma\templates\roma\partners.html:37
 msgid "Suggest a resource"
 msgstr "Sugiere un recurso"
 
 #: .\roma\menus.py:176 .\roma\templates\roma\home.html:54
 #: .\roma\templates\roma\partners.html:17
-#: .\roma\templates\roma\partners.html:48
+#: .\roma\templates\roma\partners.html:49
 msgid "Promote your business"
 msgstr "promueva su actividad"
 
@@ -212,6 +212,26 @@ msgstr "El proyecto"
 #: .\roma\menus.py:283
 msgid "Contacts"
 msgstr "Contactos"
+
+#: .\roma\templates\404.html:3
+msgid "Page Not Found"
+msgstr "Página no encontrada"
+
+#: .\roma\templates\404.html:8
+msgid "Sorry! Page Not Found"
+msgstr "¡Lo siento! Página no encontrada"
+
+#: .\roma\templates\500.html:3
+msgid "Internal Server Error"
+msgstr "Error de servidor interno"
+
+#: .\roma\templates\500.html:8
+msgid "Sorry! Internal Server Error"
+msgstr "¡Lo siento! Error interno del servidor"
+
+#: .\roma\templates\500.html:10
+msgid "Go to Home Page"
+msgstr "Ir a la página de Inicio"
 
 #: .\roma\templates\account\login.html:6
 #: .\roma\templates\account\login.html:12
@@ -446,7 +466,7 @@ msgid "characters or a few more"
 msgstr "caracteres o unos pocos más"
 
 #: .\roma\templates\roma\home.html:47 .\roma\templates\roma\partners.html:8
-#: .\roma\templates\roma\partners.html:37
+#: .\roma\templates\roma\partners.html:38
 msgid ""
 "If you know useful facilities and services, you can insert them for free, "
 "helping to expand the resource map."
@@ -455,12 +475,12 @@ msgstr ""
 "gratuita ayudando a ampliar el mapa de recursos."
 
 #: .\roma\templates\roma\home.html:48 .\roma\templates\roma\partners.html:9
-#: .\roma\templates\roma\partners.html:38
+#: .\roma\templates\roma\partners.html:39
 msgid "add now"
 msgstr "añadir ahora"
 
 #: .\roma\templates\roma\home.html:55 .\roma\templates\roma\partners.html:18
-#: .\roma\templates\roma\partners.html:49
+#: .\roma\templates\roma\partners.html:50
 msgid ""
 "With RomaPaese you can gain visibility on the web and easily get in touch "
 "with new potential customers."
@@ -469,7 +489,7 @@ msgstr ""
 "fácilmente con nuevos clientes potenciales."
 
 #: .\roma\templates\roma\home.html:56 .\roma\templates\roma\partners.html:19
-#: .\roma\templates\roma\partners.html:50
+#: .\roma\templates\roma\partners.html:51
 msgid "read more"
 msgstr "leer más"
 
@@ -507,9 +527,11 @@ msgstr "mostrar los recursos en el mapa por categoría"
 #: .\roma\templates\roma\partners.html:24
 #: .\roma\templates\roma\partners.html:25
 #: .\roma\templates\roma\partners.html:26
-#: .\roma\templates\roma\partners.html:59
+#: .\roma\templates\roma\partners.html:27
 #: .\roma\templates\roma\partners.html:60
 #: .\roma\templates\roma\partners.html:61
+#: .\roma\templates\roma\partners.html:66
+#: .\roma\templates\roma\partners.html:67
 msgid "show resource"
 msgstr "muestra el recurso"
 

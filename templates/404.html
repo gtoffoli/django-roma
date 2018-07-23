@@ -1,0 +1,14 @@
+{% extends "roma/roma_base.html" %}
+{% load staticfiles i18n %}
+{% block head_title %}{% trans "Page Not Found" %}{% endblock %}
+{% block main_content %}
+    <div class="container text-center">
+        <div class="text-center" style="height: 80vh">
+            <h1 style="font-size: 76px; padding-top: 50px">Oops! 404</h1>
+            <h1>{% trans "Sorry! Page Not Found" %}</h1>
+            <div style="margin-top: 40px">
+                <a href="/" class="btn btn-default" style="font-size: 20px"><i class="fa fa-home" aria-hidden="true"></i> Take Me Home </a>
+            </div>
+        </div>
+    </div>
+{% endblock main_content %}
