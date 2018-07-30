@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 import datetime
+import requests
 # import feedparser
 
 from django.core.cache import caches
@@ -15,7 +16,7 @@ from django.contrib.flatpages.models import FlatPage
 
 import roma.models
 from roma.forms import SearchForm, ContactForm
-from roma.settings import SERVER_EMAIL, SITE_NAME, ONLINE_DOMAIN
+from roma.settings import SERVER_EMAIL, SITE_NAME, ONLINE_DOMAIN, GOOGLE_RECAPTCHA_SKEY
 import pois.views
 from pois.models import Tag, TagTag, Zone, Poi, Poitype, Confighome
 from pois.models import MACROZONE, TOPOZONE, MUNICIPIO
@@ -334,6 +335,7 @@ class SignupView(allauthSignupView):
 signup = SignupView.as_view()
 
 #180417 MMR
+"""
 def contactsView(request):
     flatpage = FlatPage.objects.get(url='/project/contacts/')
     text_body = flatpage.content
@@ -357,3 +359,38 @@ def contactsView(request):
     else:
         form=ContactForm()
     return render(request, "roma/contacts.html", {'success': False, 'form': form, 'text_body': text_body, 'name': '', 'message': ''})
+"""
+def contactsView(request):
+    flatpage = FlatPage.objects.get(url='/project/contacts/')
+    text_body = flatpage.content
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            recaptcha = request.POST.get('g-recaptcha-response')
+            data = {
+                'secret': GOOGLE_RECAPTCHA_SKEY,
+                'response': recaptcha
+            }
+            r = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
+            result = r.json()
+            if result['success']:
+                name = form.cleaned_data['from_name']
+                from_email = form.cleaned_data['from_email']
+                subject = form.cleaned_data['subject']
+                message = form.cleaned_data['message']
+                text_message = "Da %s (%s)\n\n%s\n\n---------------\nEmail inviata dal sito di %s (https://%s)" % (name, from_email, message, SITE_NAME, request.META.get('HTTP_HOST', ONLINE_DOMAIN))
+                try:
+                    email = EmailMessage(subject, text_message, SERVER_EMAIL,
+                    [SERVER_EMAIL,], headers = {'Reply-To': from_email})
+                    email.send()
+                except BadHeaderError:
+                    return HttpResponse('Invalid header found.')
+                return render (request, "roma/contacts.html", {'success': True, 'text_body': text_body, 'name': name, 'message': message})
+            else:
+                nocaptcha = 'Invalid reCAPTCHA. Please try again.'
+                return render(request, 'roma/contacts.html', {'success': False, 'form': form, 'text_body': text_body, 'name': '', 'message': '','nocaptcha': nocaptcha})
+        else:
+            return render(request, 'roma/contacts.html', {'success': False, 'form': form, 'text_body': text_body, 'name': '', 'message': '', 'nocaptcha': ''})
+    else:
+        form=ContactForm()
+    return render(request, "roma/contacts.html", {'success': False, 'form': form, 'text_body': text_body, 'name': '', 'message': '','nocaptcha': ''})

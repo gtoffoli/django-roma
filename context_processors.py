@@ -18,7 +18,8 @@ def context_processor(request):
         'show_element': show_element,
         'maps_key': settings.GOOGLE_MAPS_KEY,
         'version_maps' : settings.VERSION_GOOGLE_MAPS,
-        'indice_zona' : '/risorse-utili-'
+        'indice_zona' : '/risorse-utili-',
+        'recaptcha_key' : settings.GOOGLE_RECAPTCHA_KEY
     }
 
     return my_settings

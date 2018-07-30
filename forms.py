@@ -57,11 +57,6 @@ class ContactForm(forms.Form):
     subject = forms.CharField(required=True,widget=forms.TextInput(attrs={'class': 'form-control','placeholder':_("Subject")}))
     message = forms.CharField(required=True, widget=forms.Textarea(attrs={'class': 'form-control','placeholder':_("Message")}))
     permission = forms.BooleanField(required=True, label=_('Pursuant to art. 13 of Legislative Decree 30 June 2003 n. 196 we wish to inform you that the personal data supplied by you with the completion and submission of this form will be used only to respond to your request.'), widget=forms.CheckboxInput())
-    captcha = CaptchaField(
-            label=_("control string"),
-            help_text=_("Enter these 5 characters in the textbox on the right"),
-            widget=CaptchaTextInput(attrs={'class': 'form-control'})
-            )
 
 #180702 MMR
 class FlatPageForm(forms.Form):
