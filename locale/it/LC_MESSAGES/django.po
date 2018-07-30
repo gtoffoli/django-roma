@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-23 14:34+0200\n"
-"PO-Revision-Date: 2018-07-23 14:38+0100\n"
+"POT-Creation-Date: 2018-07-30 12:10+0200\n"
+"PO-Revision-Date: 2018-07-30 12:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -53,19 +53,11 @@ msgstr ""
 "del presente modulo serviranno solo ad avere un referente per questa "
 "segnalazione."
 
-#: .\roma\forms.py:61
-msgid "control string"
-msgstr "stringa di controllo"
-
-#: .\roma\forms.py:62
-msgid "Enter these 5 characters in the textbox on the right"
-msgstr "Digita questi 5 caratteri nella casella di testo sulla destra"
-
-#: .\roma\forms.py:68
+#: .\roma\forms.py:63
 msgid "title"
 msgstr "titolo"
 
-#: .\roma\forms.py:69
+#: .\roma\forms.py:64
 msgid "page content"
 msgstr "contenuto"
 
@@ -221,6 +213,10 @@ msgstr "Pagina non trovata"
 msgid "Sorry! Page Not Found"
 msgstr "Mi dispiace! Pagina non trovata"
 
+#: .\roma\templates\404.html:10 .\roma\templates\500.html:10
+msgid "Go to Home Page"
+msgstr "Vai alla Home Page"
+
 #: .\roma\templates\500.html:3
 msgid "Internal Server Error"
 msgstr "Errore interno del server"
@@ -228,10 +224,6 @@ msgstr "Errore interno del server"
 #: .\roma\templates\500.html:8
 msgid "Sorry! Internal Server Error"
 msgstr "Mi dispiace! Errore interno del Server"
-
-#: .\roma\templates\500.html:10
-msgid "Go to Home Page"
-msgstr "Vai alla Home Page"
 
 #: .\roma\templates\account\login.html:6
 #: .\roma\templates\account\login.html:12
@@ -419,11 +411,11 @@ msgstr "inviaci una e-mail"
 msgid "write us a message"
 msgstr "scrivici un messaggio"
 
-#: .\roma\templates\roma\contacts.html:42
+#: .\roma\templates\roma\contacts.html:48
 msgid "Send"
 msgstr "Invia"
 
-#: .\roma\templates\roma\contacts.html:45
+#: .\roma\templates\roma\contacts.html:51
 msgid "All fields are required"
 msgstr "Tutti i campi sono obbligatori"
 
@@ -585,6 +577,16 @@ msgstr ""
 #: .\roma\templates\roma\roma_base.html:368
 msgid "learn more"
 msgstr "leggi di più"
+
+#: .\roma\views.py:390
+msgid "Invalid reCAPTCHA. Please try again."
+msgstr "ReCAPTCHA non valido. Per favore riprova."
+
+#~ msgid "control string"
+#~ msgstr "stringa di controllo"
+
+#~ msgid "Enter these 5 characters in the textbox on the right"
+#~ msgstr "Digita questi 5 caratteri nella casella di testo sulla destra"
 
 #~ msgid "Log In"
 #~ msgstr "Accedi"

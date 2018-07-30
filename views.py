@@ -387,7 +387,7 @@ def contactsView(request):
                     return HttpResponse('Invalid header found.')
                 return render (request, "roma/contacts.html", {'success': True, 'text_body': text_body, 'name': name, 'message': message})
             else:
-                nocaptcha = 'Invalid reCAPTCHA. Please try again.'
+                nocaptcha = _('Invalid reCAPTCHA. Please try again.')
                 return render(request, 'roma/contacts.html', {'success': False, 'form': form, 'text_body': text_body, 'name': '', 'message': '','nocaptcha': nocaptcha})
         else:
             return render(request, 'roma/contacts.html', {'success': False, 'form': form, 'text_body': text_body, 'name': '', 'message': '', 'nocaptcha': ''})
