@@ -149,7 +149,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'tinymce',
     'bootstrap3',
-    'captcha',
+    #'captcha',
     'dal',
     'dal_select2',
     'dal_queryset_sequence',

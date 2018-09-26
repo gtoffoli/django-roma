@@ -202,7 +202,7 @@ urlpatterns += [
     url(r'^tinymce/', include('tinymce.urls')),
     # MMR - url(r'^admin/filebrowser/', include(site.urls)),
     # MMR - url(r'^grappelli/', include('grappelli.urls')),
-    url(r'^captcha/', include('captcha.urls')),
+    # url(r'^captcha/', include('captcha.urls')),
     # Media
     url(r'^media/(?P<path>.*)$', django_views_static.serve,
         {'document_root': settings.MEDIA_ROOT}),
