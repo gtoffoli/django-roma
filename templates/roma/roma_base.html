@@ -23,6 +23,7 @@
 {% endblock ann_lev_page %}
 
     <title>{% block head_title %}{% endblock %}{% if site_name %} | {{ site_name }}{% endif %}</title>
+    <link rel = "canonical" href="https://{{request.get_host}}{{ request.get_full_path }}{% endblock canonical_url %}">
     {% block facebook_data %}{% endblock facebook_data %}
     <link rel="icon" href="{% static 'roma/img/icon-rp.png' %}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{% static 'roma/img/icon-rp.png' %}" type="image/png">
@@ -179,6 +180,7 @@
 {% endif %}{% endif %}{% endif %}
     </style>
     {% block extra_style %}{% endblock extra_style %}
+    {% block JSON-LD %}{% endblock JSON-LD %}
 </head>
 
 <body id="{% block body_id %}{% endblock body_id %}">
