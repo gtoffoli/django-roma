@@ -442,5 +442,5 @@ DATATRANS_TRANSLATE_MAP = {
     'poi': ('/risorsa/%s/', 'slug', 'name', 'pois.forms.PoiForm',),
 }
 
-VERSION_GOOGLE_MAPS = '3.32'
+VERSION_GOOGLE_MAPS = '3.35'
 
