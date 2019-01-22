@@ -9,12 +9,14 @@
             <div class="col-lg-offset-2 col-lg-9">
                 <div class="mB30">{{ text_body|safe }}</div>
                 <div class="row">
+                    {% comment %}
                     <div class="col-lg-6 text-center">
                         <p class="fontSize60"><i class="fa fa-phone color-roma" aria-hidden="true"></i></p>
                         <h3 class=" mT-10 color-roma">{% trans "call us"|capfirst %}</h3>
                         <p>+39 0644231115</p>
                     </div>
-                    <div class="col-lg-6 text-center ">
+                    {% endcomment %}
+                    <div class="col-lg-12 text-center ">
                         <p class="fontSize60"><i class="fa fa-envelope color-copper" aria-hidden="true"></i></p>
                         <h3 class=" mT-10 color-copper">{% trans "send us an email"|capfirst %}</h3>
                         <p>romapaese@linkroma.it</p>
