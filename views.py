@@ -36,6 +36,11 @@ def robots(request):
     response['Content-Type'] = 'text/plain; charset=utf-8'
     return response
 
+def ads(request):
+    response = render(request, 'roma/ads.txt', {})
+    response['Content-Type'] = 'text/plain; charset=utf-8'
+    return response
+
 def slim(request):
     return render(request, "roma/slim.html", {'text': datetime.datetime.now(),})
     
