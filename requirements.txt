@@ -16,7 +16,7 @@ django-simple-menu==1.2.1
 django-templates-macros==0.2
 django-tinymce4-lite==1.7.0
 django-user-agents==0.3.2
-djangorestframework==3.7.7
+djangorestframework==3.9.1
 feedparser==5.2.1
 idna==2.6
 jsmin==2.2.2
