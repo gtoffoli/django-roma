@@ -6,7 +6,7 @@ django-allauth==0.34.0
 django-autocomplete-light==3.2.10
 django-autoslug==1.9.3
 django-bootstrap3==9.1.0
-django-filter==1.1.0
+django-filter==2.4.0
 django-haystack==2.6.1
 django-querysetsequence==0.8
 django-ranged-response==0.2.0
