@@ -26,9 +26,9 @@ Disallow: /suburbio/
 Disallow: /zona-toponomastica/
 Disallow: /zona-urbanistica/
 Disallow: /zona-cap/
-Disallow: /categoria/*/zona/roma/
-Disallow: /categoria/*/tema/
-Disallow: /tema/*/zona/
+# Disallow: /categoria/*/zona/roma/
+# Disallow: /categoria/*/tema/
+# Disallow: /tema/*/zona/
 
 Crawl-delay: 10
 
