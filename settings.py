@@ -254,6 +254,11 @@ LOGGING = {
             '()': 'django.utils.log.RequireDebugFalse'
         }
     },
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(message)s'
+        },
+    },
     'handlers': {
         'null': {
             'class': 'logging.NullHandler',
