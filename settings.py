@@ -262,13 +262,21 @@ LOGGING = {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
-        }
+        },
+        'errorlog': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(PARENT_ROOT, 'logs', 'error.log'),
+            'formatter': 'verbose'
+        },
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins'],
+            # 'handlers': ['mail_admins'],
+            'handlers': ['errorlog', 'mail_admins'],
             'level': 'ERROR',
-            'propagate': True,
+            # 'propagate': True,
+            'include_html': True,
+            'propagate': False,
         },
         # Silence SuspiciousOperation.DisallowedHost exception ('Invalid
         # HTTP_HOST' header messages). Set the handler to 'null' so we don't
