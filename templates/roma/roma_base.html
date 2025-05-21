@@ -348,9 +348,10 @@
     {% endblock content_base %}
     
     {% block footer_base %}
-        <div class="container-fluid fontSize13 pT10 pB20" style="background:#027FB3; color:#aaa"><a href="#" class="scrollup" rel="nofollow">Scroll</a>
+        <div class="container-fluid fontSize13 pT10" style="padding-bottom:10px; background:#027FB3; color:#aaa"><a href="#" class="scrollup" rel="nofollow">Scroll</a>
             <div class="container">
-                <div class="pull-left">&copy; {% now "Y" %} LINK SRL - P. IVA 02098911007 :: Via Udine 30 - 00161 Roma :: <a href="mailto:info@linkroma.it" style="color:#ddd">romapaese@linkroma.it</a> - www.romapaese.it</div><div class="pull-right noprint"><a href="/privacy/" style="color:#ddd">PRIVACY</a></div>
+                <div style="text-align:center;">&copy; {% now "Y" %} LINK SRL - P. IVA 02098911007 {% comment %}:: Via Udine 30 - 00161{% endcomment %} - Roma :: <a href="mailto:info@linkroma.it" style="color:#ddd">romapaese@linkroma.it</a> - www.romapaese.it</div>
+                {% comment %}<div class="pull-right noprint"><a href="/privacy/" style="color:#ddd">PRIVACY</a></div>{% endcomment %}
             </div>
         </div>
     {% endblock footer_base %}

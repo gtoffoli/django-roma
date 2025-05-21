@@ -280,6 +280,10 @@ Menu.add_item("main", MenuItem(ugettext_lazy("Project"),
                            url='/about-us/',
                            weight=40,
                            separator=True))
+Menu.add_item("main", MenuItem(ugettext_lazy("Privacy"),
+                           url='/privacy/',
+                           weight=40,
+                           separator=True))
 Menu.add_item("main", MenuItem(ugettext_lazy("Contacts"),
                            url='/contattare-redazione-romapaese',
                            weight=40,
