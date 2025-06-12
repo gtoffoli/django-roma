@@ -2,7 +2,9 @@ from __future__ import unicode_literals
 
 from django.views.generic import TemplateView
 from django.conf import settings
-from django.conf.urls import include, url
+# from django.conf.urls import include, url
+from django.urls import re_path as url
+from django.conf.urls import include
 
 # from filebrowser.sites import site
 
@@ -13,10 +15,12 @@ from pois.views import StreetAutocomplete, ZoneAutocomplete, PoiAutocomplete, Ta
 from pois import views as pois_views
 from pois import search_indexes as pois_searchindexes
 
+"""
 import fairvillage
 from fairvillage.api import get_components, server_version, search_keys, radial_search, street_search, bbox_search, zone_search
 from fairvillage.api import get_pois, add_poi
 from fairvillage.api import fv_router # Routers provide an easy way of automatically determining the URL conf
+"""
 
 # MMR 20181701
 from django.contrib import admin
@@ -28,22 +32,22 @@ admin.autodiscover()
 
 urlpatterns = [
     # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api-auth/', include('rest_framework.urls')),
-    url(r'^rest/', include(fv_router.urls)),
-    url(r'^api/', include(fv_router.urls)),
-    url(r'^rest/get_components/$', get_components),
-    url(r'^rest/search_keys/$', search_keys),
-    url(r'^server_version/$', server_version),
-    url(r'^search_keys/$', search_keys),
-    url(r'^rest/radial_search/$', radial_search),
-    url(r'^radial_search/$', radial_search),
-    url(r'^rest/bbox_search/$', bbox_search),
-    url(r'^bbox_search/$', bbox_search),
-    url(r'^rest/get_pois/$', get_pois),
-    url(r'^get_pois/$', get_pois),
-    url(r'^zone_search/$', zone_search),
-    url(r'^street_search/$', street_search),
-    url(r'^add_poi/$', add_poi),
+    # url(r'^api-auth/', include('rest_framework.urls')),
+    # url(r'^rest/', include(fv_router.urls)),
+    # url(r'^api/', include(fv_router.urls)),
+    # url(r'^rest/get_components/$', get_components),
+    # url(r'^rest/search_keys/$', search_keys),
+    # url(r'^server_version/$', server_version),
+    # url(r'^search_keys/$', search_keys),
+    # url(r'^rest/radial_search/$', radial_search),
+    # url(r'^radial_search/$', radial_search),
+    # url(r'^rest/bbox_search/$', bbox_search),
+    # url(r'^bbox_search/$', bbox_search),
+    # url(r'^rest/get_pois/$', get_pois),
+    # url(r'^get_pois/$', get_pois),
+    # url(r'^zone_search/$', zone_search),
+    # url(r'^street_search/$', street_search),
+    # url(r'^add_poi/$', add_poi),
 
     # urlpatterns = patterns('',
     # url(r'^fairvillage/$', roma_views.fairvillage, name='fairvillage'),

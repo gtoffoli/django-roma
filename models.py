@@ -1,6 +1,8 @@
 # MMR old vesrion -import HTMLParser
 from __future__ import unicode_literals
-from django.utils.encoding import python_2_unicode_compatible
+# from django.utils.encoding import python_2_unicode_compatible
+import six
+from six import python_2_unicode_compatible
 
 from html.parser import HTMLParser
 from django.db import models

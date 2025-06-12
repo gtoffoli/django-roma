@@ -94,6 +94,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
     'django_user_agents.middleware.UserAgentMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'roma.urls'
@@ -185,8 +186,10 @@ if USE_HAYSTACK:
 # Cache backend is optional, but recommended to speed up user agent parsing
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        # 'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
         'LOCATION': '127.0.0.1:11211',
+        'MAX_ENTRIES': 2000,
     },
     'custom': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
@@ -456,4 +459,12 @@ DATATRANS_TRANSLATE_MAP = {
 }
 
 VERSION_GOOGLE_MAPS = '3.35'
+
+from django.utils.encoding import smart_str
+django.utils.encoding.smart_text = smart_str
+
+import django.utils.translation
+django.utils.translation.ugettext = django.utils.translation.gettext
+django.utils.translation.ugettext_lazy = django.utils.translation.gettext_lazy
+django.utils.translation.ungettext = django.utils.translation.ngettext
 
