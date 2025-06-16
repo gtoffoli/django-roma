@@ -276,13 +276,16 @@ LOGGING = {
             'filename': os.path.join(PARENT_ROOT, 'logs', 'error.log'),
             'formatter': 'verbose'
         },
+        'accesslog': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(PARENT_ROOT, 'logs', 'access.log'),
+            'formatter': 'verbose'
+        },
     },
     'loggers': {
         'django.request': {
-            # 'handlers': ['mail_admins'],
             'handlers': ['errorlog', 'mail_admins'],
             'level': 'ERROR',
-            # 'propagate': True,
             'include_html': True,
             'propagate': False,
         },
@@ -290,7 +293,8 @@ LOGGING = {
         # HTTP_HOST' header messages). Set the handler to 'null' so we don't
         # get those annoying emails.
         'django.security.DisallowedHost': {
-            'handlers': ['null'],
+            # 'handlers': ['null',],
+            'handlers': ['accesslog',],
             'propagate': False,
         },
     }
