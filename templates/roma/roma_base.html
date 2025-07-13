@@ -14,6 +14,7 @@
     <meta name="owner" content="LINK srl, Via Udine 30 - Roma">
     <meta name="author" content="LINK srl - Giovanni Toffoli, Mariarosaria Manco">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if LANGUAGE_CODE != "it" %}<meta name="robots" content="noindex">{% endif %}
     {% block extra_meta %}{% endblock extra_meta %}
 
 {% block ann_lev_page %}
@@ -23,7 +24,7 @@
 {% endblock ann_lev_page %}
 
     <title>{% block head_title %}{% endblock %}{% if site_name %} | {{ site_name }}{% endif %}</title>
-    <link rel = "canonical" href="https://{{request.get_host}}{{ request.get_full_path }}">
+    {% comment %}<link rel = "canonical" href="https://{{request.get_host}}{{ request.get_full_path }}">{% endcomment %}
     {% block facebook_data %}{% endblock facebook_data %}
     <link rel="icon" href="{% static 'roma/img/icon-rp.png' %}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{% static 'roma/img/icon-rp.png' %}" type="image/png">
