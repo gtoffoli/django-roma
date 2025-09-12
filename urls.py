@@ -71,6 +71,7 @@ urlpatterns = [
     url(r'^robots.txt$', roma_views.robots, name='robots'),
     url(r'^ads.txt$', roma_views.ads, name='ads'),
     url(r'^test$', roma_views.test, name='test'),
+    url(r'^error', roma_views.error, name='error'),
     url(r'^home$', roma_views.home, name='home',),
     # url(r'^about$', TemplateView.as_view(template_name='roma/about.html'), name='about',),
     url(r'^poitypes$', TemplateView.as_view(template_name='pois/poitype_index.html'), name='poitypes',),

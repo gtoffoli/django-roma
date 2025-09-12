@@ -330,6 +330,9 @@ def home(request):
 def test(request):
     return render(request, 'roma/test.html', {})
 
+def error(request):
+    assert False
+
 from allauth.account.views import SignupView as allauthSignupView
 from .forms import SignupForm
 # GT 131015

@@ -31,6 +31,14 @@ else:
 SHOW_MAPS = True
 MAX_POIS = 50
 srid_OSM = 3857
+srid_GPS = 4326
+roma_lon = 12.4750
+roma_lat = 41.9050
+from django.contrib.gis.geos import Point
+default_point = Point(roma_lon, roma_lat, srid=srid_GPS)
+default_point.transform(srid_OSM)
+DEFAULT_LON = default_point.coords[0]
+DEFAULT_LAT = default_point.coords[1]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
